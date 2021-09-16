@@ -70,6 +70,7 @@ a {
   text-decoration: none;
   color: var(--teal);
   padding: 0.5rem;
+  border: 1px solid var(--teal);
 }
 a:hover {
   background-color: var(--teal);
@@ -119,6 +120,7 @@ textarea {
   }
   aside {
     padding: 2%;
+    max-width: 30%;
   }
   header > section {
     display: flex;
