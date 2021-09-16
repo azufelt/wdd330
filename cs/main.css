@@ -1,0 +1,108 @@
+:root {
+  --red: rgb(255, 103, 64);
+  --darkpink: hsla(3, 86%, 68%, 1);
+  --pink: hsla(4, 100%, 84%, 1);
+  --lightpink: hsla(13, 100%, 97%, 1);
+  --blue: hsla(186, 77%, 37%, 1);
+  --teal: hsla(187, 77%, 24%, 1);
+  --yellow: hsla(40, 100%, 65%, 1);
+  --lightblue: hsla(186, 77%, 37%, 0.5);
+}
+html {
+  font-family: "Montserrat", Arial, sans-serif;
+  color: var(--lightpink);
+}
+body {
+  color: var(--teal);
+}
+h1 {
+  font-family: "Playfair Display", Times, serif;
+  font-size: 4rem;
+  color: var(--darkpink);
+  filter: drop-shadow(2px 2px 2px var(--teal));
+  margin-bottom: 1rem;
+}
+h2 {
+  color: var(--yellow);
+}
+/* .gridbox {
+  padding: 3%;
+} */
+header {
+  text-align: center;
+}
+main {
+  margin: 2rem 0;
+}
+/* main ~ section {
+  border: 3px dashed var(--lightblue);
+  padding: 2%;
+} */
+main ~ section > h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+main > section {
+  padding: 0.5rem;
+}
+main > section > h2 {
+  font-size: 2rem;
+}
+header > section {
+  padding: 1%;
+}
+footer {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: var(--teal);
+  padding: 0.5rem;
+}
+a:hover {
+  background-color: var(--teal);
+  color: var(--lightpink);
+}
+li {
+  line-height: 2rem;
+  list-style: circle;
+}
+/* -----------form--------- */
+textarea {
+  width: 800px;
+  height: 250px;
+  background-color: lightyellow;
+}
+/* ----------large screen------- */
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  .gridbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .contentbox {
+    display: flex;
+  }
+  .contentbox > section {
+    border-left: 2px solid var(--red);
+    width: 100%;
+  }
+  .contentbox > section > h2 {
+    margin-left: 3rem;
+  }
+  aside {
+    padding: 2%;
+  }
+  header > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer {
+    position: absolute;
+    left: 40%;
+  }
+}

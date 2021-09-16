@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link type="normalize/css" rel="stylesheet" href="#" />
+    <!-- <link type="text/css" rel="stylesheet" href="/wdd330-journal/main.css" /> -->
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    
+    <script src="js/script.js" defer></script>
+    <script src="js/story_editor.js" defer></script>
+   
+   
+    <title>Ashley Zufelt Frontend WDD330</title>
+  </head>
+  <body>
+    <div class="gridbox">
+      <header>
+        <h1>Week 1</h1>
+
+        <section>
+          <a href="/index.html">WDD 330 Menu</a>
+          <p>Local Storage Activity</p>
+          <p>Sept. 14, 2021</p>
+        </section>
+      </header>
+      <main>
+        <h2> Story Editor</h2>
+<h3>Story Name:</h3>
+ <input id=name_input placeholder="Title Here..."></input>
+ <section>
+   <button onclick="loadStory()">Find & Edit It</button>
+    <button onclick="saveStory()">Save It</button>
+    <button onclick="displayStory()">Display Story!</button>
+ </section>
+<textarea id="story_editor" placeholder="Write a totally awesome story here"></textarea>
+<section id="story_display"></section>
+      </main>
+    </div>
+    <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Permanent Marker", "Shadows Into Light Two"],
+        },
+      });
+    </script>
+  </body>
+</html>
