@@ -10,11 +10,10 @@
     <link type="text/css" rel="stylesheet" href="css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="shortcut icon" href="favicon.ico" />
-    
+
     <script src="js/script.js" defer></script>
     <script src="js/story_editor.js" defer></script>
-   
-   
+
     <title>Ashley Zufelt Frontend WDD330</title>
   </head>
   <body>
@@ -23,22 +22,25 @@
         <h1>Week 1</h1>
 
         <section>
-          <a href="/index.html">WDD 330 Menu</a>
+          <h3><a href="/index.html">WDD 330 Menu</a></h3>
           <p>Local Storage Activity</p>
           <p>Sept. 14, 2021</p>
         </section>
       </header>
       <main>
-        <h2> Story Editor</h2>
-<h3>Story Name:</h3>
- <input id=name_input placeholder="Title Here..."></input>
- <section>
-   <button onclick="loadStory()">Find & Edit It</button>
-    <button onclick="saveStory()">Save It</button>
-    <button onclick="displayStory()">Display Story!</button>
- </section>
-<textarea id="story_editor" placeholder="Write a totally awesome story here"></textarea>
-<section id="story_display"></section>
+        <h2>Story Name:</h2>
+        <input id="name_input" placeholder="Title Here..." />
+        <section>
+          <h3>Story Editor:</h3>
+          <button onclick="loadStory()">Find & Edit It</button>
+          <button onclick="saveStory()">Save It</button>
+          <button onclick="displayStory()">Display Story!</button>
+        </section>
+        <textarea
+          id="story_editor"
+          placeholder="Write a totally awesome story here"
+        ></textarea>
+        <section id="story_display"></section>
       </main>
     </div>
     <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
