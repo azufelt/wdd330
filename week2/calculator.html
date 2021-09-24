@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Team Activity Week 2 - Brigham Young University-Idaho"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/calculator.js"></script>
+
+    <title>Team Project - Week 2</title>
+  </head>
+
+  <body class="calcBody">
+    <h1>Let's Do Math!</h1>
+    <section class="calculator">
+      <div class="mathInputs">
+        <input type="number" id="inputA" placeholder="Enter a #" />
+        <input type="number" id="inputB" placeholder="Enter a #" />
+      </div>
+      <section>
+        <button id="add" onclick="doMath(add)">+</button>
+        <button id="subtract" onclick="doMath(sub)">-</button>
+        <button id="multiply" onclick="doMath(mult)">*</button>
+        <button id="divide" onclick="doMath(div)">/</button>
+        <button id="button" onclick="getValues()">Calculate!</button>
+      </section>
+    </section>
+    <div id="output">Total=<span></span></div>
+  </body>
+</html>

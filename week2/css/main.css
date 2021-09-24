@@ -8,13 +8,16 @@
   --yellow: hsla(40, 100%, 65%, 1);
   --lightblue: hsla(186, 77%, 37%, 0.5);
 }
+
 html {
   font-family: "Montserrat", Arial, sans-serif;
   color: var(--lightpink);
 }
+
 body {
   color: var(--teal);
 }
+
 h1 {
   font-family: "Permanent Marker", cursive;
   font-size: 4rem;
@@ -22,6 +25,7 @@ h1 {
   filter: drop-shadow(2px 2px 2px var(--teal));
   margin-bottom: 1rem;
 }
+
 h2,
 h3,
 h4,
@@ -30,6 +34,7 @@ h6 {
   font-family: "Shadows Into Light Two", cursive;
   color: var(--yellow);
 }
+
 /* .notepad {
   visibility: hidden;
   position: fixed;
@@ -40,61 +45,114 @@ svg {
 .gridbox {
   padding: 3%;
 }
+
 header {
   text-align: center;
 }
+
 main {
   margin: 2rem 0;
 }
-main ~ section {
+
+main~section {
   border: 3px dashed var(--lightblue);
   padding: 2%;
 }
-main ~ section > h2 {
+
+main~section>h2 {
   text-align: center;
   font-size: 2rem;
 }
-main > section {
+
+main>section {
   padding: 0.5rem;
 }
-main > section > h2 {
+
+main>section>h2 {
   font-size: 2rem;
 }
-header > section {
+
+header>section {
   padding: 1%;
 }
+
 footer {
   text-align: center;
 }
+
 a {
   text-decoration: none;
   color: var(--teal);
   padding: 0.5rem;
   border: 1px solid var(--teal);
 }
+
 a:hover {
   background-color: var(--teal);
   color: var(--lightpink);
 }
+
 li {
   padding: 0.5rem 0;
 }
+
 .vocab {
   font-weight: bolder;
   font-size: larger;
 }
+
 /* -----------form--------- */
 textarea {
   width: 800px;
   height: 250px;
   background-color: lightyellow;
 }
+
+input {
+  padding: .5rem;
+  border: 3px solid var(--darkpink);
+}
+
+.calcBody {
+  background-color: var(--lightblue);
+  text-align: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.mathInputs {
+  padding: 2rem;
+}
+
+.calculator>section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calculator button{
+  margin: .5rem;
+  font-size: x-large;
+}
+#output {
+  background-color: white;
+  padding: .5rem;
+  margin: 0 40%;
+  border: 3px solid var(--teal);
+}
+
 /* ----------large screen------- */
 @media only screen and (min-width: 600px) {
   body {
     max-width: 85%;
     margin: 0 auto;
   }
+
   /* .notepad {
     visibility: visible;
     background-image: url("data:image/svg+xml,");
@@ -108,25 +166,31 @@ textarea {
     display: flex;
     flex-direction: column;
   }
+
   .contentbox {
     display: flex;
   }
-  .contentbox > section {
+
+  .contentbox>section {
     border-left: 2px solid var(--red);
     width: 100%;
   }
-  .contentbox > section > h2 {
+
+  .contentbox>section>h2 {
     margin-left: 3rem;
   }
+
   aside {
     padding: 2%;
     max-width: 30%;
   }
-  header > section {
+
+  header>section {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   footer {
     position: absolute;
     left: 40%;
