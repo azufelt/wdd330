@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="">
+      <input type="text" />
+    </label>
+    <button id="button" type="button" onclick="myFunction()">Click Here</button>
+    <div id="contents"></div>
+    <script>
+      function myFunction() {
+        var input = document.querySelector("input").value;
+
+        document.querySelector("#contents").innerHTML = input;
+      }
+    </script>
+    <section>
+      <input class="numValue" type="text" />
+
+      <button id="numButton" tyoe="button" onclick="mathFunction()">
+        Numbers here
+      </button>
+      <div id="outputNum"></div>
+      <script>
+        function mathFunction() {
+          //Sum all numbers up to the uesr number given
+          let num = parseInt(document.querySelector(".numValue").value);
+          var total = 0;
+          for (var i = 1; i <= num; i++) {
+            total += i;
+          }
+          document.querySelector("#outputNum").textContent = total;
+        }
+      </script>
+    </section>
+    <section>
+      <input type="text" class="num1" />
+      <input type="text" class="num2" />
+      <button id="plusBtn" type="button" onclick="addFunction()">+</button>
+      <div class="addOutput"></div>
+      <script>
+        function addFunction() {
+          //take 2 user inputs and add together, return the sum
+          let a = parseInt(document.querySelector(".num1").value);
+          let b = parseInt(document.querySelector(".num2").value);
+
+          var total = a + b;
+          document.querySelector(".addOutput").innerHTML = total;
+        }
+      </script>
+    </section>
+    <section>
+      <input type="text" class="song">
+      <button id="songBtn" type="button" onclick="songFunc()">Sing it!
+        <div id="songOutput"></div>
+        <script>
+          function songFunc(song, callback){
+            // song = document.querySelector(".song").value;
+            console.log("I'm singing along to" + song);
+            callback();
+          }
+        </script>
+    </section>
+  </body>
+</html>
