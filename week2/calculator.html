@@ -14,20 +14,81 @@
   </head>
 
   <body class="calcBody">
-    <h1>Let's Do Math!</h1>
-    <section class="calculator">
-      <div class="mathInputs">
-        <input type="number" id="inputA" placeholder="Enter a #" />
-        <input type="number" id="inputB" placeholder="Enter a #" />
-      </div>
+    <header>
+      <h1>Week 2 ~ Team Activity</h1>
+      <h2>Frontend WDD 330</h2>
       <section>
-        <button id="add" onclick="doMath(add)">+</button>
-        <button id="subtract" onclick="doMath(sub)">-</button>
-        <button id="multiply" onclick="doMath(mult)">*</button>
-        <button id="divide" onclick="doMath(div)">/</button>
-        <button id="button" onclick="getValues()">Calculate!</button>
+        <h3><a href="../index.html">Menu</a></h3>
+        <p>
+          <a
+            href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/1"
+            target="_blank"
+            >JavaScript: Novice to Ninja, Ch. 4</a
+          >
+        </p>
+
+        <p><a href="index.html"> Back to Journal</a></p>
       </section>
+    </header>
+    <div class="calcbox">
+      <section>
+        <h2>Core Requirements</h2>
+        <h5>Activity 01 & 02 ~ Summation</h5>
+        <input
+          type="text"
+          id="userInput"
+          name="textField"
+          placeholder="# to calc summation"
+        />
+        <div id="userOutput1"></div>
+        <br />
+        <button id="button" onclick="readContent()">Sum the Numbers!</button>
+        <br />
+        <h5>Activity 03 ~ Adding Machine</h5>
+        <input type="text" id="userInput" name="textField" />
+        <input type="text" id="newInput" name="textField" />
+        <br />
+        <button id="add" onclick="performOperation(addFunction)">+</button>
+        <button id="subtract" onclick="performOperation(subtract)">-</button>
+        <button id="multiply" onclick="performOperation(multiply)">*</button>
+        <button id="division" onclick="performOperation(divide)">/</button>
+        <div id="userOutput"></div>
+      </section>
+      <section class="calculator">
+        <h2>Stretch Activity</h2>
+        <div class="mathInputs">
+          <input type="number" id="inputA" placeholder="Enter a #" />
+          <input type="number" id="inputB" placeholder="Enter a #" />
+        </div>
+        <section>
+          <button id="add" onclick="doMath(add)">+</button>
+          <button id="subtract" onclick="doMath(sub)">-</button>
+          <button id="multiply" onclick="doMath(mult)">*</button>
+          <button id="divide" onclick="doMath(div)">/</button>
+        </section>
+        <div id="output">Total=<span></span></div>
+      </section>
+    </div>
+    <section class="summary">
+      <h2>Summary</h2>
+      <p>
+        Our team was quickly able to do the basic requirements for the activity,
+        as well as add in the additional stretch goals. However we hit a speed
+        bump when we tried to consolidate how many calls we made to the user
+        input values. For ease we initially called the user input values each
+        time the user clicked a math function. From there we worked toward only
+        getting them once, then determining how to pass them as parameters to
+        each of the math functions that may get selected.
+      </p>
+      <p>
+        We tried various ways, including ( but certainly not limited to) setting
+        the user input values to local storage then retrieving them, calling two
+        functions onclick, nesting one function as a parameter inside another
+        function onclick, etc. Ultimately we were unsuccessful -on our own- to
+        have a running calculator that did not repeat some calls. We utilizewd
+        the example to guide us in our use of passing the arguments as a
+        callback. Which eventually led to a working calculator, with DRY code.
+      </p>
     </section>
-    <div id="output">Total=<span></span></div>
   </body>
 </html>
