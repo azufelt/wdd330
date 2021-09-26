@@ -56,14 +56,21 @@
     </section>
     <section>
       <input type="text" class="song">
-      <button id="songBtn" type="button" onclick="songFunc()">Sing it!
+      <button id="songBtn" type="button" onclick="sing()">Sing it!
         <div id="songOutput"></div>
         <script>
-          function songFunc(song, callback){
-            // song = document.querySelector(".song").value;
+          function sing(song, callback){
+            song = document.querySelector(".song").value;
             console.log("I'm singing along to" + song);
             callback();
           }
+          if(typeof(callback) === 'function'){
+            callback();
+          }
+          function dance() {
+            console.log("I'm moving my body to the groove")
+          }
+          sing('Let it Go');
         </script>
     </section>
   </body>

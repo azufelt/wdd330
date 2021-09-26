@@ -38,8 +38,9 @@
             <li>
               <a href="calculator.html">Calculator</a>
             </li>
+            <li><a href="test.html">SingSong</a></li>
             <li>
-              <a href="https://codepen.io/azufelt/pen/rNwdbVv"
+              <a href="https://codepen.io/azufelt/pen/rNwdbVv" target="_blank"
                 >Rainbow CodePen</a
               >
             </li>
@@ -61,12 +62,18 @@
               language.
             </li>
             <li><span class="vocab">REPL-</span>Read Eval Print Loop</li>
+            <li><span class="vocab">Invoke</span></li>
+            <li><span class="vocab">Declare</span></li>
+            <li><span class="vocab">Expression</span></li>
+            <li><span class="vocab">Hoist</span></li>
           </ul>
           <h2>Questions:</h2>
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Callbacks?!!? 🤯</li>
+            <li>
+              What are the benefits/drawbacks of using a expression vs.
+              declaration?
+            </li>
           </ul>
         </aside>
         <section class="notes">
@@ -113,12 +120,40 @@
               </ul>
             </li>
             <li>Functions & Callbacks</li>
+            <ul>
+              <li>
+                <pre><code>// the variable helloExpression has a value of undefined, so the function cannot be invoked
+helloExpression(); // throws an error
+// the function declaration can be invoked before it is declared
+helloDeclaration(); // returns &#x27;hello&#x27;
+// assign function expression to a variable
+var helloExpression = function() { 
+    console.log(&#x27;hello&#x27;) 
+}
+// declare function declaration
+function helloDeclaration() {
+    console.log(&#x27;hello&#x27;) 
+}
+// The function expression can only be invoked after assignment
+helloExpression(); // returns &#x27;hello&#x27;</code></pre>
+              </li>
+            </ul>
           </ul>
         </section>
       </main>
       <section>
+        s
         <h2>Summary</h2>
-        <p></p>
+        <p>
+          Turns out I relaly like to define variables and functions in JS. It
+          helps me understand how the code travels from one part to the next. I
+          hope to be able to be good enough at JS one day that I can easily
+          understand how declarations and callbacks are handled.
+        </p>
+        <p>
+          This weeks activities were a challenge for sure, and showed me where
+          some holes are in my knowledge and understanding.
+        </p>
       </section>
     </div>
     <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>

@@ -7,7 +7,7 @@
   --teal: hsla(187, 77%, 24%, 1);
   --yellow: hsla(40, 100%, 65%, 1);
   --lightblue: hsla(186, 77%, 37%, 0.5);
-  --white: white;
+  --lightgray: rgb(238, 238, 238);
 }
 
 html {
@@ -149,6 +149,13 @@ input {
   background-color: var(--white);
   margin: 2rem;
   border: 3px dashed var(--lightblue);
+}
+pre {
+  background-color: var(--lightgray);
+  border: 3px double gray;
+  padding: .5rem;
+ color: black;
+ white-space: pre-wrap;
 }
 /* ----------large screen------- */
 @media only screen and (min-width: 600px) {
