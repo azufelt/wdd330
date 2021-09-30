@@ -102,6 +102,9 @@ li {
 li a {
 white-space: nowrap;
 }
+aside {
+  /* width: 30%; */
+}
 .vocab {
   font-weight: bolder;
   font-size: larger;
@@ -185,6 +188,7 @@ pre {
 
   aside {
     padding: 2%;
+    max-width: 30%;
   }
 
   header>section {

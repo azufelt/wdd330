@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link type="normalize/css" rel="stylesheet" href="#" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="js/script.js" defer></script>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <title>Ashley Zufelt Frontend WDD330</title>
+  </head>
+  <body>
+    <div class="notepad"></div>
+    <div class="gridbox">
+      <header>
+        <h1>Week 3</h1>
+        <h2>Frontend WDD 330</h2>
+        <section>
+          <h3><a href="../index.html">Menu</a></h3>
+          <p>
+            <a
+              href="https://javascript.info/object-methods"
+              target="_blank"
+              >Oject Methods: <em>this</em></a
+            >
+          </p>
+
+          <p>Sept. 27, 2021</p>
+        </section>
+      </header>
+      <main class="contentbox">
+        <aside>
+          <h2>Activity/Excercise:</h2>
+          <ul class="activitylinks">
+            <li>
+              <a href="/week3/activity.html">Team Activity</a>
+            </li>
+          </ul>
+
+          <h2>Keywords:</h2>
+          <ul>
+            <li>
+              <span class="vocab">Object-</span>
+              <pre>
+let user = {
+  name: "John", 
+  age: 30 
+}</pre
+              >
+            </li>
+            <li>
+              <span class="vocab">Function-</span>
+              <pre>
+user.sayhi = function() {
+  alert("Hello!");
+}</pre
+              >
+            </li>
+            <li>
+              <span class="vocab">Method-</span> A function that is a property
+              of an <em>Object</em>. Or stored inside an Object. Methods allow objects to act like object.function(), and they can use <em>this</em> to reference an object. 
+            </li>
+            <li>
+              <span class="vocab">"this"-</span> not bound, acts like a
+              "variable" function call. It has no value on it's own, until a function is declared and called. 
+            </li>
+            <li><span class="vocab"></span></li>
+            <li><span class="vocab"></span></li>
+            <li><span class="vocab"></span></li>
+            <li><span class="vocab"></span></li>
+          </ul>
+          <h2>Questions:</h2>
+          <ul>
+            <li>?</li>
+            <li>?</li>
+          </ul>
+        </aside>
+        <section class="notes">
+          <h2>Notes:</h2>
+
+          <ul>
+            <li>
+              <span class="vocab">Method Shorthand—</span> Instead of:
+              <pre>
+user = {
+  sayHi: function() {
+    alert("Hello!");
+  }
+};</pre
+              >
+              We can use shorthand to make it look cleaner like:
+              <pre>
+user = {
+  sayHi() {
+    alert("Hello!");
+    }
+};</pre
+              >
+            </li>
+            <li>
+              <span class="vocab">this—</span> a method can use keyword
+              <em>this</em> to access the object. It does not have to have the
+              exact function name.
+              <pre>
+let user = {
+  name: "John",
+  age: 30,
+
+  sayHi() {
+    //"this" is the "current object- user"
+    alert(this.name);
+  }
+};
+
+user.sayHi();
+              </pre>
+              The value of "this" in the method is the object used to call the
+              method.
+            </li>
+            <li><span class="vocab">Arrow functions =></span>
+              Arrow functions don't have their own <em>this. If <em>this is used in an => function, then it is owned by the outer function "normal" function. Example: 
+                <pre>
+let user = {
+  firstName: "Ashley",
+  sayHi() {
+    let arrow = () => alert(this.firstName);
+    arrow();
+  }
+};
+User.sayHi(); 
+                </pre>
+                It's a special feature of an => function... made useful when we WANT to use the outer object context.
+            </li>
+            <li><span class="vocab">Chaining/<em>ladder</em>—</span>
+              <pre>
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function() { //will show current step
+    alert(this.step);
+  }
+};
+              </pre>
+              Making several calls in sequence would look like: 
+              <pre>
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep();
+              </pre>
+              <span class="vocab">—OR—</span> we can make the calls chainable like:
+              <pre>
+ladder.up().up().down().showStep();
+              </pre>
+            </li>
+            <li><span class="vocab">Objects—</span>
+            <ul>
+              <li>
+                Object literals
+              </li>
+              <li>Adding properties to Objects</li>
+              <li>Object Methods</li>
+              <li>JSON</li>
+              <li>Math object</li>
+              <li>Date object</li>
+              <li>RegExp object</li>
+            </ul>
+          </li>
+
+          </ul>
+        </section>
+      </main>
+      <section>
+        <h2>Summary</h2>
+        <p></p>
+      </section>
+    </div>
+    <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            "Permanent Marker",
+            "Shadows Into Light Two",
+            "Montserrat",
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
