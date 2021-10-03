@@ -26,7 +26,8 @@
               target="_blank"
               >Oject Methods: <em>this</em></a
             >
-          </p>
+            <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/5" target="_blank"
+                      >JS: Ninja Ch.5-7</a>          </p>
 
           <p>Sept. 27, 2021</p>
         </section>
@@ -67,15 +68,14 @@ user.sayhi = function() {
               <span class="vocab">"this"-</span> not bound, acts like a
               "variable" function call. It has no value on it's own, until a function is declared and called. 
             </li>
-            <li><span class="vocab"></span></li>
-            <li><span class="vocab"></span></li>
-            <li><span class="vocab"></span></li>
-            <li><span class="vocab"></span></li>
+           <li><span class="vocab">DOM Tree</span></li>
+           <li><span class="vocab">Node-- has numerical code</span></li>
+          <li><span class="vocab">Event Propagation</span></li>
           </ul>
           <h2>Questions:</h2>
           <ul>
-            <li>?</li>
-            <li>?</li>
+            <li>What do nodes & the DOM tree have to do with getting elements by ID/query?</li>
+            <li>I've read about Bubbline before, What is an example of how it acts when done a specfic way?</li>
           </ul>
         </aside>
         <section class="notes">
@@ -130,7 +130,8 @@ let user = {
     arrow();
   }
 };
-User.sayHi(); 
+
+user.sayHi(); 
                 </pre>
                 It's a special feature of an => function... made useful when we WANT to use the outer object context.
             </li>
@@ -174,13 +175,31 @@ ladder.up().up().down().showStep();
               <li>RegExp object</li>
             </ul>
           </li>
+<li><class="vocab">Node-</class>Node lists are array-like, however they are not arrays. They have a length, but cannot be used with any other arry function (like slice()). </li>
+<li> Get elements by Id, Tag, Selector, Query, <span class="vocab">jQuery</span> uses document.querySelectorall().</li>
+<li>So, Navigating the Nodes, or the DOM tree, is actually a lot like navigating through the terminal. If you can move around through the computer, via jsut command line, then you can more easily understand how to gain access to various parts of the DOM.</li>
+<li><span class="vocab">AddEventListener</span>I love AddEventListeners! This is the "new" replacement, for the now deprecated older methods of calling methods 'onclick', etc. Using AddEventListeners keeps Javascripot out of the HTML markup, which keeps code cleaner, and easier to scale and maintain. </li>
+<li><span class="vocab">Events-</span>There are many, MANY, types of Events Here's a <a href="https://developer.mozilla.org/en-US/docs/Web/Events">long list</a> of them.
+<ul>
+  <li>Animation</li>
+  <li>Focus</li>
+  <li>Inputs</li>
+  <li>Scroll</li>
+</ul></li>
 
           </ul>
         </section>
       </main>
       <section>
         <h2>Summary</h2>
-        <p></p>
+        <p>LOTS of stuff to wrap my head around this week!! I think the more difficult parts for me to keep straight are <ol>
+          <li>Remembering the names of ALL.THE.THINGS.😅</li>
+          <li>Knowing/Remembering which arguments a function needs to take.</li>
+          <li>Being able to understand & WRITE laddered/linked functions.
+            
+        </ol>
+      I'm not too worried though, it's often a lot for my brain to take in, but once I'm able to get my hands on it, put it in to practice nad build something, then it's better committed to memory. So, several more times and I should be up to speed;)</p>
+      <p>Another little "win" for learning and understanding this week was using the terminal directly in Dev Tools to be able to affect the Wiki Page Boulevards filter. I am quite new to programming and development (I haven't even been doing this for a year yet!) and so learning little things like that always excited me! Soon I will be a "real" developer, that will know how to do all the functions!</p>
       </section>
     </div>
     <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
