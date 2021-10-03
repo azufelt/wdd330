@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/activity.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
     <title>Week 3 | Team Activity</title>
   </head>
   <body>
-    <h1>🦖 Team Activity Code. Output Divs Pending.</h1> 
+    <h1>🦖 Team Activity Code.</h1>
     <section>
       <h2>## Array Cardio Day 1</h2>
       <p>Get your shorts on - this is an array workout!</p>
@@ -29,32 +30,70 @@
         { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
       ];
       </pre>
-      <h3>1. Filter the list of inventors for those who were born in the 1500's</h3>
-      <div id="num1">
-
-      </div>
+      <h3>
+        1. Filter the list of inventors for those who were born in the 1500's
+      </h3>
+      <div id="num1"></div>
+      <pre class="answerCode">
+const inventors_1500s = inventors.filter(inventor => (inventor.year < 1600) && (inventor.year >= 1500));
+console.log(inventors_1500s);</pre
+      >
+      <h3>2. Give us an array of the inventors' first and last names</h3>
+      <div id="num2"></div>
+      <h3>3. Sort the inventors by birthdate, oldest to youngest</h3>
+      <div id="num3"></div>
+      <pre class="answerCode">
+const sortedInventors = inventors.sort(function(a, b) {
+  return a.year - b.year;
+});
+      console.log(sortedInventors);
+      </pre>
+      <h3>4. How many years did all the inventors live?</h3>
+      <div id="num4"></div>
+      <pre class="answerCode">
+const totalYears = inventors.reduce(function(total, current) {
+return total + (current.passed - current.year);
+}, 0);
+console.log(totalYears);</pre
+      >
+      <h3>5. Sort the inventors by years lived</h3>
+      <div id="num5"></div>
+      <pre class="answerCode">
+const ageSortedInventors = inventors.sort(function(a, b) {
+  return (a.passed - a.year) - (b.passed - b.year);
+});
+console.log(ageSortedInventors);
+     
+      
+// Note: This completely unneccesarry code is creating a new
+// array of inventors WITH an extra age perameter.
+const extraValue = ageSortedInventors.map(function(current) {
+  return {first:current.first,
+    last:current.last,
+    year:current.year,
+    passed:current.passed,
+    age:current.passed - current.year};
+});
+console.log(extraValue);
+      </pre>
+      <h3>
+        6. create a list of Boulevards in Paris that contain 'de' anywhere in
+        the name
+        <a href="https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris"
+          >Paris Wikipedia</a
+        >
+        go to the link above and open the console.
+      </h3>
+      <pre>
+const de_streets = links.map(function(current) {return current.innerText});
+de_streets.filter(function(current){return current.includes("de")});
+      //did it :)</pre
+      >
     </section>
-  
-    <pre>
-
-    // Get your shorts on - this is an array workout!
-      // ## Array Cardio Day 1
-      // Some data we can work with
-      const inventors = [
-        { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
-        { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
-        { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
-        { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
-        { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
-        { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
-        { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
-        { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
-        { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
-        { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
-        { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
-        { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
-      ];
-      const people = [
+    <section>
+      <h2>Some more data to work with:</h2>
+      <pre>
+     const people = [
         'Beck, Glenn',
         'Becker, Carl',
         'Beckett, Samuel',
@@ -97,70 +136,18 @@
         'Blair, Tony',
         'Blake, William'
       ];
-      // Array.prototype.filter()
-      // 1. Filter the list of inventors for those who were born in the 1500's
-      const inventors_1500s = inventors.filter(inventor => (inventor.year < 1600) && (inventor.year >= 1500));
-      console.log(inventors_1500s);
-      // Array.prototype.map()
-      // 2. Give us an array of the inventors' first and last names
-      const names = inventors.map(function(currentValue) {
-        return currentValue.first + " " + currentValue.last;
-      });
-      console.log(names);
-      // Array.prototype.sort()
-      // 3. Sort the inventors by birthdate, oldest to youngest
-      const sortedInventors = inventors.sort(function(a, b) {
-        return a.year - b.year;
-      });
-      console.log(sortedInventors);
-      // Array.prototype.reduce()
-      // 4. How many years did all the inventors live?
-      const totalYears = inventors.reduce(function(total, current) {
-        return total + (current.passed - current.year);
-      }, 0);
-      console.log(totalYears);
-      // 5. Sort the inventors by years lived
-      const ageSortedInventors = inventors.sort(function(a, b) {
-        return (a.passed - a.year) - (b.passed - b.year);
-      });
-      console.log(ageSortedInventors);
-      // Note: This completely unneccesarry code is creating a new
-      // array of inventors WITH an extra age perameter.
-      const extraValue = ageSortedInventors.map(function(current) {
-        return {first:current.first,
-          last:current.last,
-          year:current.year,
-          passed:current.passed,
-          age:current.passed - current.year};
-      });
-      console.log(extraValue);
-      // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-      // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-      // goto the link above and open the console. Paste the following two lines in.  That will create a list of links in memory that you can reference through the console. Use that list to finish the problem.
-      // const category = document.querySelector('.mw-category');
-      // const links = Array.from(category.querySelectorAll('a'));
-      // const de_streets = links.map(function(current) {return current.innerText});
-      // de_streets.filter(function(current){return current.includes("de")});
-      // did it :)
-      // 0: "Boulevard de l'Amiral-Bruix"
-      // 1: "Boulevard des Capucines"
-      // 2: "Boulevard de la Chapelle"
-      // 3: "Boulevard de Clichy"
-      // 4: "Boulevard de l'Hôpital"
-      // 5: "Boulevard des Italiens"
-      // 6: "Boulevard de la Madeleine"
-      // 7: "Boulevard de Magenta"
-      // 8: "Boulevard Marguerite-de-Rochechouart"
-      // 9: "Boulevard de Sébastopol"
-      // 10: "Boulevard de Strasbourg"
-      // 11: "Boulevard de la Zone"
-      // 7. sort Exercise
-      // Sort the people alphabetically by last name
-      const peopleSortedByNameAlphabetically = people.sort();
-      console.log(peopleSortedByNameAlphabetically);
-      // 8. Reduce Exercise
-      // Sum up the instances of each of these
-      const data = [
+  </pre
+      >
+
+      <h3>7. Sort the people alphabetically by last name</h3>
+      <div id="num7"></div>
+      <pre class="an">
+const peopleSortedByNameAlphabetically = people.sort();
+console.log(peopleSortedByNameAlphabetically);
+      </pre>
+      <h3>8. Reduce Exercise— Sum up the instances of each of these:</h3>
+      <pre>
+const data = [
         'car',
         'car',
         'truck',
@@ -175,19 +162,24 @@
         'van',
         'car',
         'truck'
-      ];
-      const dataFrequency = data.reduce(function(objectFrequenciesContainer, currentBitOfData) {
+      ];</pre
+      >
+      <div id="num8"></div>
+      <pre class="answerCode">
+const dataFrequency = data.reduce(function(objectFrequenciesContainer, currentBitOfData) {
         if(!objectFrequenciesContainer[currentBitOfData]) {
           objectFrequenciesContainer[currentBitOfData] = 0;
         }
         objectFrequenciesContainer[currentBitOfData]++;
         return objectFrequenciesContainer;
       }, {});
-      console.log(dataFrequency);
-  </script>
-  <script>
-    // ## Array Cardio Day 2
-    const people2 = [
+      console.log(dataFrequency);</pre
+      >
+    </section>
+    <section>
+      <h1>## Array Cardio Day 2</h1>
+      <pre>
+        const people2 = [
       { name: 'Wes', year: 1988 },
       { name: 'Kait', year: 1986 },
       { name: 'Irv', year: 1970 },
@@ -200,26 +192,37 @@
       { text: 'Ramen is my fav food ever', id: 123523 },
       { text: 'Nice Nice Nice!', id: 542328 }
     ];
-    // Some and Every Checks
-    // Array.prototype.some() // is at least one person 19 or older?
-    const olderThan_19 = people2.some(function(current) {
-      return (2021 - current.year) > 19;
-    });
+      </pre>
+      <h3>Is at least one person 19 or older?</h3>
+      <div id="num10"></div>
+      <pre class="answerCode">
+const olderThan_19 = people2.some(function(current) {
+  return (2021 - current.year) > 19;
+});
     console.log(olderThan_19);
-    // Array.prototype.every() // is everyone 19 or older?
-    const allOlderThan_19 = people2.every(current => 2021 - current.year > 19);
-    console.log(allOlderThan_19);
-    // Array.prototype.find()
-    // Find is like filter, but instead returns just the one you are looking for
-    // find the comment with the ID of 823423
-    const found_comment = comments.find(current => current.id === 823423);
-    console.log(found_comment);
-    // Array.prototype.findIndex()
-    // Find the comment with this ID
-    // delete the comment with the ID of 823423
-    comments.splice(comments.indexOf(found_comment), 1);
-    console.log(comments);
 
-    </pre>
+      </pre>
+      <h3>—Is everyone 19 or older?</h3>
+      <div id="num11"></div>
+      <pre class="answerCode">
+const allOlderThan_19 = people2.every(current => 2021 - current.year > 19);
+console.log(allOlderThan_19);
+
+      </pre>
+      <h3>Find the comment with the ID of 823423</h3>
+      <div id="num12"></div>
+      <pre class="answerCode">
+const found_comment = comments.find(current => current.id === 823423);
+console.log(found_comment);
+      </pre>
+      <h3>Find the comment with that^^ ID & delete the</h3>
+      <div id="num13"></div>
+      <pre class="answerCode">
+        
+comments.splice(comments.indexOf(found_comment), 1);
+console.log(comments);
+    </pre
+      >
+    </section>
   </body>
 </html>

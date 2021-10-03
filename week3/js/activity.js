@@ -63,30 +63,35 @@
       // 1. Filter the list of inventors for those who were born in the 1500's
       const inventors_1500s = inventors.filter(inventor => (inventor.year < 1600) && (inventor.year >= 1500));
       console.log(inventors_1500s);
-      document.querySelector("#num1").html = inventors_1500s;
+      document.querySelector("#num1").innerHTML = JSON.stringify(inventors_1500s);
       // Array.prototype.map()
       // 2. Give us an array of the inventors' first and last names
       const names = inventors.map(function(currentValue) {
         return currentValue.first + " " + currentValue.last;
       });
       console.log(names);
+      document.querySelector("#num2").innerHTML = names;
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
       const sortedInventors = inventors.sort(function(a, b) {
         return a.year - b.year;
       });
       console.log(sortedInventors);
+      document.querySelector("#num3").innerHTML = JSON.stringify(sortedInventors);
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live?
       const totalYears = inventors.reduce(function(total, current) {
         return total + (current.passed - current.year);
       }, 0);
       console.log(totalYears);
+      document.querySelector("#num4").innerHTML = totalYears;
       // 5. Sort the inventors by years lived
       const ageSortedInventors = inventors.sort(function(a, b) {
         return (a.passed - a.year) - (b.passed - b.year);
       });
       console.log(ageSortedInventors);
+     
+      
       // Note: This completely unneccesarry code is creating a new
       // array of inventors WITH an extra age perameter.
       const extraValue = ageSortedInventors.map(function(current) {
@@ -97,6 +102,7 @@
           age:current.passed - current.year};
       });
       console.log(extraValue);
+      document.querySelector("#num5").innerHTML = JSON.stringify(extraValue);
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
       // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
       // goto the link above and open the console. Paste the following two lines in.  That will create a list of links in memory that you can reference through the console. Use that list to finish the problem.
@@ -121,6 +127,7 @@
       // Sort the people alphabetically by last name
       const peopleSortedByNameAlphabetically = people.sort();
       console.log(peopleSortedByNameAlphabetically);
+      document.querySelector("#num7").innerHTML = peopleSortedByNameAlphabetically;
       // 8. Reduce Exercise
       // Sum up the instances of each of these
       const data = [
@@ -147,8 +154,15 @@
         return objectFrequenciesContainer;
       }, {});
       console.log(dataFrequency);
-  </script>
-  <script>
+      const carTotals = JSON.stringify(dataFrequency);
+      document.querySelector("#num8").innerHTML = carTotals;
+      //{car: 5, truck: 3, bike: 2, walk: 2, van: 2}
+// bike: 2
+// car: 5
+// truck: 3
+// van: 2
+// walk: 2
+ 
     // ## Array Cardio Day 2
     const people2 = [
       { name: 'Wes', year: 1988 },
@@ -169,16 +183,21 @@
       return (2021 - current.year) > 19;
     });
     console.log(olderThan_19);
+    document.querySelector("#num10").innerHTML=olderThan_19;
     // Array.prototype.every() // is everyone 19 or older?
     const allOlderThan_19 = people2.every(current => 2021 - current.year > 19);
     console.log(allOlderThan_19);
+    document.querySelector("#num11").innerHTML= allOlderThan_19;
     // Array.prototype.find()
     // Find is like filter, but instead returns just the one you are looking for
     // find the comment with the ID of 823423
     const found_comment = comments.find(current => current.id === 823423);
     console.log(found_comment);
+    document.querySelector("#num12").innerHTML= found_comment.text + "<br>" + found_comment.id;
     // Array.prototype.findIndex()
     // Find the comment with this ID
     // delete the comment with the ID of 823423
     comments.splice(comments.indexOf(found_comment), 1);
     console.log(comments);
+    document.querySelector("#num13").innerHTML=comments.length;
+

@@ -162,6 +162,11 @@ pre {
  color: black;
  white-space: pre-wrap;
 }
+.answerCode {
+  background-color: aliceblue;
+  max-width: 50%;
+  border: 3px solid navy;
+}
 /* ----------large screen------- */
 @media only screen and (min-width: 600px) {
   body {
