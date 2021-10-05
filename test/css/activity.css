@@ -1,0 +1,38 @@
+section {
+    text-align: center;
+}.tictactoebox {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  
+  max-width: 530px;
+  margin: 0 auto;
+}
+.middle {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+.center {
+   border-top: 5px solid black;
+   border-bottom: 5px solid black;
+}
+.box {
+  width: 175px;
+  height: 175px;
+  align-items: center;
+  font-family: "Permanent Marker";
+  font-size: 5rem;
+}
+select, label {
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+button {
+  display: block;
+  padding: .5rem;
+  margin: .5rem auto;
+  background-color: aliceblue;
+  font-size: 2rem;
+}
+.playerSelections {
+  margin: 1rem;
+}

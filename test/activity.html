@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/activity.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="css/activity.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <title>Week 4 | Team Activity</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 4 🦖 Team Activity</h1>
+      <h2>Frontend WDD 330</h2>
+      <section>
+        <h3><a href="../index.html">Menu</a></h3>
+        <p>
+          <a
+            href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/5"
+            target="_blank"
+            >JavaScript: Novice to Ninja, Ch. 6-7</a
+          >
+        </p>
+
+        <p><a href="index.html"> Back to Journal</a></p>
+      </section>
+    </header>
+    <main>
+      <section>
+        <h2>Tic-Tac-Toe</h2>
+        <div class="tictactoebox">
+          <div data-cell-index="0" class="box left top" ></div>
+          <div data-cell-index="1" class="box middle top" ></div>
+          <div data-cell-index="2" class="box right top" ></div>
+          <div data-cell-index="3" class="box left center" ></div>
+          <div data-cell-index="4" class="box middle center" "></div>
+          <div data-cell-index="5" class="box right center" ></div>
+          <div data-cell-index="6" class="box left bottom" ></div>
+          <div data-cell-index="7" class="box middle bottom" ></div>
+          <div data-cell-index="8" class="box right bottom" ></div>
+        </div>
+        <div class="playerSelections">
+          <label for="tic"> Player 1:</label> 
+          <span id="token1"></span>
+          <select name="tic" id="player1" onchange="player1Token()">
+            <option value="🐛">🐛</option>
+            <option value="👑">👑</option>
+            <option value="🍄">🍄</option>
+            <option value="🤓">🤓</option>
+            <option value="🐳">🐳</option>
+            <option value="✨">✨</option>
+            <option value="🌮">🌮</option>
+          </select>
+          <label for="tac"> Player 2:</label>
+          <span id="token2"></span>
+          <select name="tac" id="player2" onchange="player2Token()">
+            <option value="🦖">🦖</option>
+            <option value="🍔">🍔</option>
+            <option value="🥸">🥸</option>
+            <option value="🤖">🤖</option>
+            <option value="🦄">🦄</option>
+            <option value="💀">💀</option>
+            <option value="🎷">🎷</option>
+          </select>
+        <button class="restart">New Game!</button>
+        <h1 class="gameStatus"></h1>
+
+
+    
+        </div>
+      </section>
+    </main>
+    <a href="https://dev.to/bornasepic/pure-and-simple-tic-tac-toe-with-javascript-4pgn">Dev.to</a>
+  </body>
+</html>

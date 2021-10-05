@@ -5,4 +5,5 @@ const options = {
       day: "numeric",
       year: "numeric",
     };
-document.querySelector("#currentyear").innerHTML = date.getFullYear();
+document.querySelector("#currentyear").innerHTML 
+= date.getFullYear();

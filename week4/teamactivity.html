@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        text-align: center;
+      }
+
+      section {
+        display: flex;
+        flex-direction: row;
+        margin: 3rem 10%;
+        align-items: center;
+      }
+
+      .tictactoebox {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        max-width: 530px;
+        margin: 0 auto;
+      }
+
+      .middle {
+        border-left: 5px solid black;
+        border-right: 5px solid black;
+      }
+
+      .center {
+        border-top: 5px solid black;
+        border-bottom: 5px solid black;
+      }
+
+      .box {
+        width: 175px;
+        height: 175px;
+        align-items: center;
+        font-family: "Permanent Marker";
+        font-size: 5rem;
+      }
+
+      button {
+        display: block;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+        background-color: aliceblue;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div class="tictactoebox">
+          <div id="0" class="box left top"></div>
+          <div id="1" class="box middle top"></div>
+          <div id="2" class="box right top"></div>
+          <div id="3" class="box left center"></div>
+          <div id="4" class="box middle center"></div>
+          <div id="5" class="box right center"></div>
+          <div id="6" class="box left bottom"></div>
+          <div id="7" class="box middle bottom"></div>
+          <div id="8" class="box right bottom"></div>
+        </div>
+        <div>
+          <button type="reset">New Game!</button>
+        </div>
+      </section>
+    </main>
+    <script>
+      let count = 0;
+
+      const clickArea = document.querySelectorAll(".box");
+      console.log(clickArea);
+      for (let i = 0; i < clickArea.length; i++) {
+        clickArea[i].addEventListener("click", boxClick);
+      }
+
+      // This was our first attempt at putting in x's
+      // function boxClick() {
+      // const token = document.createElement('p')
+      // token.textContent = "X"
+      // this.append(token);
+      // }
+
+      // This is our second attempt
+      function boxClick() {
+        if (this.innerHTML == "") {
+          if (count < 9) {
+            if (count % 2 == 0) {
+              this.innerHTML = "x";
+            } else {
+              this.innerHTML = "o";
+            }
+          }
+          count++;
+        }
+        checkWinner();
+      }
+      const winningList = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      function checkWinner() {
+        // Tanner/Ben wanted to write this later
+      }
+      const butt = document
+        .querySelector("button")
+        .addEventListener("click", () => {
+          window.location.reload();
+        });
+    </script>
+  </body>
+</html>
