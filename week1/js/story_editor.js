@@ -17,3 +17,4 @@ function loadStory() {
   var storyHTML = localStorage.getItem(storyName)
   document.getElementById("story_editor").value = storyHTML
 }
+ 

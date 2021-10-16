@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/todo.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <h1>To DO List</h1>
+    <div>
+      <label for="item">Add Item:</label>
+      <input type="text" name="item" id="item" autofocus required />
+      <button type="click" class="addButton">Add to List!</button>
+    </div>
+    <div class="buttonDiv">
+      <button type="click" class="alltaskButton">All Tasks</button>
+      <button type="click" class="completedButton">Completed</button>
+      <button type="click" class="activeButton">Active</button>
+    </div>
+
+    <div>
+      <ul id="output"></ul>
+    </div>
+    <script src="js/ToDos.js"></script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ashley Zufelt" />
+  <link type="normalize/css" rel="stylesheet" href="#" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script src="js/script.js" defer></script>
+
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <title>Ashley Zufelt Frontend WDD330</title>
+</head>
+
+<body>
+  <div class="notepad"></div>
+  <div class="gridbox">
+    <header>
+      <h1>Week 5</h1>
+      <h2>Frontend WDD 330</h2>
+      <section>
+        <h3><a href="../index.html">Menu</a></h3>
+        <p>
+          <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/10"
+            target="_blank">JS: Ninja Ch.10</a>
+        </p>
+
+        <p>Oct. 13, 2021</p>
+      </section>
+    </header>
+    <main class="contentbox">
+      <aside>
+        <h2>Activity/Excercise:</h2>
+        <ul class="activitylinks">
+          <li>
+            <a href="teamactivity/index.html">Team Activity</a><br><br>
+            <a href="teamactivity/test/list.html">Grocery List</a><br><br>
+            <a href="todolist.html">ToDo List</a>
+          </li>
+        </ul>
+
+        <h2>Keywords:</h2>
+        <ul>
+          <li>
+            <span class="vocab">Exception</span>-error that produces a return value used to to fix the error.
+          </li>
+          <li>
+            <span class="vocab">Slack Trace</span>-steps backward to find the error
+          </li>
+          <li>
+            <span class="vocab">Strict Mode/"Sloppy Mode"</span> -increases possibility of errors, to weed out poorly
+            written code
+          </li>
+          <li>
+            <span class="vocab">Test-driven Development-</span> process of writing tests before writing code.
+          </li>
+        
+        </ul>
+        <h2>Questions:</h2>
+        <ul>
+        </ul>
+      </aside>
+      <section class="notes">
+        <h2>Notes:</h2>
+        <h1>DeBugging</h1>
+        <ul>
+          <li>
+            <span class="vocab"> Errors</span>
+            <ul>
+              <li>System Error -Problem with system or external device</li>
+              <li>Program Error -incorrect syntax or faulty logic /possible typo <h3>This one is our responsibility as a
+                  programmer</h3>
+              </li>
+              <li>User Error -User has entered data incorrectly and program is unable to process</li>
+
+
+              <li>Exception Errors & Slack Traces</li>
+              <li>Warnings may still allow code to be executed, but that could lead to problems later. </li>
+            </ul>
+          </li>
+          <li><span class="vocab">Linting Tools</span>Designed to highlight sloppy programming, syntax errors,
+            indetations, etc. Enforce a programming style. *Useful when working as a team. Can use an extenions/plugin,
+            or can install linting using npm. Read more on <a
+              href="https://www.sitepoint.com/up-and-running-with-eslint-the-pluggable-javascript-linter/">ESLint</a>
+          </li>
+          <li><span class="vocab">Feature Detection</span>-using if statement to check if object method exists before
+            trying to actually call the method (Kinda like how Bro. Blazzard had I us put in, "if the input is not
+            blank, then do these things")
+            <ul>
+              <li>
+                <pre>
+if (window.holoDeck) {
+    virtualReality.activate();
+}
+            </pre>By wrapping it in the if statement it will check first, and only run if no errors, else it will
+                return undefined and not continue running.</li>
+              <li>
+                <a href="https://modernizr.com/docs">Modernizr</a> a library that implements deature detection.
+              </li>
+              <li>Browser Sniffing is a deprecated way of checking for browser support.</li>
+            </ul>
+          </li>
+          <li><span class="vocab">Debugging</span>
+            <ul>
+              <li>Breakpoints- view the value at different points to see what is being defined.</li>
+              <li>aler()- to display dialog at a certian point. stops program fromrunning until OK is click. </li>
+          </li>
+          <li><span class="vocab">Console</span>
+          <li>console.log()- method to display alert or verification of working code.</li>
+        </ul>
+        </li>
+        <li><span class="vocab">Debugging TOOLS</span>
+          <ul>
+            <li>Firefox</li>
+            <li>Edge</li>
+            <li>Chrome</li>
+            <li>Safari</li>
+          </ul>
+          <li> "Debugger" as keyword in code! <pre>
+function amIOldEnough(age){
+    debugger;
+        if (age < 12) {
+        debugger;
+        return 'No, sorry.';
+        } else if (age < 18) {
+        debugger;
+        return 'Only if you are accompanied by an adult.';
+        } else {
+        debugger;
+        return 'Yep, come on in!';
+    }
+}
+
+amIOldEnough(16);
+          </pre>You can hover over variables in the browser to see what value they hold.</li>
+        </li>
+        <li><span class="vocab">Error Objects</span></li>
+        <li>
+          Throwing Exceptions
+        </li>
+        <li>Exception Handling- upon an exception, program terminates with error message. We can deal with the error and keep program running
+          <ul>
+            <li>try</li>
+            <li>catch</li>
+            <li>finally</li>
+          </ul>
+          <pre>
+function imaginarySquareRoot(number) {
+    'use strict';
+    try {
+        return String(squareRoot(number));
+    } catch(error) {
+        return squareRoot(-number)+'i';
+    }
+}
+          </pre>
+        </li>
+        <li><span class="vocab">Tests</span>-TEST TEST TEST. Testing is so very important. 
+          <ul><li><span class="vocab">Test-driven Dev-</span>Write test before writing code, next step is to write code to pass the test. Then refactor code to make it faster, more reliable, and less repetitive.</li></ul>
+        </li>
+        </ul>
+      </section>
+    </main>
+    <section>
+      <h2>Summary</h2>
+      <p>I feel quite confident in my browser de-bugging abilities... I spend FAR too long in the debuggin stage. 😂 I haven't used the debugging tools within my script very much, other than logging to console to do checks on things.</p>
+      <p>MY summary or "learn" is that we have so many tools to use, and using them is all part of the development process. It's <span class="vocab">OKAY</span> to think about how the program needs to be written, write and test small pieces at a time, then when it's all working, REFACTOR it. It doesn't have to be the fastest, cleanest, more precise before or while I write it, get it working, error free, then look for ways to improve upon what has been written.</p>
+      <p>Also, look for ways to break the code into pieces or snippets so the program doesn't have to rely on a BIG block of code to run. That way if there are errors somewhere, it can be more easily identified. </p>
+    </section>
+  </div>
+  <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: [
+          "Permanent Marker",
+          "Shadows Into Light Two",
+          "Montserrat",
+        ],
+      },
+    });
+  </script>
+</body>
+
+</html>

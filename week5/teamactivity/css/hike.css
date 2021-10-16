@@ -1,0 +1,57 @@
+:root {
+  --main: rgb(46, 75, 21);
+  --key: whitesmoke;
+  --accent: white;
+}
+
+body {
+  text-align: center;
+}img {
+  max-width: 100%;
+}
+body {
+  background-color: var(--main);
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  
+  color: aliceblue;
+  padding: 3rem;
+}
+ul {
+    background-color: var(--key);
+  list-style: none;
+  padding-left:0;
+}
+li {
+    padding: 1rem;
+}
+ul li:nth-child(even){
+  background-color: var(--accent);
+}
+.light div:nth-child(3n){
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+}
+
+button {
+  padding: .5rem 1rem;
+  background-color:var(--main);
+  color: var(--key);
+  margin: 1rem;
+  border-radius: 25px;
+   border: 3px solid var(--main)
+}
+button:active {
+  background-color:var(--key);
+  color: var(--main);
+  border: 3px solid var(--main)
+}
+.hikestyles li :nth-of-type(div){
+  text-align: left;
+}

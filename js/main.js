@@ -3,7 +3,7 @@ const requestLinks = "js/main.json";
 fetch(requestLinks)
 .then(function (response) {
   return response.json();
-})
+}) 
 .then(function (jsObject){
   const weeks = jsObject['assignments'];
   console.log(weeks);
