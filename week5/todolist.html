@@ -4,23 +4,37 @@
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="css/todo.css" />
     <title>To Do List</title>
+    <style>
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
     <h1>To DO List</h1>
-    <div>
+    <form class="todo-form">
       <label for="item">Add Item:</label>
-      <input type="text" name="item" id="item" autofocus required />
-      <button type="click" class="addButton">Add to List!</button>
-    </div>
+      <input type="text" name="item" id="item" class="item todo-input" autofocus />
+      <button type="submit" class="addButton" id="addButton">
+        Add to List!
+      </button>
+   
     <div class="buttonDiv">
-      <button type="click" class="alltaskButton">All Tasks</button>
-      <button type="click" class="completedButton">Completed</button>
-      <button type="click" class="activeButton">Active</button>
+      <button type="submit" class="alltaskButton" id="alltaskButton">
+        All Tasks
+      </button>
+      <button type="submit" class="completedButton" id="completedButton">
+        Completed
+      </button>
+      <button type="submit" class="activeButton" id="activeButton">
+        Active
+      </button>
+       </form>
     </div>
 
     <div>
-      <ul id="output"></ul>
+      <ul id="todo-list" class="todo-list"></ul>
     </div>
-    <script src="js/ToDos.js"></script>
+    <script src="js/TuesdayToDo.js"></script>
   </body>
 </html>

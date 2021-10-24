@@ -3,40 +3,26 @@
 //stringify and store JSON to local storage
 
 
-//add listener
-//add item object/push to local
-//render todo list view -foreach
-//add whole list to local storage
-//get from local
-//toggle .foreach item.id -data-key
-//Add globally to local storage
-//function delete todo item //add to local
-//globally GET from local
-
-
 const button = document.querySelector('button');
 button.addEventListener('click', listfunction);
 const todoList = [];
 
 /// build JSON 
 function listfunction() {
-  if (button != "") {
-    const itemValue = document.querySelector("#item").value;
-    let object = {}
-    todoList.push(object);
-    var timestamp = new Date().getTime();
-    object.timestamp = timestamp;
-    object.value = itemValue;
-    object.status = "active";
-    localStorage.setItem('todoList', JSON.stringify(todoList));
-    document.querySelector('#item').value = '';
-    // console.log(todoList);
-    displayList();
-  };
+  const itemValue = document.querySelector("#item").value;
+  let object = {}
+  todoList.push(object);
+  var timestamp = new Date().getTime();
 
+  object.timestamp = timestamp;
+  object.value = itemValue;
+  object.status = "active";
+  document.querySelector('#item').value = '';
+
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+
+  displayList();
 }
-
-
 console.log(todoList);
 
 const completedButton = document.querySelector('.completedButton');
@@ -48,42 +34,48 @@ activeButton.addEventListener('click', listfunction);
 //use toggle class attribute to change active to complete/checked
 
 function displayList() {
-  
-    var getList = JSON.parse(window.localStorage.getItem('todoList'));
-    let i = 0;
-    getList.forEach((item) => {
-      document.querySelector('#output').innerHTML =
-        `     <li class="itemLine">
+var getList = JSON.parse(window.localStorage.getItem('todoList'));
+// console.log(getList);
+
+ let i = 0;
+
+// let itemList = getList;
+let item = getList[i];
+getList.forEach(item => {
+ 
+  document.querySelector('#output').innerHTML =
+          `     <li class="itemLine">
        <label for="${item.value}" class="itemLabel">
          <input type="checkbox" name="${item.value}" class="checkbox">${item.value}</input>
        </label>
          <button name="${item.value}Delete" class="itemDelete">❌</button>
       </li>`
-      i++
-    });
+  
+});
 
-    let key = item.timestamp;
-    let value = item.name;
-    localStorage.setItem(key, value);
-    // input.value = ''; //this clears input field after li item created
-    // listItem.focus; //resets focus so it can listen for a new entry
-    const deletebutton = document.querySelector(".itemDelete").value;
-    deletebutton.addEventListener('click', function () {
-      output.removeChild(li); //go to the output and remove child of the parent called li, because we placed the X as a child element of each li
-      localStorage.removeItem(key)
-      listItem.focus;
-    });
-    checkbox.addEventListener('change', function () {
-      localStorage.getItem(key)
-      localStorage.setItem(key, "completed")
-    })
-  };
-function getListFromLocal() {
+
 
 }
-getListFromLocal();
 
+//   if (localStorage.getItem("todoList") !== null) {
+//     var getList = JSON.parse(window.localStorage.getItem('todoList'));
+//     //  const getList = localStorage.getItem('todoList');
+//     i = 0;
+//     // const outputList = getList[i];
+//     for (i, length = getList.length; i < length; i++) {
+//       if (getList.value != '') {
+//         document.querySelector('#output').innerHTML =
+//           `     <li class="itemLine">
+//        <label for="${getList[i].value}" class="itemLabel">
+//          <input type="checkbox" name="${getList.value}" class="checkbox">${getList.value}</input>
+//        </label>
+//          <button name="${getList.value}Delete" class="itemDelete">❌</button>
+//       </li>`
 
+//       }
+//     };
+//   }
+// };
 
 
 
