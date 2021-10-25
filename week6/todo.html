@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="css/todo.css" />
-    <title>To Do List</title>
-    <style>
-      .completed {
-        text-decoration: line-through;
-      }
-    </style>
-  </head>
+
+<head>
+  <meta charset="utf-8" />
+  <link type="text/css" rel="stylesheet" href="css/todo.css" />
+  <title>To Do List</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <ul id="todo-list" class="todo-list"></ul>
+  </div>
+
   <body>
-    <h1>To DO List</h1>
-    <form class="todo-form">
-      <label for="item">Add Item:</label>
-      <input type="text" name="item" id="item" class="item todo-input" autofocus />
-      <button type="submit" class="addButton" id="addButton">
-        Add to List!
-      </button>
-   
-    <div class="buttonDiv">
-      <button type="submit" class="alltaskButton" id="alltaskButton">
-        All Tasks
-      </button>
-      <button type="submit" class="completedButton" id="completedButton">
-        Completed
-      </button>
-      <button type="submit" class="activeButton" id="activeButton">
-        Active
-      </button>
-       </form>
+    <h1>To Do List</h1>
+    <form class="todo-form"></form>
+    <div class="input">
+      <label for="listItem">Add Item:</label>
+      <input type="text" name="listItem" id="listItem" />
+    </form>
+      <div class="buttons">
+        <button class="addButton" type="click"> Add to List!</button>
+        <button type="click" id="all">All Tasks</button>
+        <button type="click" id="active">Active</button>
+        <button type="click" id="complete">Completed</button>
+      </div>
     </div>
 
-    <div>
-      <ul id="todo-list" class="todo-list"></ul>
+    <div class="outputfield">
+      <ul id="output"></ul>
     </div>
+
+    </div>
+
     <script src="js/w6todolist.js"></script>
   </body>
+
 </html>
