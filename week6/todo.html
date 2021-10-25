@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/todo.css" />
+    <title>To Do List</title>
+    <style>
+      .completed {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>To DO List</h1>
+    <form class="todo-form">
+      <label for="item">Add Item:</label>
+      <input type="text" name="item" id="item" class="item todo-input" autofocus />
+      <button type="submit" class="addButton" id="addButton">
+        Add to List!
+      </button>
+   
+    <div class="buttonDiv">
+      <button type="submit" class="alltaskButton" id="alltaskButton">
+        All Tasks
+      </button>
+      <button type="submit" class="completedButton" id="completedButton">
+        Completed
+      </button>
+      <button type="submit" class="activeButton" id="activeButton">
+        Active
+      </button>
+       </form>
+    </div>
+
+    <div>
+      <ul id="todo-list" class="todo-list"></ul>
+    </div>
+    <script src="js/todo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+body {
+  background-color: aliceblue;
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+input {
+  padding: .3rem;
+}
+
+button {
+  padding: .5rem;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  border: 2px solid gray;
+  border-radius: 2px;
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+ul li:nth-child(even) {
+  background-color: whitesmoke;
+
+}
+
+input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+li button {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+}
+
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 1rem;
+
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    max-width: 40%;
+  }
+}
