@@ -12,6 +12,7 @@ input {
 
 button {
   padding: .5rem;
+  margin: .5rem;
 }
 
 li {
@@ -23,19 +24,23 @@ li {
   border: 2px solid gray;
   border-radius: 2px;
   background-color: lightgray;
-  padding: 1rem;
+  padding: 0;
+  font-size: 16px;
 }
 
 ul li:nth-child(even) {
   background-color: whitesmoke;
-
+}
+ul li label {
+  text-align: left;
+  min-width: 60%;
 }
 
 input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 li button {
@@ -51,9 +56,16 @@ li button {
   margin: 1rem;
 
 }
+form {
+  border: 2px solid black;
+  border-radius: 25px;
+}
 
+.filterBtns {
+  text-align: center;
+}
 @media only screen and (min-width: 600px) {
   body {
-    max-width: 40%;
+    max-width: 50%;
   }
 }

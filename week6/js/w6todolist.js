@@ -32,21 +32,13 @@ function store() {
     }
 }
 
-
-
-
-
 function outputList(list) {
     document.querySelector("#output").innerHTML = '';
-    // console.log(todoList);
-    // const list = JSON.parse(localStorage.getItem('todoList', JSON.stringify(todoList)));
-    // console.log(list);
 
     let i = 0;
     for (i; i < list.length; i++) {
         let itemName = list[i].newItem.name;
         let itemTS = list[i].newItem.timestamp;
-
 
         if (itemName != '') {
             let li = document.createElement('li');
@@ -58,13 +50,9 @@ function outputList(list) {
             checkbox.setAttribute('type', 'checkbox');
             checkbox.setAttribute('class', 'checkbox');
             checkbox.setAttribute('name', itemName);
-            
-
             if (list[i].newItem.complete) {
                 checkbox.checked = true;
             }
-
-
             let d = label.textContent;
             let ts = li.getAttribute('data-key');
 
@@ -103,8 +91,6 @@ function outputList(list) {
                 }
 
             })
-
-
             deletebutton.addEventListener('click', function () {
                 let list = JSON.parse(localStorage.getItem('todoList', JSON.stringify(todoList)));
 
