@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link type="normalize/css" rel="stylesheet" href="#" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="js/script.js" defer></script>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <title>Ashley Zufelt Frontend WDD330</title>
+  </head>
+
+  <body>
+    <div class="notepad"></div>
+    <div class="gridbox">
+      <header>
+        <h1>Week 7</h1>
+        <h2>Frontend WDD 330</h2>
+        <section>
+          <h3><a href="../index.html">Menu</a></h3>
+          <p>
+            <a
+              href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/11"
+              target="_blank"
+              >JS: Ninja Ch.11,13</a
+            >
+          </p>
+
+          <p>Oct. 30, 2021</p>
+        </section>
+      </header>
+      <main class="contentbox">
+        <aside>
+          <h2>Activity/Excercise:</h2>
+          <ul class="activitylinks">
+            <li>
+              <a href="hiking-complete.html">Hike List</a>
+            </li>
+            <li><a  href="ajax.html">Chuck Norris API</a></li>
+            <li><a href="todo.html">ToDo List Ch. 13-AJAX</a></li>
+          </ul>
+
+          <h2>Keywords:</h2>
+          <ul>
+            <li><span class="vocab">Spinners—</span> a message displayerd with user is waiting. <a href="http://www.ajaxload.info/" target="_b;blank">AJAX Loiad</a>
+            </li>
+          </ul>
+          <ul>
+            <li><span class="vocab">First-class Objects—</span></li>
+            <li><span class="vocab">IIFE—</span>Immediately Invoked Function Expression... allows variables to be temporarily used within a function, but not affect future code.</li>
+            <li><span class="vocab"><a href="http://callbackhell.com/" target="_blank">Callback Hell</a></span> </li>
+            <li><span class="vocab">Currying—</span></li>
+          </ul>
+          <h2>Questions:</h2>
+          <ul></ul>
+        </aside>
+        <section class="notes">
+          <h2>Notes:</h2>
+          <ul>
+            <li>
+              <span class="vocab">Function Properties/Methods</span>-can have
+              properties and methods such as:
+              <ul>
+                Properties:
+                <li>length</li>
+                <li>name</li>
+              </ul>
+              <ul>
+                Methods:
+            <li>
+              call() can be used to set value of
+              <span><pre>this</pre></span> inside of a function when an object
+              is provided as the first argument.<br />
+              <pre>
+function sayHello(){
+  return `Hello my name is ${ this.name }`;
+}
+          </pre
+              >
+            </li>
+            <pre>
+
+const clark = { name: 'Clark'};
+const bruce = { name: 'Bruce'};
+
+sayHello.call(clark);
+<<'Hello, my name is Clark'
+
+sayHello.call(bruce);
+<<'Hello, my name if Bruce'
+            </pre>
+            <li>If a function called requires parameters, they  need to be provided as arguments after the first argument, which is always the value of <span><pre>this</pre></span> 
+              <pre>
+function sayHello(greeting='Hello'){
+  return `${ greeting }, my name is ${ this.name }`;
+}
+sayHello.call(clark, 'How do you do');
+<<'How do you do, my name is Clark.'
+
+sayHello.call(bruce);
+<<'Hello, my name is Bruce'
+            </pre></li>
+            <li>call() or apply() takes <em>null</em> as it's first argument <pre>
+square.apply(null,[4])
+            </pre></li>
+            <li>Custom properties— <span class="vocab">memoization</span>
+              saves the result of a function in a <span><pre>cache</pre></span> property, so it can be used again later. 
+              <pre>
+function square(x) {
+  square.cache = square.cache || {};
+  if (!square.cache[x]) {
+    square.cahce[x] = x*x;
+    }
+    return square.cache[x]
+}
+              </pre>
+            </li>
+            <li>IIFE—Immediate Invoked Function Expressions, can be used within a function so as not to affect later code or variables.
+<pre>
+  (function() {
+    const name = 'Peter Parker'; //This might be obtained from a cookie in reality
+    console.log(`Welcome back ${name}.`);
+  })();
+</pre>
+<ul>
+  <li>This can also be acheived by placing code inside a block. </li>
+  <li>Variables have block scope when <span><pre>const</pre></span> or <span><pre>let</pre></span> are used. </li>
+</ul> </li>
+<li><span class="vocab">Callbacks</span>—Code runs in order, one piece at a time. But using a callback allows code to be executed out of synchronous order. Meaning a certain piece may only run if a user clicks on it, causing an event to happen.
+<ul>
+  <li>
+    This wait() function accepts a callback, and uses the setTimeout() to callback after a given number of seconds.
+    <pre>
+function wait(messagee, callback, seconds) {
+  setTimeout(callback, seconds * 1000);
+  console.log(message);
+}
+function selfDestruct() {
+  console.log('BOOOOOOOM!!');
+}
+wait('This will self-destruct in five seconds...', selfDestruct, 5);
+console.log('hmmmm, should i accept the mission....?');
+
+<<<
+    </pre>
+   <li><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank"><span class="vocab">Javascript Event Loop</span></a></li>
+  </li>
+</ul></li>
+          </ul>
+          <ul>
+            <li>
+              <span class="vocab">AJAX—</span>Allows pages to be updating without being reloaded. Enables data to be sent/received in the background, while the rest of the program/page continues to run.
+            </li>
+            <li><span class="vocab">Client/Server—</span> allows javascript to request resources from the server, usually they are JSON data or small pieces of html or text.</li>
+            <li>Typical server-side lan guage is PHO, Ruby, Node.js or .NET</li>
+            <li><span class="vocab">Fetch API—</span>uses promises to avoid callback hell.
+            <ul>
+              <li>Has a global <span><pre>fetch()</pre></span> methad that only has one mandatory argument. which is the URL of the resource you want to fetch. 
+              <pre>
+fetch('https://examplee.com/data')
+.then( //code that handles response)
+.catch( //code that runs if the server returns an error)
+              </pre></li>
+              <li>JSON response promise:
+                <pre>
+fetch(url)
+.then( response => response.json()); //transforms JSON date into Javascript Object
+.then( data => console.log(Object.entries(data)))
+.catch(error => console.log('There was an error:', error))
+                </pre>
+              </li>
+              <li><span class="vocab">Object.entries()—</span>Key/Value pairs & manipulating the object </li>
+              <li><span class="vocab">Creating Response Objects—</span>
+            
+              typically a response object is returned from a request. However you can create your own responce objects using a <em>Constructior Function</em>
+                <pre>
+const repsonse = new Response( 'Hello!', {
+  ok: true,
+  status: 200,
+  statusText: 'OK',
+  type: 'cors',
+  url: '/api'
+});
+              </pre>
+              The first argument is the data that is to be returned (ex. file, or JSON data, etc.)<br>
+              The second argument is an object that can be used to provie values for the properties listed above.
+            </li>
+            <li><span class="vocab">Request() constructor—</span>
+              <ul>
+                <li>
+url – The URL of the requested resource (the only property that is required).
+                </li>
+                <li>
+method – a string that specifies which HTTP method should be used for the request. By default, this is 'GET'.
+                </li>
+                <li>
+headers – This is a Headers object (see later section) that provides details of the request's headers.
+                </li>
+                <li>
+mode – Allows you to specify if CORS is used or not. CORS is enabled by default.
+                </li>
+                <li>
+cache – Allows you to specify how the request will use the browser's cache. For example, you can force it to request a resource and update the cache with the result, or you can force it to only look in the cache for the resource.
+credentials – Lets you specify if cookies should be allowed with the request.
+                </li>
+                <li>
+redirect – Specifies what to do if the response returns a redirect. There’s a choice of three values: 'follow' (the redirect is followed), 'error' (an error is thrown) or 'manual' (the user has to click on a link to follow the redirect).
+                </li>
+              </ul>
+            
+
+
+
+
+</li>
+<li><span class="vocab"> Sending Info via AJAX—</span></li>
+            </ul></li>
+          </ul>
+        </section>
+      </main>
+      <section>
+        <h2>Summary</h2>
+      </section>
+    </div>
+    <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            "Permanent Marker",
+            "Shadows Into Light Two",
+            "Montserrat",
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>

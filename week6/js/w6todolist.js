@@ -1,5 +1,5 @@
 const addButton = document.querySelector('.addButton');
-addButton.addEventListener('click', store, false);
+addButton.addEventListener('click', storage, false);
 let todoList = [];
 
 class item {
@@ -10,7 +10,7 @@ class item {
     }
 }
 
-function store() {
+function storage() {
     const itemValue = document.querySelector("#listItem").value
     document.querySelector('#output').innerHTML = '';
 
