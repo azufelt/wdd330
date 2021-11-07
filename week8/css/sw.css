@@ -1,0 +1,75 @@
+body {
+  background-color: rgb(82, 69, 69);
+  display: flex;
+  flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+.borderBox {
+   background-color: rgb(82, 69, 69);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border: 15px solid rgb(249, 249, 96);
+   border-radius: 25px;;
+   padding: 1rem;
+   margin-bottom: 1rem;
+}
+li {
+  color: white;
+  list-style: none;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+h1, h2, h3 {
+  color: rgb(249, 249, 96);
+}
+.listBox {
+  text-align: left;
+  /* margin: 0 25%; */
+}
+.outputResidents {
+  height: 500px;
+  margin-bottom: 3rem;
+}
+.paginationButtons {
+  display: none;
+}
+.ButtonForm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+input[type="radio"] {
+ opacity: 0;
+}
+.radioBtns label {
+  display: inline-block;
+  background-color: #ddd;
+  padding: 10px 10px;
+  font-family: sans-serif,
+  Arial;
+  font-size: 3rem;
+  border: 5px solid white;
+  border-radius:50px;
+}
+.radioBtns label:hover {
+  background-color: rgb(249, 242, 45);
+}
+.radioBtns input[type="radio"]:focus+label {
+  border: 2px dashed rgb(249, 242, 45);
+}
+.radioBtns input[type="radio"]:checked+label {
+  background-color: rgb(250, 249, 199);
+  border-color: rgb(249, 242, 45);
+}
+
+button {
+  background-color: whitesmoke;
+  padding: .5rem;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+

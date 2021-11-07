@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(62, 156, 228);
+}
+.content {
+display: flex;
+flex-direction: row;
+margin: 0 auto;
+justify-content: center;
+}
+h1 {
+  color: yellow;
+  font-size: 3rem;
+  text-align: center;
+}
+.buttonBox {
+text-align: center;
+margin: 2rem;
+}
+img {
+  margin: 2rem;
+  background:rgb(62, 156, 228);
+}
+.listBox {
+  padding: 3rem;
+  background-color:whitesmoke;
+  border: 5px solid rgb(190, 23, 23);
+}
+button {
+  background-color:whitesmoke;
+  padding: 1rem;
+  border-radius: 5%;
+  font-size: 1rem;
+  color: rgb(190, 23, 23);
+}

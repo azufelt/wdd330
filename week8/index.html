@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link type="normalize/css" rel="stylesheet" href="#" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/transitions.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="js/script.js" defer></script>
+    <script src="js/canvas.js" defer></script>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <title>Ashley Zufelt Frontend WDD330</title>
+  </head>
+
+  <body>
+    <div class="notepad"></div>
+    <div class="gridbox">
+      <header>
+        <h1>Week 8</h1>
+        <h2>Frontend WDD 330</h2>
+        <section>
+          <h3><a href="../index.html">Menu</a></h3>
+          <p>
+            <a
+              href="https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition"
+              target="_blank"
+              >CSS for the Real World. 8, 12</a
+            >
+          </p>
+
+          <p>Nov 1, 2021</p>
+        </section>
+      </header>
+      <main class="contentbox">
+        <aside>
+          <h2>Activity/Excercise:</h2>
+          <ul class="activitylinks">
+            <li><a href="/week8/starwars.html">Star Wars</a></li>
+            <li><a href="/week8/pokemon.html">Pokemon</a></li>
+          </ul>
+
+          <h2>Keywords:</h2>
+          <ul>
+            <li><span class="vocab">transition-property</span></li>
+            <li><span class="vocab">transition-duration</span></li>
+            <li>
+              <span class="vocab">transition-timing-function</span>
+              <ul>
+                <li>ease</li>
+                <li>linear</li>
+                <li>ease-in</li>
+                <li>ease-out</li>
+                <li>ease-in-out</li>
+              </ul>
+            </li>
+            <li>
+              <span class="vocab">cubic-bezier</span>liner = cubic-bezier(0, 0,
+              1, 1) <-- This method is great if y0ou've studied six yers of
+              calculus.
+            </li>
+            <li><span class="vocab">transition-delay</span></li>
+            <li><span class="vocab">SVG—</span>Scalable Vector Graphics</li>
+          </ul>
+        </aside>
+        <section class="notes">
+          <h2>Notes:</h2>
+          <ul>
+            <li class="vocab">Transitions/Animations/Keyframes</li>
+            <li>
+              <span class="vocab">Transform—</span>Translate(x,y) uses similar
+              spacing such as a <span><pre>position:absolute</pre></span> Use
+              -webkit-transform to accommodate older browsers. Transitions are
+              declared with regular styes on an element.
+              <ul>
+                <li class="ad-ad2">
+                  <h2>Put your <span>dukes</span> up, sire</h2>
+                </li>
+              </ul>
+            </li>
+            <li class="ad-ad2">
+              <h2><span>Scaling—</span></h2>
+              scales horizontally then vertically. Use a single value to
+              grow/shrink both directions.
+            </li>
+            <li class="ad-ad3">
+              <h2><span>Rotate</span></h2>
+              Transforms are applied in order, so pu the rotate() first.
+            </li>
+            <li class="ad-ad4">
+              <h2><span>Skew</span></h2>
+            </li>
+
+            <li><span class="vocab">Transitions—</span></li>
+            <li>
+              <span class="vocab">Transform-origin—</span>Uses same syntax as
+              background-position.
+            </li>
+            <li>
+              transition shorthand... THIS:
+              <pre>
+.ad-ad2 h1 span {
+    transition-property: transform; 
+    transition-duration: 0.2s;  
+    transition-timing-function: ease-out;
+    transition-delay: 50ms;
+}
+              </pre>
+              Turns into THIS:
+              <pre>
+.ad-ad2 h1 span {
+    transition: transform 0.2s ease-out 50ms;
+}         
+              </pre>
+            </li>
+            <li>
+              You can make multiple transitions in one call, change the size,
+              color, position, ease, etc.
+            </li>
+            <li>
+              Keep reading about <span class="vocab">@Keyframes—</span>
+              <div class="arrow">👇🏻</div>
+              <pre>
+.arrow {
+  animation: bounce 2s infinite;
+  text-align: center;
+  font-size: 10rem;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-2rem);
+  }
+
+  60% {
+    transform: translateY(-1rem);
+  }
+}
+              </pre>
+            </li>
+
+            <li>
+              <span class="vocab">Canvas—</span>
+              <ul>
+                <li>Use Canvas to draw anything you can imagine.</li>
+                <li>
+                  text inside a
+                  <pre>canvas</pre>
+                  element is only shown if the browser does not support canvas.
+                </li>
+                <li>
+                  drawing on the canvas is done in JavaScript, so we need a way
+                  to grab the element from the DOM.
+                  <span class="vocab">Give the canvas and ID</span>
+                </li>
+                <li>
+                  Make sure to give canvas both a width and a height<span
+                    class="vocab"
+                    >IN HTML</span
+                  >
+                </li>
+                <li>
+                  This cannot be done in CSS, it will be given a default size of
+                  300x150
+                </li>
+                <li>
+                  <canvas
+                    id="myCanvas"
+                    class="myCanvas"
+                    width="200"
+                    height="200"
+                  >
+                    Sorry! Your browser doesn’t support Canvas.
+                  </canvas>
+                </li>
+                <li>fillStyle, CanvasGradient, CanvasPattern</li>
+                <li>
+                  You can draw other shapes by creating paths, using strokeStyle
+                </li>
+                <li>
+                  <span class="vocab">Radian—</span> a unit to measure angles.
+                  two radians are equal to 360 degrees. Review more about
+                  radians
+                  <a
+                    href="https://betterexplained.com/articles/intuitive-guide-to-angles-degrees-and-radians/"
+                    >here.</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="vocab">SVG—</span>is easier to draw shapes for
+              viewing than using canvas.
+              <div class="heart"></div>
+            
+<pre>
+  .heart {
+  position: relative;
+  width: 100px;
+}
+
+.heart::after,
+.heart::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 400px;
+  width: 100px;
+  height: 180px;
+  background: red;
+  border-radius:100px 100px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0100%;
+}
+
+.heart::after {
+  transform: rotate(45deg);
+  transform-origin: 100%100%;
+  top: 50px;
+  left: 395px;
+}
+</pre>
+              </li>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <section>
+        <h2>Summary</h2>
+        <p>
+          Using CSS animations, transitions, @keyframes, SVG, and < canvas > a
+          static page can become dynamic allowing the user to truly have pieces
+          that interact with their movements.
+        </p>
+        <p>
+          I have already played with lots of @keyframes,simple transitions, and
+          SVG elements. I have some familiarity with canvas and how they can be
+          used. Putting all of these elements together for a truly dynamic web
+          app is something I truly look forward to and get excited about!
+        </p>
+      </section>
+    </div>
+    <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            "Permanent Marker",
+            "Shadows Into Light Two",
+            "Montserrat",
+          ],
+        },
+      });
+    </script>
+  </body>
+</html>
