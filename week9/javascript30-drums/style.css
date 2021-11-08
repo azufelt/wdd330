@@ -49,3 +49,9 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
+
+.moveButton {
+  border: 5px solid red;
+
+  
+}
