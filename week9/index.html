@@ -1,75 +1,354 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ashley Zufelt" />
-    <link type="normalize/css" rel="stylesheet" href="#" />
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
-    <link type="text/css" rel="stylesheet" href="css/transitions.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <script src="js/script.js" defer></script>
-    <script src="js/canvas.js" defer></script>
 
-    <link rel="shortcut icon" href="../favicon.ico" />
-    <title>Ashley Zufelt Frontend WDD330</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ashley Zufelt" />
+  <link type="normalize/css" rel="stylesheet" href="#" />
+  <link type="text/css" rel="stylesheet" href="css/main.css" />
+  <link type="text/css" rel="stylesheet" href="css/transitions.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script src="js/script.js" defer></script>
+  <script src="js/canvas.js" defer></script>
+  <script src="js/reading.js" defer></script>
 
-  <body>
-    <div class="notepad"></div>
-    <div class="gridbox">
-      <header>
-        <h1>Week 9</h1>
-        <h2>Frontend WDD 330</h2>
-        <section>
-          <h3><a href="../index.html">Menu</a></h3>
-          <p>
-            <a
-              href="https://www.sitepoint.com/premium/books/html5-css3-for-the-real-world-2nd-edition"
-              target="_blank"
-              >JavaScript</a
-            >
-          </p>
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <title>Ashley Zufelt Frontend WDD330</title>
+</head>
 
-          <p>Nov 11, 2021</p>
-        </section>
-      </header>
-      <main class="contentbox">
-        <aside>
-          <h2>Activity/Excercise:</h2>
-          <ul class="activitylinks">
+<body>
+  <div class="notepad"></div>
+  <div class="gridbox">
+    <header>
+      <h1>Week 9</h1>
+      <h2>Frontend WDD 330</h2>
+      <section>
+        <h3><a href="../index.html">Menu</a></h3>
+        <p>
+          <a href="https://www.sitepoint.com/premium/books/javascript-novice-to-ninja-2nd-edition/read/9"
+            target="_blank">JavaScript Ninja: Ch. 9 & 14
+          </a>
+        </p>
+
+        <p>Nov 11, 2021</p>
+      </section>
+    </header>
+    <main class="contentbox">
+      <aside>
+        <h2>Activity/Excercise:</h2>
+        <ul class="activitylinks">
+          <li>
+            <a href="javascript30-drums/index-START.html">Music Drums</a>
+          </li>
+          <li>
+            <a href="/week9/final-project-proposal/index2.html">Final Project Proposal</a>
+          </li>
+        </ul>
+
+        <h2>Keywords:</h2>
+        <ul>
+          <li><span class="vocab">Global Object—</span> global scope</li>
+          <li><span class="vocab">Window Object—</span></li>
+          <li><span class="vocab">Shims—</span>a peice of code that adds missing functionality to a browser.</li>
+          <li><span class="vocab">Polyfills—</span> is a <em>shim</em> that achieves the same functionality while also using the API commands that would be used if the feature was supported natively.</li>
+          <li><span class="vocab"></span></li>
+          <li><span class="vocab"></span></li>
+          <li><span class="vocab"></span></li>
+        </ul>
+      </aside>
+      <section class="notes">
+        <h2>Notes:</h2>
+        <ul>
+          <li>
+            <span class="vocab">Browser Object Model—</span> properties and
+            meethods containing info about the browser and screen. Ex-used to
+            find which browser is used to view page, or dimensions of screen
+            it is viewed on. Also can be used to create annoying pop-up
+            windows.
+            <ul>
+              <li>
+                Only available in browser environments, otherwise window
+                object is not available.
+              </li>
+              <li>
+                If you don't know the name of the global object, you can use
+                keyword
+                <pre>this</pre>
+                in the global scope :
+                <pre>const global = this;</pre>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span class="vocab">Global Scope—</span> variables that are
+            created WITHOUT using const, let or var. Global variables can be
+            access in ALL parts of the program.
+            <ul>
+              <li>
+                In general, global objects shouldn't use window object,
+                allowing the code to be more portable between environments.
+                <pre>x = 6;</pre>
+              </li>
+              <li>parseInt() and isNaN() are methods of global object. so you can call them like
+                <pre>Number.parseInt(4.2);</pre>
+              </li>
+            </ul>
+          </li>
+          <li><span class=-"vocab">Window Object—</span>
+            <ul> Use with Care:
+              <li>window.alert()</li>
+              <li>window.confirm()</li>
+              <li>window.prompt()</li>
+            </ul>
+          <li><span class="vocab">Location:</span>
+            <ul>
+              <li>window.location.href</li>
+              <li>protocol</li>
+              <li>host</li>
+              <li>hostname</li>
+              <li>port</li>
+              <li>pathname</li>
+              <li>hash</li>
+              <li>origin</li>
+              <li>window.location.assign('https')</li>
+              <li>window.history.length</li>
+            </ul>
+          </li>
+          <li><span class="vocab">Controlling windows—</span> a new window can be opened using
+            <pre>window.open() method. </pre> This can be used to create a pop-up....
+            <ul>
+              <li>
+                <pre>
+const popup = window.open('https://sitepoint.com', 'SitePoint', width=400, height=400,resizable=yes');
+            </pre>
+              </li>
+              <li>
+                <pre>popup.close();</pre> is used to close the window. </li>
+              <li>pop-up can also be moved using X and Y coordinates, such as move to side when user scrolls, etc.</li>
+            </ul>
+          </li>most useful on mobile devices so you can turn of the screen, or change/lock the orientation.
+          <ul>
             <li>
-              <a href="javascript30-drums/index-START.html">Music Drums</a>
-              <a href="/week9/final-project-proposal/index2.html"
-                >Final Project Proposal</a
-              >
+              <pre>
+window.screen.height 
+<< 1024
+window.screen.width 
+<< 1280
+window.screen.colorDepth;
+window.screen.availWidth
+window.screen.availHeight</pre>
             </li>
           </ul>
+          </li>
+          <li><span class="vocab">Document Object—</span> each window contains a document. DOM, used to manipulate items
+            on the page.
+            <ul>
+              <li>document.write()
+                <pre>
+document.write('Hello, world!');
+              </pre>
+              </li>
+              <li>document.cookie = 'name=Superman';
+                <ul>reading cookies--
+                  <li>
+                    to see current cookie jar contents, enter
+                    <pre>document.cookie</pre>
+                  </li>
+                  <li>document.cookie.split to break the string into an array containing name/value pair, theen use a
+                    <pre>for of</pre> loop to iterate through the array.</li>
+                  <li>cookie expirations</li>
+                  <li>Secure cookies document,cookie = 'name=Batman; secure'; adding secure will ensure it's only
+                    transmitted over secure HTTPS</li>
+                  <li>deleting cookies— set to a time in the past. </li>
+                </ul>
+              </li>
+              <li>Timing Functions—
+                <ul>
+                  <li>
+                    setTimeout().... accepts a callback to a function as firs param, and a number in milliseconds as its
+                    second param.
+                    <pre>
+window.setTimeout( () => alert("Time is up!"), 3000);
+                  </pre>
 
-          <h2>Keywords:</h2>
-        </aside>
-        <section class="notes">
-          <h2>Notes:</h2>
-        </section>
-      </main>
-      <section>
-        <h2>Summary</h2>
+                  </li>
+                  <li>setInterval()</li>
+                  <li>ALERT-- Be careful when using <em>this</em> keyword, with the timing methods, it is actually set
+                    to the window object, rather than the method's object.</li>
+                </ul>
+
+              </li>
+              <li>
+                <class="vocab">Animation—</class>
+                  <ul>
+                    <li>setTimeout() and setInterval() can be used to make animations. -- requestAnimationFrame()
+
+
+                      <div class="animationSquares">
+
+                        <div id='square'>
+                          <style>
+                            #square {
+                              margin: 100px;
+                              width: 100px;
+                              height: 100px;
+                              background: #d16;
+                            }
+
+                            .animationSquares {
+                              display: flex;
+                              flex-direction: row;
+                            }
+                          </style>
+                        </div>
+
+                        <div id='csssquare'>
+
+                          <style>
+                            #csssquare {
+                              margin: 100px;
+                              width: 100px;
+                              height: 100px;
+                              background: #cc0;
+                              animation: spin 4s linear infinite;
+                            }
+
+                            @keyframes spin {
+                              from {
+                                transform: rotate(0deg);
+                              }
+
+                              to {
+                                transform: rotate(3600deg);
+                              }
+                            }
+                          </style>
+                        </div>
+                      </div>
+
+                    </li>
+                    <li> CSS animation @keyframes— typically it's better to use CSS for animations.</li>
+                  </ul>
+              </li>
+            </ul>
+          </li>
+          <li><span class="vocab">HTML5 APIs—</span>
+            <ul>
+              <li>data- attribute a way to embed custom attributes that are ignored by the browser. Their sole purpose
+                is to be used by Javascript.
+                <ul>
+                  <li>Must start with "data-"</li>
+                  <li>contain only lowercase letters, numbers, hyphens, dots, colons or underscores</li>
+                  <li>include a string value
+                    <pre>
+                  data-powers = "flight superSpeed"
+                  data-rating = '5'
+                  data-user = 'DAZ'
+                </pre>
+                    can be used to identify particular elements or to filter.
+                    <ul>
+                      <li>
+                        <pre>
+                  <div id='hero' data-powers='flight superSpeed'>
+    Superman
+</div>
+                </pre>
+                        <pre>const superman = document.getElementById('hero');
+const powers = superman.dataset.powers;
+<< 'flight superSpeed'</pre>
+                        the 'data-' prefix gets dropped, and just 'powers' is used as if it's a property of the
+                        <em>dataset</em> object.
+                      </li>
+                      <li>hyphens get replaced with CamelCase</li>
+                    </ul>
+                  </li>
+
+                </ul>
+              <li> Web Storage- has some crucial differences than cookies
+                <ul>
+                  <li>Stored info is NOT shared with the server</li>
+                  <li>Info is available in multiple windows of the browser (if domain is the same)</li>
+                  <li>Storage capacity limit is larger</li>
+                  <li>Stored data does not automatically expire, making cookies a better choice for something like pop-ups once a day.</li>
+                </ul>
+                <li>Local Storage:
+                  <ul> Every time a value is saved to local storage, a 'storage' event is fired. 
+                    <li>
+                      'key' tells us the key of the item that changed. 
+                    </li>
+                    <li>newValue tells the new value of the change</li>
+                    <li>oldValue tells previous value, prior to being changed</li>
+                    <li>storageArea says if it is stored in local or session storage</li>
+                    <li> Add event listener to log info about any changes to the Web Storage
+                      <pre>
+addEventListener('storage', (event) => {
+console.log(`The ${event.key} was updated from ${event.oldValue} to ${event.newValue} and saved in 
+${event.storageArea}`) }, false);
+                    </pre></li>
+                    <li>Only store Strings: 
+                      <pre>
+localStorage.setItem('superman', JSON.stringify(hero);)
+                      </pre>
+                      <pre>
+superman = JSON.parse(localStorage.getItem('superman'));</pre>
+                    </li>
+                  </ul>
+                  <li>Geolocation— used to get geographical position of device
+                    <ul>
+                      <li>
+                        getCurrentPosition()
+                        <pre>
+navigatore.geolocation.getCurrentPosition(youAreHere);
+function youAreHere(position) {
+    console.log(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`); 
+}
+                        </pre>
+                      </li>
+                      <li> Use 'navigator.geolocation.clearWatch(id);'  to stop the callback being called.</li>
+                    </ul>
+                  </li>
+                  <li>Drawing with Canvas—
+                    <ul>
+                      <li>
+                        use getElementById() method to access canvas in JavaScript.
+                      </li>
+                      <li>
+
+                      </li>
+                      <canvas id='canvas' width='400' height='400'>Sorry, but your browser does not support the canvas element</canvas>
+                    </ul>
+                  </li>
+                </li>
+
+              </li>
+          </li>
+        </ul>
+        </li>
+        </ul>
       </section>
-    </div>
-    <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
+    </main>
+    <section>
+      <h2>Summary</h2>
+      <p>Favorite things from this reading was the usefulness and funcionality of the <em>data-</em> attribute. And learning about how to draw on canvas in a simple way that could be updated in real time based on user input data! 
+        </p>
+    </section>
+  </div>
+  <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>
-      WebFont.load({
-        google: {
-          families: [
-            "Permanent Marker",
-            "Shadows Into Light Two",
-            "Montserrat",
-          ],
-        },
-      });
-    </script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: [
+          "Permanent Marker",
+          "Shadows Into Light Two",
+          "Montserrat",
+        ],
+      },
+    });
+  </script>
+</body>
+
 </html>
