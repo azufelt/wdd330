@@ -13,7 +13,7 @@
       name="description"
       content="Site plan for weather website community"
     />
-
+    <script src="js/characterapi.js" defer></script>
     <link type="text/css" rel="stylesheet" href="css/small.css" />
     <link type="text/css" rel="stylesheet" href="css/medium.css" />
     <link type="text/css" rel="stylesheet" href="css/large.css" />
@@ -95,15 +95,21 @@
       </div>
 
       <div class="mediacard">
-        <h2 class="headline1">Trivia:</h2>
-        <a
-          href="https://www.aarp.org/travel/vacation-ideas/family/info-2021/walt-disney-world-quiz.html#quest1"
-          >50th Anniversary Trivia</a
-        >
-        <a
-          href="https://kidadl.com/articles/disney-trivia-questions-with-answers-about-all-things-disney-for-super-fans"
-          >Disney Trivia</a
-        >
+        <h2 class="headline1">Api Call:</h2>
+        <h1>Disney Character</h1>
+        <form action="">
+          <label for="character">Character:</label>
+          <input
+            type="text"
+            id="character"
+            class="characterValue"
+            name="character"
+          /><br /><br />
+          <input type="submit" class="characterSearch" value="Search" />
+        </form>
+        <div class="characterBio">
+          <ul class="returnresults"></ul>
+        </div>
       </div>
 
       <div class="mediacard">
@@ -117,6 +123,18 @@
         <h2>Additional includes:</h2>
         <ul>
           <li>Tic-Tac-Toe, Mouse versus all</li>
+          <li>
+            <a
+              href="https://www.aarp.org/travel/vacation-ideas/family/info-2021/walt-disney-world-quiz.html#quest1"
+              >50th Anniversary Trivia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://kidadl.com/articles/disney-trivia-questions-with-answers-about-all-things-disney-for-super-fans"
+              >Disney Trivia</a
+            >
+          </li>
           <li>
             Fun Inclusions:
             <ul>
