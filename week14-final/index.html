@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- <link
+      type="normalize/css"
+      rel="stylesheet"
+      href="/homepage/css/normalize.css"
+    />
+    <link type="text/css" rel="stylesheet" href="css/main.css" /> -->
+    <!-- <script src="js/script.js" defer></script> -->
+    <script src="js/characterapi.js" defer></script>
+    <script src="js/recipe.js" defer></script>
+    <!-- Import axios library -->
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <!-- Querystring library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/waltograph"
+      type="text/css"
+    />
+
+    <title>Final Project</title>
+  </head>
+  <body>
+    <main>
+      <h1>Disney Character</h1>
+      <form action="">
+        <label for="character">Character:</label>
+        <input
+          type="text"
+          id="character"
+          class="characterValue"
+          name="character"
+        /><br /><br />
+        <input type="submit" class="characterSearch" value="Search" />
+      </form>
+      <div class="characterBio">
+        <ul class="returnresults"></ul>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Montserrat", "Playfair Display"],
+        },
+      });
+    </script>
+  </body>
+</html>

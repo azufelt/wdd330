@@ -52,6 +52,5 @@ kbd {
 
 .moveButton {
   border: 5px solid red;
-
-  
+  transform: translateY(10px)
 }
