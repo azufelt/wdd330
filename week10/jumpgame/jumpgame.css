@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.game {
+  width: 800px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+
+.dino {
+  transform: scale(-1, 1);
+  font-size: 5rem;
+  /* relative so it can move in the container */
+  position: relative;
+  /* positioned the amount of the container, minus the heieght of the character */
+  top: 210px;
+  right: 680px;
+  z-index: 100;
+}
+
+.gameOver {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 260px;
+  left: 90px;
+}
+
+.animate {
+  animation: jump 500ms;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.block {
+  font-size: 3rem;
+  position: relative;
+  top: 130px;
+  left: 750px;
+}
+
+.start {
+  /* animation to make block keep running over and over  */
+  animation: block 2.5s infinite linear;
+  animation-delay: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.buttonBox {
+  text-align: center;
+}
+
+.startBtn {
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin: 1rem;
+  background-color: #202049;
+  color: white;
+  border-radius: 5px;
+}
+
+@keyframes block {
+  0% {
+    left: 820px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+@keyframes jump {
+  0% {
+    top: 200px;
+  }
+  30% {
+    top: 100px;
+  }
+  70% {
+    top: 100px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+
+/*# sourceMappingURL=jumpgame.css.map */

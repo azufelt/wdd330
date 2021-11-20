@@ -41,30 +41,31 @@ for (pageNum; pageNum <= 10; pageNum++) {
           id: item._id
         }
         characterList.push(nameList)
+        console.log(characterList);
       });
       localStorage.setItem('characterList', JSON.stringify(characterList));
     })
 }
 
-const searchbtn = document.querySelector(".characterSearch");
-searchbtn.addEventListener('click', findChar, false);
+// const searchbtn = document.querySelector(".characterSearch");
+// searchbtn.addEventListener('click', findChar, false);
 
-function findChar() {
-  const searchChar = document.querySelector(".characterValue").value;
-  const storagelist = JSON.parse(localStorage.getItem('characterList'));
+// function findChar() {
+//   const searchChar = document.querySelector(".characterValue").value;
+//   const storagelist = JSON.parse(localStorage.getItem('characterList'));
 
-  var filterObj = storagelist.filter(object => object.name = searchChar);
-  // var charUrl = filterObj.name;
+//   var filterObj = storagelist.filter(object => object.name = searchChar);
+//   // var chsarUrl = filterObj.name;
 
-  filterObj.forEach(item => {
-    let li = document.createElement('li')
-    li.innerHTML = item.name;
-    document.querySelector('.returnresults')
-  })
-  // console.log(charUrl);
+//   filterObj.forEach(item => {
+//     let li = document.createElement('li')
+//     li.innerHTML = item.name;
+//     document.querySelector('.returnresults')
+//   })
+//   console.log(charUrl);
 
-  // characterResults(charUrl);
-}
+//   characterResults(charUrl);
+// }
 
 // function characterResults(charUrl) {
 
@@ -77,7 +78,7 @@ function findChar() {
 //       console.log(newBio)
 
 //     })
-
+//   }
 
 // let h1 = document.createElement('h1');
 // h1.innerHTML = `${newBio.name}`;

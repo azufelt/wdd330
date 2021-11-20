@@ -24,7 +24,7 @@
 //  const characterSetList = characterMakeList();
 
 // function characterMakeList(){
-var pageNum = 1;
+pageNum = 1;
 
 for (pageNum; pageNum <= 10; pageNum++) {
   const pageApi = `https://api.disneyapi.dev/characters?page=${pageNum}`;
