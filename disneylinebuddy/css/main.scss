@@ -237,9 +237,10 @@ header {
   background-repeat: norepeat;
   background-position-x: 5%;
 
-  h1 {
+  h1,
+  span {
     font-family: WaltographRegular, script, serif;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .navBox {

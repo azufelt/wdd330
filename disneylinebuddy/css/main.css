@@ -196,9 +196,10 @@ header {
   background-repeat: norepeat;
   background-position-x: 5%;
 }
-.WelcomePage h1 {
+.WelcomePage h1,
+.WelcomePage span {
   font-family: WaltographRegular, script, serif;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .WelcomePage .navBox {
   height: 50px;
