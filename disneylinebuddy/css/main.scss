@@ -1,0 +1,218 @@
+:root {
+  --black: #001219ff;
+  --dark-slate-gray: #31585eff;
+  --blue: #005f73ff;
+  --light-blue: #8fbec5ff;
+  --almond: #eedfcaff;
+  --yellow: #e7aa2dff;
+  --orange: #ca6702ff;
+  --darkorange: #bb3e03ff;
+  --red: #ae2012ff;
+  --green: #40712E;
+}
+
+$main: var(--blue);
+$key: var(--light-blue);
+$header: var(--light-blue);
+$accent: var(--yellow);
+$light: var(--almond);
+$valid: var(--green);
+$invalid: var(--red);
+$black: var(--black);
+$highlight: var(--red);
+$white: white;
+
+
+/* p {
+  font-family: 'WaltographRegular';
+  font-weight: normal;
+  font-style: normal;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.enterPage {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $accent;
+  opacity: 0;
+  z-index: -100;
+}
+
+.enterStuckatTop {
+  margin: 0%;
+  height: 100vh;
+  opacity: 1;
+  z-index: 1;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+
+  p {
+
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    font-size: 1.5rem;
+  }
+
+  input {
+    position: absolute;
+    width: 50%;
+    top: 65%;
+    left: 10%;
+    padding: .8rem;
+    border-radius: 8px;
+    border: 1px solid $black;
+  }
+
+  .enterBtn {
+    color: $white;
+    background-color: $highlight;
+    border-radius: 50px;
+    padding: .5rem 1.8rem;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .balloons img {
+    height: 50%;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+}
+
+// ************ Nav Balloon*********
+nav img {
+  position: absolute;
+  height: 15%;
+  top: 0%;
+  left: 70%;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.balloonFly {
+  animation: balloonFly 13s ease-in-out;
+}
+
+.screenFall {
+  animation: screenFall 8s 5s linear;
+}
+
+.hide {
+  z-index: -1;
+  opacity: none;
+}
+
+main {
+  background-color: $accent;
+
+}
+
+// *******ANIMATIONS**************
+@keyframes balloonFly {
+  0% {
+    height: 35%;
+    top: 30%;
+    left: 45%;
+    z-index: 1;
+    opacity: 1;
+    margin-top: 0%;
+
+  }
+
+  20% {
+    height: 30%;
+    left: 50%;
+
+  }
+
+  30% {
+    top: -10%;
+  }
+
+  40% {
+    height: 28%;
+    left: 40%;
+    top: -15%;
+  }
+
+  60% {
+    height: 26%;
+    top: -20%;
+    left: 50%;
+  }
+
+  80% {
+    height: 24%;
+    top: -20%;
+    left: 45%;
+  }
+
+  90% {
+    height: 20%;
+    top: -10%;
+    left: 60%;
+  }
+
+  100% {
+    height: 15%;
+    top: 0%;
+    left: 70%;
+    z-index: 100;
+  }
+}
+
+@keyframes screenFall {
+  0% {
+    margin-top: 0%;
+    opacity: 1;
+  }
+
+  48% {
+    margin-top: 200%;
+    opacity: 1;
+  }
+
+  49% {
+    margin-top: 205%;
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: 205%;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  51% {
+    opacity: 0;
+  }
+
+  100% {
+    margin-top: 0%;
+    opacity: 0;
+  }
+}
+
+// ***********Header*********
+// header {
+//   background-color: $key;
+// }
