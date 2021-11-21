@@ -25,7 +25,7 @@ const todoItemsList = document.querySelector('.todo-items');
 let todos = [];
 
 // add an eventListener on form, and listen for submit event
-todoForm.addEventListener('submit', function(event) {
+todoForm.addEventListener('submit', function (event) {
   // prevent the page from reloading when submitting the form
   event.preventDefault();
   addTodo(todoInput.value); // call addTodo function with input box current value
@@ -57,9 +57,9 @@ function renderTodos(todos) {
   todoItemsList.innerHTML = "";
 
   // run through each item inside todos
-  todos.forEach(function(item) {
+  todos.forEach(function (item) {
     // check if the item is completed
-    const checked = item.completed ? 'checked': null;
+    const checked = item.completed ? 'checked' : null;
 
     // make a <li> element and fill it
     // <li> </li>
@@ -91,7 +91,7 @@ function renderTodos(todos) {
 
 // function to add todos to local storage
 function addToLocalStorage(todos) {
-  // conver the array to string then store it.
+  // convert the array to string then store it.
   localStorage.setItem('todos', JSON.stringify(todos));
   // render them to screen
   renderTodos(todos);
@@ -110,7 +110,7 @@ function getFromLocalStorage() {
 
 // toggle the value to completed and not completed
 function toggle(id) {
-  todos.forEach(function(item) {
+  todos.forEach(function (item) {
     // use == not ===, because here types are different. One is number and other is string
     if (item.id == id) {
       // toggle the value
@@ -124,7 +124,7 @@ function toggle(id) {
 // deletes a todo from todos array, then updates localstorage and renders updated list to screen
 function deleteTodo(id) {
   // filters out the <li> with the id and updates the todos array
-  todos = todos.filter(function(item) {
+  todos = todos.filter(function (item) {
     // use != not !==, because here types are different. One is number and other is string
     return item.id != id;
   });
@@ -137,7 +137,7 @@ function deleteTodo(id) {
 getFromLocalStorage();
 
 // after that addEventListener <ul> with class=todoItems. Because we need to listen for click event in all delete-button and checkbox
-todoItemsList.addEventListener('click', function(event) {
+todoItemsList.addEventListener('click', function (event) {
   // check if the event is on checkbox
   if (event.target.type === 'checkbox') {
     // toggle the state

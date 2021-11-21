@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <header>
+    <div>
       <div class="enterPage enterStuckatTop">
         <div class="">
           <svg
@@ -19847,13 +19847,11 @@
             <img src="images/baloons.svg" alt="balloon bundles" />
           </div>
           <p>What's your name?</p>
-          <input type="text" required />
-          <button type="button" class="enterBtn">Enter</button>
+          <input id="nameInput" type="text" required />
+          <input type="submit" class="enterBtn" value="Enter" />
         </div>
-
-        <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
       </div>
-    </header>
+    </div>
     <nav>
       <a href="main.html"
         ><img
@@ -19862,8 +19860,24 @@
           alt="mickey balloon"
       /></a>
     </nav>
-    <main></main>
+    <main class="WelcomePage hide">
+      <header>
+        <h1>Welcome <span class="visitorName"></span>!</h1>
+        <div class="navBox">
+          <!-- <nav>
+        <a href="main.html"
+          ><img
+            class="navBalloon hide"
+            src="images/single-balloon.svg"
+            alt="mickey balloon"
+        /></a> -->
+          <!-- </nav> -->
+        </div>
+      </header>
 
+      <div>This is where all the stuff goes!</div>
+    </main>
+    <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script>
       WebFont.load({

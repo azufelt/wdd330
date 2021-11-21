@@ -86,7 +86,7 @@ nav img {
   top: 0%;
   left: 70%;
   overflow: hidden;
-  z-index: 2;
+  z-index: 100;
 }
 
 .balloonFly {
@@ -98,8 +98,13 @@ nav img {
 }
 
 .hide {
-  z-index: -1;
+  z-index: -100;
   opacity: none;
+}
+
+.show {
+  z-index: 1;
+  opacity: 1;
 }
 
 main {
@@ -174,6 +179,36 @@ main {
     margin-top: 0%;
     opacity: 0;
   }
+}
+header {
+  background-color: var(--light-blue);
+}
+
+.WelcomePage {
+  position: absolute;
+  top: -200%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: var(--almond);
+  background-image: url("/disneylinebuddy/images/mickey-sketch.svg");
+  background-repeat: norepeat;
+  background-position-x: 5%;
+}
+.WelcomePage h1 {
+  font-family: WaltographRegular, script, serif;
+  font-size: 4rem;
+}
+.WelcomePage .navBox {
+  height: 50px;
+  width: 50px;
+}
+.WelcomePage header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
