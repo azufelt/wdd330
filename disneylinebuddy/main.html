@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ashley Zufelt" />
     <link type="normalize/css" rel="stylesheet" href="#" />
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
@@ -14,7 +14,6 @@
       href="https://fontlibrary.org//face/waltograph"
       type="text/css"
     />
-    <script src="js/script.js" defer></script>
 
     <link rel="shortcut icon" href="../favicon.ico" />
     <title>Disney Line App</title>
@@ -22,25 +21,16 @@
 
   <body>
     <header>
-      <h1>Hello <span class="nameDisplay"></span></h1>
-      <a href="/main.html"><img src="" alt="mickey mouse balloon" /></a>
+      <h1>Welcome <span class="nameTitle"></span>!</h1>
+      <a href="main.html"><img src="" alt="mickey mouse balloon" /></a>
     </header>
-    <main class="">
-      <header>
-        <h1>Welcome <span class="visitorName"></span>!</h1>
-        <div class="navBox">
-          <nav>
-            <a href="main.html"
-              ><img
-                class="navBalloon hide"
-                src="images/single-balloon.svg"
-                alt="mickey balloon"
-            /></a>
-          </nav>
-        </div>
-      </header>
-
-      <div>This is where all the stuff goes!</div>
+    <main class="mainPage">
+      <div class="navTileBox">
+        <!-- <div class="NavTile">
+          <h3>Park Weather</h3>
+        </div> -->
+      </div>
+      <img src="images/mickey-sketchBW.png" alt="sketched mickey mouse" />
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -51,6 +41,6 @@
         },
       });
     </script>
-    <script src="js/script.js" defer></script>
+    <script src="js/main.mjs" type="module" defer></script>
   </body>
 </html>

@@ -1,0 +1,78 @@
+:root {
+  --black: #001219ff;
+  --dark-slate-gray: #31585eff;
+  --blue: #005f73ff;
+  --light-blue: #8fbec5ff;
+  --almond: #eedfcaff;
+  --yellow: #e7aa2dff;
+  --orange: #ca6702ff;
+  --darkorange: #bb3e03ff;
+  --red: #ae2012ff;
+  --green: #40712E;
+}
+
+$main: var(--blue);
+$key: var(--light-blue);
+$header: var(--light-blue);
+$accent: var(--yellow);
+$light: var(--almond);
+$valid: var(--green);
+$invalid: var(--red);
+$black: var(--black);
+$highlight: var(--red);
+$white: white;
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  width: 100vw;
+}
+
+// ***********Header*********
+header {
+  display: flex;
+  flex-direction: row;
+  flex: 1 100%;
+  background-color: $key;
+  padding: 2rem;
+}
+
+// **********Main Page**********
+main {
+  background-color: $accent;
+}
+
+.mainPage {
+
+  img {
+    position: absolute;
+    top: 25%;
+    left: -15%;
+    max-width: 100%;
+    opacity: .5;
+    z-index: 0;
+  }
+
+  background-color: $light;
+  height: 100vh;
+
+  .navTileBox {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .NavTile {
+    width: 10rem;
+    height: 10rem;
+    background-color: $accent;
+  }
+
+
+}

@@ -1,0 +1,49 @@
+{"navTiles": [
+  
+  {
+    "name": "Park Weather",
+    "color":" $accent",
+    "link":"#"
+  },
+    {
+    "name": "Trivia ?",
+    "color":" $header",
+    "link":"#"
+  },
+    {
+    "name": "TIc-Tac-Toe",
+    "color":" $black",
+    "link":"#"
+  },
+    {
+    "name": "Character Search",
+    "color":" $main",
+    "link":"#"
+  },
+    {
+    "name": "Would you Rather...r",
+    "color":" $highlight",
+    "link":"#"
+  },
+    {
+    "name": "Dino Dash",
+    "color":" $header",
+    "link":"#"
+  },
+    {
+    "name": "Ride Wait Times",
+    "color":" $accent",
+    "link":"#"
+  },
+    {
+    "name": "Tap-O-War",
+    "color":" $accent",
+    "link":"#"
+  },
+    {
+    "name": "Packing List",
+    "color":" $main",
+    "link":"#"
+  }
+]
+}

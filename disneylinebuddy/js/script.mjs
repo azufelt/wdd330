@@ -1,12 +1,16 @@
 // import {
-//   getName
-// } from "./getName";
+//   storeName
+// } from "./storeName.mjs";
 
 const enterBtn = document.querySelector(".enterBtn");
 enterBtn.addEventListener('click', openPage, false);
 
 function openPage() {
-  getName();
+
+  storeName()
+  // .then(() => {
+  //   floatBalloon()
+  // })
 }
 
 function floatBalloon() {
@@ -31,7 +35,7 @@ function floatBalloon() {
   }, 13000);
 }
 
-function getName() {
+function storeName() {
   //get visitor name, log to storage
   const nameInput = document.querySelector("#nameInput").value;
 
@@ -53,7 +57,7 @@ function getName() {
       document.querySelector('.nameTitle').innerHTML = displayName;
     }
     // clear the input Name value
-    nameInput.value = '';
+    // nameInput.value = '';
     floatBalloon()
   }
 }

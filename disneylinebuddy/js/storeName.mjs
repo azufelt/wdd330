@@ -1,10 +1,15 @@
-export function getName() {
+export function storeName() {
   //get visitor name, log to storage
   const nameInput = document.querySelector("#nameInput").value;
 
 
   if (nameInput == "") {
-    alert('please enter your name');
+    //wiggle field
+    const nameWrong = document.querySelector('#nameInput');
+    nameWrong.classList.add('wrongData');
+    setTimeout(function () {
+      nameWrong.classList.remove('wrongData');
+    }, 1100);
   } else {
     localStorage.setItem('visitorName', JSON.stringify(nameInput));
     const username = localStorage.getItem('visitorName');
