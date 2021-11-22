@@ -7,7 +7,9 @@ enterBtn.addEventListener('click', openPage, false);
 
 function openPage() {
   getName();
+}
 
+function floatBalloon() {
   //start header "enter Page" slide down animation
   //add a class to the .navBalloon to start animation
   const navBalloon = document.querySelector(".navBalloon");
@@ -18,17 +20,15 @@ function openPage() {
   const mainScreen = document.querySelector(".WelcomePage");
   enterScreen.classList.add('screenFall');
   //show/hide class style to have main page appear when balloon floats up
-
   mainScreen.classList.add('show');
   mainScreen.classList.remove('hide');
   setTimeout(function () {
     enterScreen.classList.remove('enterStuckatTop');
-  }, 10000)
+  }, 10000);
   //timer to change the main screen top margin to 0;
   setTimeout(function () {
     mainScreen.style.top = 0;
-  }, 13000)
-
+  }, 13000);
 }
 
 function getName() {
@@ -37,7 +37,12 @@ function getName() {
 
 
   if (nameInput == "") {
-    alert('please enter your name');
+    //wiggle field
+    const nameWrong = document.querySelector('#nameInput');
+    nameWrong.classList.add('wrongData');
+    setTimeout(function () {
+      nameWrong.classList.remove('wrongData');
+    }, 1100);
   } else {
     localStorage.setItem('visitorName', JSON.stringify(nameInput));
     const username = localStorage.getItem('visitorName');
@@ -49,5 +54,6 @@ function getName() {
     }
     // clear the input Name value
     nameInput.value = '';
+    floatBalloon()
   }
 }

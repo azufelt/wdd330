@@ -35,13 +35,19 @@ $white: white;
   font-family: 'Open Sans', sans-serif;
 }
 
+html {
+  width: 100vw;
+}
+
+
+
 body {
   position: relative;
   overflow: hidden;
 }
 
 .enterPage {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: $accent;
@@ -233,9 +239,13 @@ header {
   //might want to have header slide in from the top on animation, then have the screen "vanish appear"
   z-index: -1;
   background-color: $light;
-  background-image: url('/disneylinebuddy/images/mickey-sketch.svg');
-  background-repeat: norepeat;
-  background-position-x: 5%;
+
+  // background-image: url('/disneylinebuddy/images/mickey-sketchbw.png');
+  // background-repeat: norepeat;
+  // background-position-x: 5%;
+  img {
+    width: 100%;
+  }
 
   h1,
   span {
@@ -254,5 +264,57 @@ header {
     justify-content: space-around;
     padding: 2rem;
     // box-shadow: 0px 0px 20px $main;
+  }
+}
+
+.wrongData {
+  animation: wiggle 1s linear;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes wiggle {
+
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  html {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  body {
+    border: 3px solid black;
+    border-radius: 50px;
+  }
+
+  .enterPage {
+    border-radius: 50px;
+  }
+
+  header,
+  .WelcomePage {
+    border-radius: 50px 50px 0 0;
   }
 }
