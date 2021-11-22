@@ -46,6 +46,13 @@
               <a href="jumpgame/jumpgame.html">A fun Dino Jumping GAME!</a>
             </li>
             <li><a href="teamactivity/index">Quakes Script</a></li>
+            <li>
+              <a
+                href="https://azufelt.github.io/cse340/presentation/index.html"
+                target="_blank"
+                >Input Types</a
+              >
+            </li>
           </ul>
 
           <h2>Keywords:</h2>
@@ -106,6 +113,52 @@
       </main>
       <section>
         <h2>Summary</h2>
+        <p>
+          The notes were kind of "boring" this week... because, I already know a
+          lot about input validation in html and in javascript, along with
+          patterns and such. Since I read about them this week, I worked on
+          making my final project require the user put in information. I'll also
+          include some input fields that I have coded here: Enjoy!
+        </p>
+        <div>
+          <fieldset>
+            <form class="formBox">
+              <div class="formMessage"></div>
+              <label for="fname"
+                >First Name:
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  class="data"
+                  required
+              /></label>
+              <label for="email"
+                >Email: <input type="email" id="email" name="email" required
+              /></label>
+              <label for="username"
+                >Userame:
+                <input type="text" id="username" name="username" required
+              /></label>
+
+              <label for="password"
+                >Password:<br />
+                <span
+                  >Minimum eight characters, at least one letter and one
+                  number:</span
+                >
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  class="data"
+                  pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                  required
+              /></label>
+              <input id="formSubmit" type="button" value="Validate Inputs" />
+            </form>
+          </fieldset>
+        </div>
       </section>
     </div>
     <footer>&copy;<span id="currentyear"></span> | Ashley Zufelt</footer>

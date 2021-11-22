@@ -8,6 +8,7 @@
   --yellow: hsla(40, 100%, 65%, 1);
   --lightblue: hsla(186, 77%, 37%, 0.5);
   --lightgray: rgb(238, 238, 238);
+  --green: rgb(66, 125, 66);
 }
 
 html {
@@ -259,5 +260,60 @@ pre {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 0rem 3rem;
+  }
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  
+}
+.formBox label, .formBox input {
+  display: block;
+  margin: .5rem;
+ 
+}
+.formBox input {
+ border: 2px solid var(--lightgray);
+}
+input[type='button']{
+  max-width: 10rem;
+}
+form input:required {
+  border-left: 5px solid var(--red);
+}
+
+form input:required:valid {
+  border-left: 5px solid var(--green);
+}
+form input:invalid {
+  background-color: lighten(--pink, 10%);
+}
+.wrongData {
+ animation: wiggle 1s linear;
+ transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+@keyframes wiggle{
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
