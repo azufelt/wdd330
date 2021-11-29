@@ -3,10 +3,24 @@ searchbtn.addEventListener('click', findChar, false);
 
 
 const bigCharacterList = []; //makes new array available at global scope for future use
+// console.log(bigCharacterList);
 
 function findChar() {
+  let searchChar = document.querySelector(".characterValue").value;
 
-  console.log(bigCharacterList);
+  const filterList = bigCharacterList.filter(item => item.newItem.name == searchChar); //filter through the big List array to find an object that has a value that matches the string input from user;
+  // [0].newItem.name
+  console.log(filterList);
+
+  let listItem = document.querySelector('.returnresults');
+
+  filterList.forEach(character => {
+    let li = document.createElement('li');
+    let liName = character.newItem.name;
+    li.append(liName);
+    listItem.append(li);
+  });
+  console.log(listItem);
 }
 
 
@@ -22,7 +36,7 @@ async function fetchList() {
       // console.log(totalPages);
 
       var bigList = bigCharacterList; //build a new array for the characteer objects to go into
-
+      // console.log(bigCharacterList);
       class item { //constructs the object to go into the big character list array
         constructor() {
           this.name = charName;
@@ -31,7 +45,7 @@ async function fetchList() {
       }
 
 
-      for (pageNum; pageNum < 3; pageNum++) { //loop through all the pages of API call
+      for (pageNum; pageNum < totalPages; pageNum++) { //loop through all the pages of API call
         const dataObj = jsonObject['data'];
         // console.log(dataObj); //returns list of JUST json object "data"
 
