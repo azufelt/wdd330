@@ -11,12 +11,12 @@
 //   })
 //   .then(response => response.json())
 //   .then((jsObject) => {
-//     // console.log(jsObject);
+//     console.log(jsObject);
 //     const data = jsObject['data'];
-//     //This ACTUALLY WORKS!!! But it will have to loop through all 149 pages of data to find the character it's searching for. 
-//     const characters = data.filter(data => data.name == "Gale");
-//     console.log(characters);
-//   })
+// This ACTUALLY WORKS!!! But it will have to loop through all 149 pages of data to find the character it's searching for. 
+//   const characters = data.filter(data => data.name == "Gale");
+//   console.log(characters);
+// })
 
 //I could make a new array of the character name & _id because then I could get the information directly from the single character api url page. 
 
@@ -24,39 +24,27 @@
 //  const characterSetList = characterMakeList();
 
 // function characterMakeList(){
-pageNum = 1;
-
-for (pageNum; pageNum <= 10; pageNum++) {
-  const pageApi = `https://api.disneyapi.dev/characters?page=${pageNum}`;
-
-  fetch(pageApi)
-    .then((respond) => respond.json())
-    .then((pageObj) => {
-      const objList = pageObj['data'];
-      const characterList = [];
-
-      objList.forEach(item => {
-        let nameList = {
-          name: item.name,
-          id: item._id
-        }
-        characterList.push(nameList)
-      });
-      localStorage.setItem('characterList', JSON.stringify(characterList));
-    })
-}
+// fetchList();
 
 const searchbtn = document.querySelector(".characterSearch");
 searchbtn.addEventListener('click', findChar, false);
 
+
+
 function findChar() {
-  const searchChar = document.querySelector(".characterValue").value;
-  const storagelist = JSON.parse(localStorage.getItem('characterList'));
 
-  var filterObj = storagelist.filter(object => object.name = searchChar);
+  let CharacterSearch = fetchList(characterList);
+
+
+  let searchChar = document.querySelector(".characterValue").value;
+  // const storagelist = JSON.parse(localStorage.getItem('characterList'));
+
+
+  let filterList = CharacterSearch.filter(object => object.name == searchChar);
+  // var filterObj = storagelist.filter(object => object.name = searchChar);
   // var charUrl = filterObj.name;
-
-  filterObj.forEach(item => {
+  console.log(filterList);
+  filterList.forEach(item => {
     let li = document.createElement('li')
     li.innerHTML = item.name;
     document.querySelector('.returnresults')
@@ -65,6 +53,32 @@ function findChar() {
 
   // characterResults(charUrl);
 }
+
+function fetchList() {
+  pageNum = 1;
+
+  // for (pageNum; pageNum <= 10; pageNum++) {
+  const pageApi = `https://api.disneyapi.dev/characters?page=${pageNum}`;
+
+  fetch(pageApi)
+    .then((respond) => respond.json())
+    .then((pageObj) => {
+      const objList = pageObj['data'];
+      console.log(objList);
+      const characterList = [];
+      console.log(characterList);
+      objList.forEach(item => {
+        let nameList = {
+          name: item.name,
+          id: item._id
+        };
+        characterList.push(nameList);
+        console.log(characterList);
+      });
+    });
+
+}
+// }
 
 // function characterResults(charUrl) {
 
