@@ -1,0 +1,24 @@
+{"triviaCards": [
+  
+  {
+    "question": "What year did Disneyland open?",
+    "backgroundcolor":"blue",
+    "answer":"1955",
+    "answerbackcolor":"yellow"
+  },
+   {
+    "question": "What is the name of Wendy’s dog in Peter Pan?",
+    "backgroundcolor":"blue",
+    "answer":"Nana",
+    "answerbackcolor":"yellow"
+  },
+   {
+    "question": "Who trained Hercules to be a hero?",
+    "backgroundcolor":"blue",
+    "answer":"Philoctetes/Phil",
+    "answerbackcolor":"yellow"
+  }
+]
+}
+
+
