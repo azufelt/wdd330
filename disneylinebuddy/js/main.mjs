@@ -11,17 +11,17 @@ fetch(json)
     return response.json();
   })
   .then(function (jsObject) {
-    let i;
-    let tiles = jsObject.navTiles[i].name;
+    // let i;
+    // let tiles = jsObject.navTiles[i].name;
     // const tiles = jsObject['name'];
-    console.log(tiles);
+    console.log(jsObject);
 
-    let tileParent = document.createElement('div');
-    let tileLink = document.createElement('ul');
-    let tile = jsObject.navTiles.name;
-    for (i = 0; 1 < tile.length; i++) {
-      console.log(tile)
-    }
+    // let tileParent = document.createElement('div');
+    // let tileLink = document.createElement('ul');
+    // let tile = jsObject.navTiles.name;
+    // for (i = 0; 1 < tile.length; i++) {
+    //   console.log(tile)
+    // }
 
     // tiles.forEach(tile => {
     //   let li = document.createElement('li');
@@ -32,6 +32,6 @@ fetch(json)
     //   tileLink.append(li);
     //   i++;
     // })
-    tileParent.append(tileLink)
-    document.querySelector('.navTileBox').append(tileParent);
+    // tileParent.append(tileLink)
+    // document.querySelector('.navTileBox').append(tileParent);
   })

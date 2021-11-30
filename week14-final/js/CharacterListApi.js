@@ -1,3 +1,5 @@
+"use strict"
+
 const searchbtn = document.querySelector(".characterSearch");
 searchbtn.addEventListener('click', findChar, false);
 
@@ -9,6 +11,7 @@ function findChar() {
   let displayWindow = document.querySelector('.returnresults');
   displayWindow = "";
   let searchChar = document.querySelector(".characterValue").value;
+  document.querySelector('#character').value = ''; //clear input value 
 
   //filter through the big List array to find an object that has a value that matches the string input from user;
   const filterList = bigCharacterList.filter(function (item) {
@@ -47,7 +50,8 @@ function findChar() {
             let ul = document.createElement('ul');
             ul.append(h2)
             let objLi = jsonObject.shortFilms;
-            for (i = 0; i < objLi.length; i++) {
+            let i = 0;
+            for (i; i < objLi.length; i++) {
               let objList = document.createElement('li');
               objList.append(objLi[i]);
               ul.append(objList)
@@ -63,7 +67,8 @@ function findChar() {
             let ul = document.createElement('ul');
             ul.append(h2)
             let objLi = jsonObject.shortFilms;
-            for (i = 0; i < objLi.length; i++) {
+            let i = 0;
+            for (i; i < objLi.length; i++) {
               let objList = document.createElement('li');
               objList.append(objLi[i]);
               ul.append(objList)
@@ -79,7 +84,8 @@ function findChar() {
             let ul = document.createElement('ul');
             ul.append(h2)
             let objLi = jsonObject.tvShows;
-            for (i = 0; i < objLi.length; i++) {
+            let i = 0;
+            for (i; i < objLi.length; i++) {
               let objList = document.createElement('li');
               objList.append(objLi[i]);
               ul.append(objList)
@@ -96,7 +102,8 @@ function findChar() {
             let ul = document.createElement('ul');
             ul.append(h2)
             let objLi = jsonObject.parkAttractions;
-            for (i = 0; i < objLi.length; i++) {
+            let i = 0;
+            for (i; i < objLi.length; i++) {
               let objList = document.createElement('li');
               objList.append(objLi[i]);
               ul.append(objList)
@@ -112,7 +119,8 @@ function findChar() {
             let ul = document.createElement('ul');
             ul.append(h2)
             let objLi = jsonObject.allies;
-            for (i = 0; i < objLi.length; i++) {
+            let i = 0;
+            for (i; i < objLi.length; i++) {
               let objList = document.createElement('li');
               objList.append(objLi[i]);
               ul.append(objList)
@@ -129,7 +137,8 @@ function findChar() {
             let ul = document.createElement('ul');
             ul.append(h2)
             let objLi = jsonObject.enemies;
-            for (i = 0; i < objLi.length; i++) {
+            let i = 0;
+            for (i; i < objLi.length; i++) {
               let objList = document.createElement('li');
               objList.append(objLi[i]);
               ul.append(objList)
@@ -142,7 +151,6 @@ function findChar() {
 
 
 
-          searchChar.value = ""; //clear input value 
         })
     }
   });
@@ -179,7 +187,8 @@ async function fetchList() {
             //returns list of JUST json object "data"
 
             //loop through each object (on each page) and get the specific object value to populate the class constructor
-            for (i = 0; i < dataObj.length; i++) {
+            let i = 0;
+            for (i; i < dataObj.length; i++) {
               var charName = dataObj[i].name;
               var charid = dataObj[i]._id;
 

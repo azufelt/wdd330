@@ -41,6 +41,8 @@ header {
   padding: 2rem;
 }
 
+
+
 // **********Main Page**********
 main {
   background-color: $accent;
@@ -74,5 +76,13 @@ main {
     background-color: $accent;
   }
 
+  .navBalloon {
+    position: absolute;
+    width: 50%;
+    top: 0 px;
+    left: 60%;
+    z-index: 2;
+    border: 3px solid red;
+  }
 
 }

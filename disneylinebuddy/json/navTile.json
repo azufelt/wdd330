@@ -1,4 +1,4 @@
-{"navTiles": [
+{"navTiles":
   
   {
     "name": "Park Weather",
@@ -45,5 +45,4 @@
     "color":" $main",
     "link":"#"
   }
-]
 }
