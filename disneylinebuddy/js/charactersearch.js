@@ -1,4 +1,9 @@
 "use strict"
+import {
+  getName
+} from "./getName.mjs";
+
+getName();
 
 const searchbtn = document.querySelector(".characterSearch");
 searchbtn.addEventListener('click', findChar, false);
@@ -10,6 +15,9 @@ const bigCharacterList = []; //makes new array available at global scope for fut
 function findChar() {
   let displayWindow = document.querySelector('.returnresults');
   displayWindow = "";
+  let showResults = document.querySelector('.returnresults');
+  showResults.classList.add('show');
+
   let searchChar = document.querySelector(".characterValue").value;
   document.querySelector('#character').value = ''; //clear input value 
 
@@ -46,10 +54,10 @@ function findChar() {
 
           //look for films and return them
           if (jsonObject.films != "") {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = `Movies ${jsonObject.name} has been in:`;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = `Movies ${jsonObject.name} has been in:`;
             let ul = document.createElement('ul');
-            ul.append(h2)
+            ul.append(h3)
             let objLi = jsonObject.shortFilms;
             let i = 0;
             for (i; i < objLi.length; i++) {
@@ -63,10 +71,10 @@ function findChar() {
           }
           //Shortfilms
           if (jsonObject.shortFilms != "") {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = `Short Films ${jsonObject.name} has been in:`;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = `Short Films ${jsonObject.name} has been in:`;
             let ul = document.createElement('ul');
-            ul.append(h2)
+            ul.append(h3)
             let objLi = jsonObject.shortFilms;
             let i = 0;
             for (i; i < objLi.length; i++) {
@@ -80,10 +88,10 @@ function findChar() {
           }
           //tvShows
           if (jsonObject.tvShows != "") {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = `TV shows ${jsonObject.name} has been in:`;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = `TV shows ${jsonObject.name} has been in:`;
             let ul = document.createElement('ul');
-            ul.append(h2)
+            ul.append(h3)
             let objLi = jsonObject.tvShows;
             let i = 0;
             for (i; i < objLi.length; i++) {
@@ -98,10 +106,10 @@ function findChar() {
 
           //park attractions
           if (jsonObject.parkAttractions != "") {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = `Park Attractions featuring ${jsonObject.name}:`;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = `Park Attractions featuring ${jsonObject.name}:`;
             let ul = document.createElement('ul');
-            ul.append(h2)
+            ul.append(h3)
             let objLi = jsonObject.parkAttractions;
             let i = 0;
             for (i; i < objLi.length; i++) {
@@ -115,10 +123,10 @@ function findChar() {
           }
           //allies
           if (jsonObject.allies != "") {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = `Park Attractions featuring ${jsonObject.name}:`;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = `Park Attractions featuring ${jsonObject.name}:`;
             let ul = document.createElement('ul');
-            ul.append(h2)
+            ul.append(h3)
             let objLi = jsonObject.allies;
             let i = 0;
             for (i; i < objLi.length; i++) {
@@ -133,10 +141,10 @@ function findChar() {
 
           //enemies
           if (jsonObject.enemies != "") {
-            let h2 = document.createElement('h2');
-            h2.innerHTML = `Park Attractions featuring ${jsonObject.name}:`;
+            let h3 = document.createElement('h3');
+            h3.innerHTML = `Park Attractions featuring ${jsonObject.name}:`;
             let ul = document.createElement('ul');
-            ul.append(h2)
+            ul.append(h3)
             let objLi = jsonObject.enemies;
             let i = 0;
             for (i; i < objLi.length; i++) {

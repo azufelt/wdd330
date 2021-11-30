@@ -1,0 +1,15 @@
+:root {
+  --black: hsla(197, 100%, 5%, 1);
+  --border: hsla(188, 31%, 28%, .8);
+  --dark-slate-gray: hsla(188, 31%, 28%, 1);
+  --blue: hsla(190, 100%, 23%, 1);
+  --light-blue: hsla(188, 32%, 67%, 1);
+  --almond: hsla(35, 51%, 86%, .5);
+  --yellow: hsla(40, 79%, 54%, 1);
+  --orange: hsla(30, 98%, 40%, 1);
+  --darkorange: hsla(19, 97%, 37%, 1);
+  --red: hsla(5, 81%, 38%, 1);
+  --green: #40712E;
+  --white: white;
+}
+

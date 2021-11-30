@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ashley Zufelt" />
     <link type="normalize/css" rel="stylesheet" href="#" />
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
+    <link type="text/css" rel="stylesheet" href="css/mainpage.css" />
+    <link type="text/css" rel="stylesheet" href="css/character.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
@@ -14,9 +16,10 @@
       href="https://fontlibrary.org//face/waltograph"
       type="text/css"
     />
+    <script src="js/charactersearch.js" type="module"></script>
 
     <link rel="shortcut icon" href="../favicon.ico" />
-    <title>Disney Line App</title>
+    <title>Disney Line Buddy</title>
   </head>
 
   <body>
@@ -29,13 +32,33 @@
           class="navBalloon"
       /></a>
     </header>
-    <main class="mainPage">
-      <div class="navTileBox">
-        <!-- <div class="NavTile">
-          <h3>Park Weather</h3>
-        </div> -->
+    <main class="characterPage">
+      <div class="colorWrapper"></div>
+      <img
+        src="images/newspaperMickey.jpg"
+        alt="newspaper mickey"
+        class="backgroundimg"
+      />
+      <div class="">
+        <form action="">
+          <label for="character">Search Your Fave Character:</label>
+          <input
+            type="text"
+            id="character"
+            class="characterValue"
+            name="character"
+          />
+          <input type="button" class="button characterSearch" value="Search" />
+        </form>
+        <img
+          src="images/newspaperMickey.jpg"
+          alt="newspaper mickey"
+          class="backgroundimg bottomImage"
+        />
+        <div class="characterBio">
+          <ul class="returnresults"></ul>
+        </div>
       </div>
-      <img src="images/mickey-sketchBW.png" alt="sketched mickey mouse" />
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
@@ -46,6 +69,6 @@
         },
       });
     </script>
-    <script src="js/main.mjs" type="module" defer></script>
+    <!-- <script src="js/main.mjs" type="module" defer></script> -->
   </body>
 </html>

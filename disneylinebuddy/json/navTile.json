@@ -1,48 +1,60 @@
-{"navTiles":
+{"navTiles": [
   
   {
     "name": "Park Weather",
-    "color":" $accent",
-    "link":"#"
+    "backgroundcolor":"40, 79%, 54%",
+    "link":"#",
+    "linkcolor":"black"
   },
     {
     "name": "Trivia ?",
-    "color":" $header",
-    "link":"#"
+    "backgroundcolor":"190, 100%, 23%",
+    "link":"#",
+    "linkcolor":"white"
   },
     {
     "name": "TIc-Tac-Toe",
-    "color":" $black",
-    "link":"#"
+    "backgroundcolor":"197, 100%, 5%",
+    "link":"#",
+    "linkcolor":"white"
   },
     {
     "name": "Character Search",
-    "color":" $main",
-    "link":"#"
+    "backgroundcolor":"188, 32%, 67%",
+    "link":"character.html",
+    "linkcolor":"black"
   },
     {
-    "name": "Would you Rather...r",
-    "color":" $highlight",
-    "link":"#"
+    "name": "Would you Rather...",
+    "backgroundcolor":"5, 81%, 38%",
+    "link":"#",
+    "linkcolor":"white"
   },
     {
     "name": "Dino Dash",
-    "color":" $header",
-    "link":"#"
+    "backgroundcolor":"190, 100%, 23%",
+    "link":"#",
+    "linkcolor":"white"
   },
     {
     "name": "Ride Wait Times",
-    "color":" $accent",
-    "link":"#"
+    "backgroundcolor":"40, 79%, 54%",
+    "link":"#",
+    "linkcolor":"black"
   },
     {
     "name": "Tap-O-War",
-    "color":" $accent",
-    "link":"#"
+    "backgroundcolor":"40, 79%, 54%",
+    "link":"#",
+    "linkcolor":"black"
   },
     {
     "name": "Packing List",
-    "color":" $main",
-    "link":"#"
+    "backgroundcolor":"188, 32%, 67%",
+    "link":"#",
+    "linkcolor":"black"
   }
+]
 }
+
+

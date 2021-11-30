@@ -1,0 +1,204 @@
+:root {
+  --black: hsla(197, 100%, 5%, 1);
+  --border: hsla(188, 31%, 28%, .8);
+  --dark-slate-gray: hsla(188, 31%, 28%, 1);
+  --blue: hsla(190, 100%, 23%, 1);
+  --light-blue: hsla(188, 32%, 67%, 1);
+  --almond: hsla(35, 51%, 86%, .5);
+  --yellow: hsla(40, 79%, 54%, 1);
+  --orange: hsla(30, 98%, 40%, 1);
+  --darkorange: hsla(19, 97%, 37%, 1);
+  --red: hsla(5, 81%, 38%, 1);
+  --green: #40712E;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  width: 100vw;
+}
+
+h1,
+header span {
+  font-family: WaltographRegular,
+    script,
+    serif;
+  font-size: 3rem;
+}
+
+header {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  background-color: var(--light-blue);
+  padding: 2rem;
+  min-height: 8vh;
+}
+
+
+.mainPage {
+  background-color: var(--almond);
+  height: 100vh;
+}
+
+.mainPage img {
+  position: absolute;
+  top: 25%;
+  left: -15%;
+  max-width: 100%;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.mainPage .navTileBox {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.mainPage .NavTile {
+  width: 10rem;
+  height: 10rem;
+  background-color: var(--yellow);
+}
+
+.navBalloon {
+  position: absolute;
+  width: 30%;
+  top: 0%;
+  left: 70%;
+  z-index: 2;
+}
+
+.tileList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: 1rem;
+}
+
+.tileSquare {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  padding: 10px;
+  border: 6px solid var(--border);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tile-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+.backgroundimg {
+  position: absolute;
+  z-index: -1;
+  opacity: 30%;
+  top: -50px;
+  left: -50px;
+ height: 100%;
+
+}
+.bottomImage {
+  top: 100vh;
+}
+
+.colorWrapper {
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--blue);
+}
+
+/* ************ Character Search Page********* */
+.characterPage {
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+   object-fit: cover;
+  overflow: hidden;
+}
+
+.characterPage form {
+  color: var(--almond);
+}
+
+input,
+label {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 1rem;
+  min-width: 80%;
+}
+label {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+.button {
+  background-color: var(--red);
+  color: var(--white);
+  padding: .3rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-inline-end: 10%;
+  border: none;
+}
+
+.button:focus {
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+}
+.returnresults {
+  background-color: var(--light-blue);
+  padding: .5rem;
+  display: none;
+}
+.show {
+  display: block;
+}
+.returnresults h2 {
+ text-align: center;
+ font-size: 3rem;
+}
+.returnresults img {
+ display: block;
+ margin: 1rem auto;
+}
+.returnresults li li {
+  margin-left: 2rem;
+}
+.returnresults ul {
+  margin-bottom: 1rem;
+}
