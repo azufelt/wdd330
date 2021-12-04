@@ -2,27 +2,144 @@
   
   {
     "question": "What year did Disneyland open?",
-    "backgroundcolor":"blue",
-    "answer":"1955",
-    "answerbackcolor":"yellow"
+    "answer":"1955"
   },
    {
     "question": "What is the name of Wendy’s dog in Peter Pan?",
-    "backgroundcolor":"blue",
-    "answer":"Nana",
-    "answerbackcolor":"yellow"
+    "answer":"Nana"
   },
    {
     "question": "Who trained Hercules to be a hero?",
-    "backgroundcolor":"blue",
-    "answer":"Philoctetes/Phil",
-    "answerbackcolor":"yellow"
+    "answer":"Philoctetes (better known as Phil)"
   },
    {
-    "question": "another queestion",
-    "backgroundcolor":"blue",
-    "answer":"answer here",
-    "answerbackcolor":"yellow"
+    "question": "Which Disney film includes the hit song 'Let It Go'?",
+    "answer":"Frozen"
+  },
+   {
+    "question": "Who is the bear in 'The Jungle Book'?",
+    "answer":"Balloo"
   }
+  ,
+   {
+    "question": "What is the name of the toy store in 'Toy Story 2'?",
+    "answer":"Al’s Toy Barn"
+  }
+  ,
+   {
+    "question": "How many siblings does Prince Hans of the Southern Isles have in 'Frozen'?",
+    "answer":"12"
+  }
+  ,
+   {
+    "question": "Which ‘Full House’ actor voices the character Aladdin?",
+    "answer":"Scott Weinger"
+  }
+  ,
+   {
+    "question": "What is the name of Andy’s neighbor in 'Toy Story'?",
+    "answer":"Sid"
+  }
+  ,
+   {
+    "question": " In which territory in Disney World is Big Thunder Mountain Railroad located?",
+    "answer":"Frontierland"
+  }
+  ,
+   {
+    "question": " What are the names of Cinderella’s stepsisters?",
+    "answer":"Anastasia and Drizella"
+  }
+  ,
+   {
+    "question": "What is Prince Eric and Ariel's child called?",
+    "answer":"Princess Melody"
+  }
+  ,
+   {
+    "question": "Which Disney Princess sang 'Once Upon A Dream'?",
+    "answer":"Aurora"
+  }
+  ,
+   {
+    "question": "What are Hades' minions in 'Hercules' called",
+    "answer":"Pain and Panic"
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+  ,
+   {
+    "question": "",
+    "answer":""
+  }
+
 ]
 }
