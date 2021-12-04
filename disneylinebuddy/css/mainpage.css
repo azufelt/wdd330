@@ -44,18 +44,20 @@ header {
 }
 
 .mainPage {
-    min-height: 100vh;
-    max-width: 100%;
-    padding: 1rem;
-    object-fit: cover;
-    overflow: hidden;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
+
 .mainPage .colorWrapper {
-background-color: var(--almond);
+  background-color: var(--almond);
 }
+
 .mainPage img {
   position: absolute;
   top: 25%;
@@ -245,6 +247,7 @@ label {
   background-color: var(--white);
   height: 100%;
 }
+
 .cardWrapper {
   margin-top: 3rem;
   width: 100%;
@@ -254,6 +257,7 @@ label {
   align-items: center;
   justify-content: center;
 }
+
 .trivia-card {
   background-color: transparent;
   width: 300px;
@@ -289,14 +293,16 @@ label {
   justify-content: center;
   border-radius: 15px;
 }
+
 .trivia-card-front {
-   background-color: var(--blue);
+  background-color: var(--blue);
 }
 
 .trivia-card-back {
   background-color: var(--yellow);
   transform: rotateY(180deg);
 }
+
 .fliptoBack {
   transform: rotateY(180deg);
 }
@@ -315,7 +321,7 @@ label {
 
 .weatherPage .colorWrapper {
   background-color: var(--yellow);
- height: 100%;
+  height: 100%;
 }
 
 .minniebackgroundimg {
@@ -331,14 +337,17 @@ label {
 .weatherWrapper h2 {
   margin: 1rem;
 }
+
 .parkList {
   display: block;
   margin: 0 auto;
 }
+
 select {
   padding: 0.5rem;
   font-size: 1.1rem;
 }
+
 .weatherResults-inner {
   background-color: var(--white);
   padding: 2rem;
@@ -346,13 +355,16 @@ select {
   opacity: 90%;
   height: 60vh;
 }
+
 .weatherReport {
   opacity: 100%;
   filter: drop-shadow(0px 0px 0px black);
 }
+
 .weatherReport ul {
   font-size: 1.2rem;
 }
+
 .weatherReport h3,
 .weatherReport ul li:first-child {
   text-align: center;
@@ -370,29 +382,34 @@ select {
   overflow: hidden;
   height: 90vh;
 }
+
 .tictactoePage section {
   display: flex;
   flex-direction: column;
- justify-content: evenly;
- height: 100vh;
+  justify-content: evenly;
+  height: 100vh;
 }
+
 .playerSelections {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+
 .gameBtnBox {
   text-align: center;
   margin: 2rem;
 }
+
 .tictactoebox {
   display: grid;
   grid-template-columns: repeat(3, auto);
-      justify-content: center;
-      align-items: center;
-      justify-items: center;
-  max-width:100%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  max-width: 100%;
 }
+
 .middle {
   border-left: 5px solid black;
   border-right: 5px solid black;
@@ -410,18 +427,142 @@ select {
   font-family: "Permanent Marker";
   font-size: 5rem;
 }
+
 select,
 label {
   padding: .5rem;
   font-size: 1.5rem;
 }
+
 .gameStatus {
   margin-top: 3rem;
   text-align: center;
 }
+
 .tictactoePage h2 {
   text-align: center;
   font-size: 2rem;
+}
+
+/* ******************** Dash Game ****************** */
+.dashPage:before {
+  content: "Please turn device to play game.";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 3rem .5rem;
+  padding: 4rem .5rem;
+  font-size: 2rem;
+  background-color: var(--yellow);
+  height: 60vh;
+}
+
+.game,
+.dashPage h2,
+.dashPage input {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .dashPage:before {
+    display: none;
+  }.dashPage {
+    min-height: 100vh;
+  }
+  .game,
+  .dashPage h2,
+  .dashPage input {
+    display: block;
+  }
+  .game {
+    width: 500px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+
+  .char {
+    transform: scale(-1, 1);
+    font-size: 5rem;
+    /* relative so it can move in the container */
+    position: relative;
+    /* positioned the amount of the container, minus the heieght of the character */
+    top: 205px;
+    right: 380px;
+    z-index: 100;
+  }
+
+  .gameOver {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 380px;
+    left: 220px;
+    border: 1px solid red;
+  }
+
+  .animate {
+    animation: jump 500ms;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .block {
+    font-size: 3rem;
+    position: relative;
+    top: 130px;
+    left: 450px;
+  }
+
+  .start {
+    /* animation to make block keep running over and over  */
+    animation: block 2.5s infinite linear;
+    animation-delay: 0.5s;
+    transition-timing-function: ease-in-out;
+  }
+
+  .buttonBox {
+    text-align: center;
+  }
+
+  .startBtn {
+    padding: 0.5rem;
+    font-size: 2rem;
+    margin: 1rem;
+    background-color: #202049;
+    color: white;
+    border-radius: 5px;
+  }
+
+  @keyframes block {
+    0% {
+      left: 820px;
+    }
+
+    100% {
+      left: -20px;
+    }
+  }
+
+  @keyframes jump {
+    0% {
+      top: 200px;
+    }
+
+    30% {
+      top: 100px;
+    }
+
+    70% {
+      top: 100px;
+    }
+
+    100% {
+      top: 200px;
+    }
+  }
 }
 
 /* **************** Media Query************ */
@@ -435,10 +576,11 @@ label {
     border: 3px solid black;
     border-radius: 50px;
   }
+
   .colorWrapper {
-      border-radius: 0px 0px 50px 50px;
-      height: 100%;
-      width: 100%;
+    border-radius: 0px 0px 50px 50px;
+    height: 100%;
+    width: 100%;
   }
 
   .enterPage {
@@ -450,9 +592,11 @@ label {
   .WelcomePage {
     border-radius: 50px 50px 0 0;
   }
+
   .navBalloon {
     left: 60%;
   }
+
   .backgroundimg {
 
     width: 100vw;

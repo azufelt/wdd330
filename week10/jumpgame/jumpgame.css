@@ -9,7 +9,7 @@
   border: 1px solid black;
   margin: 0 auto;
 }
-
+ 
 .dino {
   transform: scale(-1, 1);
   font-size: 5rem;
