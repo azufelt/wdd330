@@ -266,11 +266,11 @@ label {
   width: 300px;
   height: 300px;
   perspective: 1000px;
-  border-radius: 15px;
+  /* border-radius: 15px;
   padding: 10px;
   border: 6px solid var(--border);
   -webkit-background-clip: padding-box;
-  background-clip: padding-box;
+  background-clip: padding-box; */
 }
 
 .trivia-card-inner {
@@ -294,6 +294,10 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 15px;
+}
+.trivia-card-front {
+   background-color: var(--blue);
 }
 
 .trivia-card-back {
