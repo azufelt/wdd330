@@ -4,26 +4,19 @@ import {
 
 getName();
 
-const flipCard = document.querySelector('.trivia-card');
-flipCard.addEventListener('click', getRandomInt, false);
+const frontCard = document.querySelector('.trivia-card-front');
+frontCard.addEventListener('click', getRandomInt, false);
 
 
-function cardFlip() {
-  // var element = event.currentTarget;
-  var element = document.querySelector('.trivia-card');
-  // e.target.querySelector('.tb-drop').classList.add('active');
+function cardFlip(element) {
+  // var element = document.querySelector('.trivia-card');
   // this.querySelector('.trivia-card');
-  if (element.className === "trivia-card") {
+  if (element.className === "card") {
     let front = document.querySelector('.trivia-card-inner');
     if (front.style.transform == "rotateY(180deg)") {
       front.style.transform = "rotateY(0deg)";
-      // getAnswer();
-      // getQuestion();
-
     } else {
       front.style.transform = "rotateY(180deg)";
-      // getQuestion();
-      // getAnswer();
     }
   }
 }
@@ -60,7 +53,8 @@ function getQuestion(Num) {
       setTimeout(() => {
         getAnswer(Num);
       }, 1000);
-      this.addEventListener('click', answerFlip, false);
+      let front = document.querySelector('.trivia-card-front');
+      front.addEventListener('click', answerFlip, false);
     })
 }
 
@@ -80,7 +74,8 @@ function getAnswer(Num) {
       console.log(message);
       var location = '.trivia-card-back';
       cardDisplay(message, location);
-      this.addEventListener('click', flipBacktoQ, false);
+      let back = document.querySelector('.trivia-card-back');
+      back.addEventListener('click', flipBacktoQ, false);
 
     })
 }
