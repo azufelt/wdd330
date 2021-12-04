@@ -59,7 +59,10 @@ function getAnswer() {
 }
 
 function getRandomInt(Num) {
-  let max = 3;
+
+
+  let max = 50;
+  console.log(max);
   Num = Math.floor(Math.random() * max);
   //having getAnswer here populates front and back at the same time, but also makes the answer visible too soon. 
   let dataKey = document.querySelector('.trivia-card-inner')
@@ -67,4 +70,16 @@ function getRandomInt(Num) {
   return Num;
 }
 
+// function getLength() {
+//   let jsonlength = "json/trivia.json"
+//   fetch(jsonlength)
+//     .then(function (list) {
+//       return list.json();
+//     })
+//     .then(function (object) {
+//       let array = object[triviaCards];
+//       let maxLength = array.length;
+//       return maxLength;
+//     });
+// }
 getQuestion();
