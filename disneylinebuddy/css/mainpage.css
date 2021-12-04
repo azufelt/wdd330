@@ -120,7 +120,6 @@ header {
   top: -50px;
   left: -50px;
   height: 100%;
-
 }
 
 .bottomImage {
@@ -143,6 +142,9 @@ header {
   padding: 1rem;
   object-fit: cover;
   overflow: hidden;
+   position: relative;
+   overflow: hidden;
+   height: 100vh;
 }
 
 .characterPage .colorWrapper {
@@ -196,6 +198,7 @@ label {
 .show {
   display: block;
 }
+
 .hide {
   display: none;
 }
@@ -224,25 +227,25 @@ label {
   background-color: var(--white);
 }
 
-.triviaCard {
+/* .triviaCard {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   margin: 3rem auto;
-}
+} */
 
 .largeTile {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 15px;
   padding: 10px;
   border: 6px solid var(--border);
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  
 }
-.triviaCardFront {
+
+/* .triviaCardFront {
   background-color: var(--blue);
   color: var(--white);
   display: flex;
@@ -250,18 +253,147 @@ label {
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-.triviaCardBack {
+} */
+/* .triviaCardBack {
   background-color: var(--yellow);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-}
+} */
 .show {
   display: flex;
+  z-index: 2;
 }
 
 .hide {
   display: none;
+  z-index: -5;
+}
+
+/* .cardContainer {
+  margin: 3rem 15% 3rem 13%;
+  background-color: var(--blue);
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+} */
+/* 
+.triviaCard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 2s;
+  /* backface-visibility: hidden; */
+  /* transform-style: preserve-3d; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  /* cursor: pointer; */
+/* } */
+/* 
+.triviaCardFront {
+  background-color: var(--blue);
+}
+
+.triviaCardFront,
+.triviaCardback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.triviaCardback {
+  /* background-color: var(--yellow); */
+  /* transform: rotateY(180deg); */
+/* } */
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+/* ------Tanya's flip card */
+.trivia-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.trivia-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor:pointer;
+}
+
+/* .trivia-card:hover .trivia-card-inner {
+  transform: rotateY(180deg);
+} */
+
+
+.trivia-card-front,
+.trivia-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trivia-card-back {
+  background-color: var(--yellow);
+  transform: rotateY(180deg);
+}
+
+
+
+
+/* *********************** Weather Page **************** */
+
+.weatherPage {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.weatherPage .colorWrapper {
+  background-color: var(--yellow);
+}
+
+.minniebackgroundimg {
+  position: absolute;
+  z-index: -1;
+  opacity: 70%;
+  top: 50px;
+  left: 50px;
+  height: 600px;
+  overflow: hidden
+}
+
+.weatherWrapper h2 {
+  margin: 1rem;
+}
+
+select {
+  padding: .5rem;
+  font-size: 1.5rem;
+  ;
 }

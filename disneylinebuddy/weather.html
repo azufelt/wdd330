@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link type="normalize/css" rel="stylesheet" href="#" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
+    <link type="text/css" rel="stylesheet" href="css/mainpage.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/waltograph"
+      type="text/css"
+    />
+    <script src="js/trivia.js" type="module"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <title>Disney Line Buddy</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome <span class="nameTitle"></span>!</h1>
+      <a href="main.html"
+        ><img
+          src="images/single-balloon.svg"
+          alt="mickey mouse balloon"
+          class="navBalloon"
+      /></a>
+    </header>
+    <main class="weatherPage">
+      <div class="colorWrapper"></div>
+      <img
+        src="images/minniemouse.png"
+        alt="newspaper mickey"
+        class="minniebackgroundimg"
+      />
+      <div class="weatherWrapper">
+        <h2>Which park location do you want to check the weather for?</h2>
+        <label for="parks"></label>
+
+        <select name="parks" id="parks" class="parkList">
+          <option value="california">Disneyland California</option>
+          <option value="florida">Walt Disney World Florida</option>
+          <option value="paris">Disney Paris</option>
+          <option value="japan">Tokyo Disney</option>
+          <option value="china">Disney Shanghai</option>
+        </select>
+        <div class="weatherResults"></div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Open Sans"],
+        },
+      });
+    </script>
+    <!-- <script src="js/main.mjs" type="module" defer></script> -->
+  </body>
+</html>
