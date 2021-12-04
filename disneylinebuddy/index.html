@@ -7,6 +7,7 @@
     <meta name="author" content="Ashley Zufelt" />
     <link type="normalize/css" rel="stylesheet" href="#" />
     <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/mainpage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="stylesheet"
@@ -14,6 +15,7 @@
       href="https://fontlibrary.org//face/waltograph"
       type="text/css"
     />
+    
     <!-- <script src="js/script.js" defer></script> -->
 
     <link rel="shortcut icon" href="../favicon.ico" />
@@ -19864,20 +19866,13 @@
     <main class="WelcomePage hide">
       <header>
         <h1>Welcome <span class="nameTitle"></span>!</h1>
-        <div class="navBox">
-          <!-- <nav>
-        <a href="main.html"
-          ><img
-            class="navBalloon hide"
-            src="images/single-balloon.svg"
-            alt="mickey balloon"
-        /></a> -->
-          <!-- </nav> -->
-        </div>
+        <div class="navBox"></div>
       </header>
 
       <div>
-        <h2>This is where all the stuff goes!</h2>
+        <div class="navTileBox">
+          <ul class="tileList"></ul>
+        </div>
         <img src="images/mickey-sketchBW.png" alt="sketched mickey mouse" />
       </div>
     </main>
@@ -19891,5 +19886,6 @@
       });
     </script>
     <script src="js/script.mjs" type="module" defer></script>
+    <script src="js/main.mjs" type="module"></script>
   </body>
 </html>
