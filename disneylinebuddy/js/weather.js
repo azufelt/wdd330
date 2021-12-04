@@ -66,9 +66,6 @@ function getLocation(park) {
   displayWeather(apiURL);
 }
 
-
-
-
 function displayWeather(apiURL) {
   fetch(apiURL)
     .then((response) => response.json())
@@ -90,15 +87,10 @@ function displayWeather(apiURL) {
 
       const temp = jsObject.current.temp.toFixed(0);
       document.querySelector("#currentTemp").textContent = temp;
+      const icon = jsObject.current.weather[0].icon;
 
-      var chill = 0;
-      var message = 0;
-      if (temp <= 50 && windspeed > 3) {
-        chill = 35.74 + .6215 * temp - 35.75 * Math.pow(windspeed, .16) + .4275 * temp * Math.pow(windspeed, .16);
-        message = chill.toFixed() + "°F";
-      } else {
-        message = "N/A"
-      };
-      document.querySelector("#windchill").innerHTML = message;
+      //  http:openweathermap.org/img/wn/10d@2x.png
+      let url = `"http://openweathermap.org/img/wn/${icon}@2x.png"`;
+      document.querySelector("#windchill").innerHTML = `<img src=${url} alt="weather icon">`;
     });
 }
