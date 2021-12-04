@@ -65,7 +65,7 @@ function getQuestion(Num) {
 }
 
 function answerFlip() {
-  flipCard();
+  cardFlip();
 }
 
 function getAnswer(Num) {
@@ -77,6 +77,7 @@ function getAnswer(Num) {
     })
     .then(function (jsObject) {
       var message = jsObject.triviaCards[index].answer;
+      console.log(message);
       var location = '.trivia-card-back';
       cardDisplay(message, location);
       this.addEventListener('click', flipBacktoQ, false);
