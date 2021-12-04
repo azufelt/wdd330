@@ -1,15 +1,16 @@
 :root {
   --black: hsla(197, 100%, 5%, 1);
-  --border: hsla(188, 31%, 28%, .8);
+  --border: hsla(188, 31%, 28%, 0.8);
   --dark-slate-gray: hsla(188, 31%, 28%, 1);
   --blue: hsla(190, 100%, 23%, 1);
   --light-blue: hsla(188, 32%, 67%, 1);
-  --almond: hsla(35, 51%, 86%, .5);
+  --almond: hsla(35, 51%, 86%, 0.5);
   --yellow: hsla(40, 79%, 54%, 1);
   --orange: hsla(30, 98%, 40%, 1);
   --darkorange: hsla(19, 97%, 37%, 1);
   --red: hsla(5, 81%, 38%, 1);
-  --green: #40712E;
+  --green: #40712e;
+  --white: white;
 }
 
 * {
@@ -28,9 +29,7 @@ html {
 
 h1,
 header span {
-  font-family: WaltographRegular,
-    script,
-    serif;
+  font-family: WaltographRegular, script, serif;
   font-size: 3rem;
 }
 
@@ -43,7 +42,6 @@ header {
   padding: 2rem;
   min-height: 8vh;
 }
-
 
 .mainPage {
   background-color: var(--almond);
@@ -85,7 +83,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 0.5rem;
   margin: 1rem;
 }
 
@@ -142,9 +140,9 @@ header {
   padding: 1rem;
   object-fit: cover;
   overflow: hidden;
-   position: relative;
-   overflow: hidden;
-   height: 100vh;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .characterPage .colorWrapper {
@@ -175,7 +173,7 @@ label {
 .button {
   background-color: var(--red);
   color: var(--white);
-  padding: .3rem 1.5rem;
+  padding: 0.3rem 1.5rem;
   border-radius: 50px;
   font-weight: bold;
   margin-inline-end: 10%;
@@ -191,7 +189,7 @@ label {
 
 .returnresults {
   background-color: var(--light-blue);
-  padding: .5rem;
+  padding: 0.5rem;
   display: none;
 }
 
@@ -222,45 +220,20 @@ label {
 }
 
 /* ************ Trivia Page********* */
+.triviaPage {
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+}
 
 .triviaPage .colorWrapper {
   background-color: var(--white);
 }
 
-/* .triviaCard {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  margin: 3rem auto;
-} */
-
-.largeTile {
-  width: 250px;
-  height: 250px;
-  border-radius: 15px;
-  padding: 10px;
-  border: 6px solid var(--border);
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-}
-
-/* .triviaCardFront {
-  background-color: var(--blue);
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-} */
-/* .triviaCardBack {
-  background-color: var(--yellow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-} */
 .show {
   display: flex;
   z-index: 2;
@@ -270,50 +243,6 @@ label {
   display: none;
   z-index: -5;
 }
-
-/* .cardContainer {
-  margin: 3rem 15% 3rem 13%;
-  background-color: var(--blue);
-  width: 250px;
-  height: 250px;
-  perspective: 1000px;
-} */
-/* 
-.triviaCard {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 2s;
-  /* backface-visibility: hidden; */
-  /* transform-style: preserve-3d; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-  /* cursor: pointer; */
-/* } */
-/* 
-.triviaCardFront {
-  background-color: var(--blue);
-}
-
-.triviaCardFront,
-.triviaCardback {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-.triviaCardback {
-  /* background-color: var(--yellow); */
-  /* transform: rotateY(180deg); */
-/* } */
-
 .yellow {
   background-color: var(--yellow);
 }
@@ -323,11 +252,25 @@ label {
 }
 
 /* ------Tanya's flip card */
+.cardWrapper {
+  margin-top: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .trivia-card {
   background-color: transparent;
   width: 300px;
   height: 300px;
   perspective: 1000px;
+  border-radius: 15px;
+  padding: 10px;
+  border: 6px solid var(--border);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .trivia-card-inner {
@@ -338,13 +281,8 @@ label {
   transition: transform 1.8s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  cursor:pointer;
+  cursor: pointer;
 }
-
-/* .trivia-card:hover .trivia-card-inner {
-  transform: rotateY(180deg);
-} */
-
 
 .trivia-card-front,
 .trivia-card-back {
@@ -362,9 +300,13 @@ label {
   background-color: var(--yellow);
   transform: rotateY(180deg);
 }
+.fliptoBack {
+  transform: rotateY(180deg);
+}
 
-
-
+.fliptoFront {
+  transform: rotateY(0deg);
+}
 
 /* *********************** Weather Page **************** */
 
@@ -381,19 +323,39 @@ label {
 .minniebackgroundimg {
   position: absolute;
   z-index: -1;
-  opacity: 70%;
-  top: 50px;
+  opacity: 50%;
+  top: 200px;
   left: 50px;
   height: 600px;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .weatherWrapper h2 {
   margin: 1rem;
 }
-
+.parkList {
+  display: block;
+  margin: 0 auto;
+}
 select {
-  padding: .5rem;
-  font-size: 1.5rem;
-  ;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+}
+.weatherResults-inner {
+  background-color: var(--white);
+  padding: 2rem;
+  margin: 2rem;
+  opacity: 90%;
+  height: 60vh;
+}
+.weatherReport {
+  opacity: 100%;
+  filter: drop-shadow(0px 0px 0px black);
+}
+.weatherReport ul {
+  font-size: 1.2rem;
+}
+.weatherReport h3,
+.weatherReport ul li:first-child {
+  text-align: center;
 }
