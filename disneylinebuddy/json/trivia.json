@@ -1,145 +1,261 @@
-{"triviaCards": [
-  
-  {
-    "question": "What year did Disneyland open?",
-    "answer":"1955"
-  },
-   {
-    "question": "What is the name of Wendy’s dog in Peter Pan?",
-    "answer":"Nana"
-  },
-   {
-    "question": "Who trained Hercules to be a hero?",
-    "answer":"Philoctetes (better known as Phil)"
-  },
-   {
-    "question": "Which Disney film includes the hit song 'Let It Go'?",
-    "answer":"Frozen"
-  },
-   {
-    "question": "Who is the bear in 'The Jungle Book'?",
-    "answer":"Balloo"
-  }
-  ,
-   {
-    "question": "What is the name of the toy store in 'Toy Story 2'?",
-    "answer":"Al’s Toy Barn"
-  }
-  ,
-   {
-    "question": "How many siblings does Prince Hans of the Southern Isles have in 'Frozen'?",
-    "answer":"12"
-  }
-  ,
-   {
-    "question": "Which ‘Full House’ actor voices the character Aladdin?",
-    "answer":"Scott Weinger"
-  }
-  ,
-   {
-    "question": "What is the name of Andy’s neighbor in 'Toy Story'?",
-    "answer":"Sid"
-  }
-  ,
-   {
-    "question": " In which territory in Disney World is Big Thunder Mountain Railroad located?",
-    "answer":"Frontierland"
-  }
-  ,
-   {
-    "question": " What are the names of Cinderella’s stepsisters?",
-    "answer":"Anastasia and Drizella"
-  }
-  ,
-   {
-    "question": "What is Prince Eric and Ariel's child called?",
-    "answer":"Princess Melody"
-  }
-  ,
-   {
-    "question": "Which Disney Princess sang 'Once Upon A Dream'?",
-    "answer":"Aurora"
-  }
-  ,
-   {
-    "question": "What are Hades' minions in 'Hercules' called",
-    "answer":"Pain and Panic"
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
-  ,
-   {
-    "question": "",
-    "answer":""
-  }
+{
+  "triviaCards": [
 
-]
+    {
+      "question": "What year did Disneyland open?",
+      "answer": "1955"
+    },
+    {
+      "question": "What is the name of Wendy’s dog in Peter Pan?",
+      "answer": "Nana"
+    },
+    {
+      "question": "Who trained Hercules to be a hero?",
+      "answer": "Philoctetes (better known as Phil)"
+    },
+    {
+      "question": "Which Disney film includes the hit song 'Let It Go'?",
+      "answer": "Frozen"
+    },
+    {
+      "question": "Who is the bear in 'The Jungle Book'?",
+      "answer": "Balloo"
+    },
+    {
+      "question": "What is the name of the toy store in 'Toy Story 2'?",
+      "answer": "Al’s Toy Barn"
+    },
+    {
+      "question": "How many siblings does Prince Hans of the Southern Isles have in 'Frozen'?",
+      "answer": "12"
+    },
+    {
+      "question": "Which ‘Full House’ actor voices the character Aladdin?",
+      "answer": "Scott Weinger"
+    },
+    {
+      "question": "What is the name of Andy’s neighbor in 'Toy Story'?",
+      "answer": "Sid"
+    },
+    {
+      "question": " In which territory in Disney World is Big Thunder Mountain Railroad located?",
+      "answer": "Frontierland"
+    },
+    {
+      "question": " What are the names of Cinderella’s stepsisters?",
+      "answer": "Anastasia and Drizella"
+    },
+    {
+      "question": "What is Prince Eric and Ariel's child called?",
+      "answer": "Princess Melody"
+    },
+    {
+      "question": "Which Disney Princess sang 'Once Upon A Dream'?",
+      "answer": "Aurora"
+    },
+    {
+      "question": "What are Hades' minions in 'Hercules' called",
+      "answer": "Pain and Panic"
+    },
+    {
+      "question": "Where does Mike Wazowski go with his girlfriend Celia for her birthday feast in ‘Monsters Inc’?",
+      "answer": "Harryhausen’s"
+    },
+    {
+      "question": "What does 'Hakuna Matata' mean?",
+      "answer": "No worries"
+    },
+    {
+      "question": "What is the castle in Shanghai Disneyland Park called?",
+      "answer": "The Enchanted Storybook Castle"
+    },
+    {
+      "question": "Who are the seven dwarfs in the movie 'Snow White'?",
+      "answer": "Doc, Grumpy, Happy, Sleepy, Bashful, Sneezy and Dopey"
+    },
+    {
+      "question": "What are the names of the mountains in Magic Kingdom?",
+      "answer": "Space Mountain, Splash Mountain and Big Thunder Railroad Mountain"
+    },
+    {
+      "question": "How many fingers does Mickey Mouse have on each hand?",
+      "answer": " Four (three fingers and a thumb)"
+    },
+    {
+      "question": "The Genie was clasped in the lamp for how many years before Aladdin discovered him?",
+      "answer": "10,000 years"
+    },
+    {
+      "question": "What's the name of Walt Disney’s first ever cartoon character?",
+      "answer": "Oswald the Lucky Rabbit"
+    },
+    {
+      "question": "Who is Mufasa’s trusted counselor in 'The Lion King'?",
+      "answer": "Zazu"
+    },
+    {
+      "question": "Christian Bale is the voice actor of which character in 'Pocahontas'?",
+      "answer": "Thomas"
+    },
+    {
+      "question": "Which poisonous fruit did Snow White eat?",
+      "answer": "Apple"
+    },
+    {
+      "question": "Angelina Jolie played which Disney villain?",
+      "answer": "Maleficent"
+    },
+    {
+      "question": "Which Disney princess came to Elsa’s Coronation Day in Arendelle?",
+      "answer": "Rapunzel"
+    },
+    {
+      "question": "What is the name of Belle’s dad in 'Beauty And The Beast'?",
+      "answer": "Maurice"
+    },
+    {
+      "question": "Which Disney Princess did Lily James play in a 2015 live-action remake?",
+      "answer": "Cinderella"
+    },
+    {
+      "question": "Who attends to Pinocchio’s conscience?",
+      "answer": "Jiminy Cricket"
+    },
+    {
+      "question": "What is the name of Goofy’s son?",
+      "answer": "Maximillian Goof"
+    },
+    {
+      "question": "Which circus is shown in the 1941 animated film 'Dumbo'?",
+      "answer": "WDP Circus"
+    },
+    {
+      "question": "Which was the first Pixar film?",
+      "answer": "Toy Story"
+    },
+    {
+      "question": "How many years old is Crush in 'Finding Nemo",
+      "answer": " 150"
+    },
+    {
+      "question": " Who is Sleeping Beauty’s prince?",
+      "answer": "Prince Philip"
+    },
+    {
+      "question": "Emperor Kuzco turns into which animal in 'The Emperor’s New Groove'?",
+      "answer": "Llama"
+    }
+
+    ,
+    {
+      "question": "What is the name of Remy’s culinary icon in 'Ratatouille'?",
+      "answer": "Chef Auguste Gusteau"
+    }
+
+    ,
+    {
+      "question": "Pongo and Perdita initially had how many pups in '101 Dalmatians'?",
+      "answer": "15"
+    }
+
+    37. Question: What is Tarzan’ s adopted mother’ s name ?
+
+    Answer : Kala.,
+    {
+      "question": "",
+      "answer": ""
+    }
+
+
+    ,
+    {
+      "question": "Who composed the music for 'Toy Story'?",
+      "answer": " Randy Newman"
+    }
+
+    ,
+    {
+      "question": "The sorcerer’s name in the movie 'Fantasia' spells what word backward?",
+      "answer": "Disney"
+    }
+
+    ,
+    {
+      "question": "What is Princess Mia’s full name in the movie 'The Princess Diaries'?",
+      "answer": "Amelia Mignonette Thermopolis Renaldi"
+    }
+
+    ,
+    {
+      "question": "The Haunted Mansion is a dwelling for how many joyous haunts?",
+      "answer": "999"
+    }
+
+    ,
+    {
+      "question": "What's the name of Rapunzel's chameleon?",
+      "answer": "Pascal"
+    }
+
+    ,
+    {
+      "question": "Who said, “Fish are friends, not food”?",
+      "answer": "Bruce"
+    }
+
+
+    ,
+    {
+      "question": "Duchess is a mother to how many kittens in 'The Aristocats'?",
+      "answer": "Three"
+    }
+
+    ,
+    {
+      "question": "Which Disney character sang 'Kiss The Girl'?",
+      "answer": "Sebastian"
+    }
+
+
+    ,
+    {
+      "question": "What were Mickey Mouse’s first words ever spoken?",
+      "answer": "Hot dog!"
+    }
+
+
+    ,
+    {
+      "question": "Which high school did Troy and Gabriella attend in 'High School Musical'?",
+      "answer": " East High School"
+    }
+
+
+    ,
+    {
+      "question": "What name does Mulan pick for herself while pretending to be a man?",
+      "answer": "Ping"
+    }
+
+
+    ,
+    {
+      "question": "Complete the quote- All you need is a little faith, trust, and...",
+      "answer": "Pixie dust."
+    }
+    ,
+    {
+      "question": "What is Flynn Rider’s actual name in 'Tangled'?",
+      "answer": "Eugene Fitzherbert"
+    },
+    {
+      "question": "Who is Miguel’s idol in 'Coco'?",
+      "answer": " Ernesto de la Cruz"
+    }
+    ,
+    {
+      "question": "How many Muses are in 'Hercules'?",
+      "answer": "Five"
+    }
+  ]
 }
