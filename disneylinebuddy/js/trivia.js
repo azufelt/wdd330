@@ -5,7 +5,7 @@ import {
 getName();
 
 const frontCard = document.querySelector('.trivia-card-front');
-frontCard.addEventListener('click', getRandomInt, false);
+frontCard.addEventListener('click', getRandomInt, true);
 
 
 function cardFlip(element) {

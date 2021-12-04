@@ -16,7 +16,8 @@
       href="https://fontlibrary.org//face/waltograph"
       type="text/css"
     />
-    <script src="js/trivia.js" type="module"></script>
+
+    <script src="js/weather.js" type="module"></script>
 
     <link rel="shortcut icon" href="../favicon.ico" />
     <title>Disney Line Buddy</title>
@@ -43,14 +44,26 @@
         <h2>Which park location do you want to check the weather for?</h2>
         <label for="parks"></label>
 
-        <select name="parks" id="parks" class="parkList">
-          <option value="california">Disneyland California</option>
-          <option value="florida">Walt Disney World Florida</option>
-          <option value="paris">Disney Paris</option>
-          <option value="japan">Tokyo Disney</option>
-          <option value="china">Disney Shanghai</option>
+        <select name="parkList" id="parkList" class="parkList">
+          <option value="california" class="park">Disneyland California</option>
+          <option value="florida" class="park">
+            Walt Disney World Florida
+          </option>
+          <option value="paris" class="park">Disney Paris</option>
+          <option value="japan" class="park">Tokyo Disney</option>
+          <option value="china" class="park">Disney Hong Kong</option>
+          <option value="shanghai" class="park">Disney Shanghai</option>
         </select>
-        <div class="weatherResults"></div>
+        <div class="weatherResults">
+          <h3>Current Weather</h3>
+          <p>
+            Currently: <span id="conditions"></span><br />
+            Current Temp: <span id="currentTemp"></span>°F<br />
+            Wind Chill: <span id="windchill"></span><br />
+            Humidity: <span id="humidity"></span><br />
+            Wind Speed: <span id="wind"></span>mph<br />
+          </p>
+        </div>
       </div>
     </main>
 
