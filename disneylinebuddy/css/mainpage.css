@@ -44,10 +44,18 @@ header {
 }
 
 .mainPage {
-  background-color: var(--almond);
-  height: 100vh;
+    min-height: 100vh;
+    max-width: 100%;
+    padding: 1rem;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
 }
-
+.mainPage .colorWrapper {
+background-color: var(--almond);
+}
 .mainPage img {
   position: absolute;
   top: 25%;
@@ -83,6 +91,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
 }
@@ -234,7 +243,7 @@ label {
   background-color: var(--white);
 }
 
-.show {
+/* .show {
   display: flex;
   z-index: 2;
 }
@@ -249,9 +258,8 @@ label {
 
 .blue {
   background-color: var(--blue);
-}
+} */
 
-/* ------Tanya's flip card */
 .cardWrapper {
   margin-top: 3rem;
   width: 100%;
@@ -362,4 +370,46 @@ select {
 .weatherReport h3,
 .weatherReport ul li:first-child {
   text-align: center;
+}
+
+
+/* ****************** tic tac toee page *************** */
+
+
+
+
+
+/* **************** Media Query************ */
+@media only screen and (min-width: 500px) {
+  html {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  body {
+    border: 3px solid black;
+    border-radius: 50px;
+  }
+  .colorWrapper {
+      border-radius: 0px 0px 50px 50px;
+      height: 100%;
+      width: 100%;
+  }
+
+  .enterPage {
+    width: 100%;
+    border-radius: 50px;
+  }
+
+  header,
+  .WelcomePage {
+    border-radius: 50px 50px 0 0;
+  }
+  .navBalloon {
+    left: 60%;
+  }
+  .backgroundimg {
+
+    width: 100vw;
+  }
 }
