@@ -184,6 +184,7 @@ label {
   color: var(--white);
   padding: 0.3rem 1.5rem;
   border-radius: 50px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-inline-end: 10%;
   border: none;
@@ -373,11 +374,70 @@ select {
 }
 
 
-/* ****************** tic tac toee page *************** */
+/* ****************** tic tac toe page *************** */
+.tictactoePage {
+  min-height: 100vh;
+  max-width: 100%;
+  padding: 1rem;
+  object-fit: cover;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  height: 90vh;
+}
+.tictactoePage section {
+  display: flex;
+  flex-direction: column;
+ justify-content: evenly;
+ height: 100vh;
+}
+.playerSelections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.gameBtnBox {
+  text-align: center;
+  margin: 2rem;
+}
+.tictactoebox {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+  max-width:100%;
+}
+.middle {
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
 
+.center {
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
 
-
-
+.box {
+  width: 110px;
+  height: 110px;
+  align-items: center;
+  font-family: "Permanent Marker";
+  font-size: 5rem;
+}
+select,
+label {
+  padding: .5rem;
+  font-size: 1.5rem;
+}
+.gameStatus {
+  margin-top: 3rem;
+  text-align: center;
+}
+.tictactoePage h2 {
+  text-align: center;
+  font-size: 2rem;
+}
 
 /* **************** Media Query************ */
 @media only screen and (min-width: 500px) {
@@ -412,4 +472,5 @@ select {
 
     width: 100vw;
   }
+
 }

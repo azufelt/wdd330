@@ -12,9 +12,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/waltograph" type="text/css" />
-
-  <script src="js/weather.js" type="module"></script>
-
+<!-- <link href="http://fonts.cdnfonts.com/css/disney-family-1" rel="stylesheet"> -->
+  
+  <script src="js/tictactoe.js" type="module"></script>
   <link rel="shortcut icon" href="../favicon.ico" />
   <title>Disney Line Buddy</title>
 </head>
@@ -24,31 +24,38 @@
     <h1>Welcome <span class="nameTitle"></span>!</h1>
     <a href="main.html"><img src="images/single-balloon.svg" alt="mickey mouse balloon" class="navBalloon" /></a>
   </header>
-  <main class="tictactoerPage">
+  <main class="tictactoePage">
     <div class="colorWrapper"></div>
 
     <section>
+      <h2>Tic-Tac-Toe</h2>
       <div class="playerSelections">
-        <h2> Select player token before game play.</h2>
-        <label for="tic"> Player 1:</label>
-        <span id="token1"></span>
-        <select name="tic" id="player1" onchange="player1Token()">
-          <option><img src="images/spiderman.svg" alt="mickey spiderman icon token"></option>
-          <option value="👑">👑</option>
-
-        </select>
-        <label for="tac"> Player 2:</label>
-        <span id="token2"></span>
-        <select name="tac" id="player2" onchange="player2Token()">
-          <option><img src="images/swmouse.svg" alt="mickey star wars face icon "></option>
-          <option value="🍔">🍔</option>
-        </select>
-        <button class="restart">Start Game!</button>
-        <h1 class="gameStatus"></h1>
-
-
-
+        <div>
+          <label for="tic"></label>
+          <span id="token1"></span>
+          <select name="tic" id="player1" onchange="player1Token()">
+           <option disabled="disabled">Player 1:</option>
+            <option value="❤️">❤️</option>
+            <option value="💛">💛</option>
+          </select>
+        </div>
+        <div>
+          <label for="tac"></label>
+          <span id="token2"></span>
+          <select name="tac" id="player2" onchange="player2Token()">
+            <option disabled="disabled">Player 2:</option>
+            <option value="🖤">🖤</option>
+            <option value="💛">💛</option>
+          </select>
+        </div>
+       
       </div>
+       <p>**Select player token before game play.
+      </p>
+      <div class="gameBtnBox">
+         <!-- <button class="restart button">Start Game!</button> -->
+         <input type="button" class="button restart" value="Start Game!" />  
+       </div>
 
       <div class="tictactoebox">
         <div data-cell-index="0" class="box left top"></div>
@@ -56,12 +63,12 @@
         <div data-cell-index="2" class="box right top"></div>
         <div data-cell-index="3" class="box left center"></div>
         <div data-cell-index="4" class="box middle center" "></div>
-          <div data-cell-index=" 5" class="box right center"></div>
+        <div data-cell-index=" 5" class="box right center"></div>
         <div data-cell-index="6" class="box left bottom"></div>
         <div data-cell-index="7" class="box middle bottom"></div>
         <div data-cell-index="8" class="box right bottom"></div>
       </div>
-
+ <h1 class="gameStatus"></h1>
     </section>
   </main>
 
