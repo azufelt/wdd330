@@ -126,7 +126,7 @@ background-color: var(--almond);
   opacity: 30%;
   top: -50px;
   left: -50px;
-  height: 100%;
+  min-height: 100vh;
 }
 
 .bottomImage {
@@ -139,7 +139,7 @@ background-color: var(--almond);
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 /* ************ Character Search Page********* */
@@ -151,11 +151,12 @@ background-color: var(--almond);
   overflow: hidden;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 .characterPage .colorWrapper {
   background-color: var(--blue);
+  height: 100%;
 }
 
 .characterPage form {
@@ -242,25 +243,8 @@ label {
 
 .triviaPage .colorWrapper {
   background-color: var(--white);
+  height: 100%;
 }
-
-/* .show {
-  display: flex;
-  z-index: 2;
-}
-
-.hide {
-  display: none;
-  z-index: -5;
-}
-.yellow {
-  background-color: var(--yellow);
-}
-
-.blue {
-  background-color: var(--blue);
-} */
-
 .cardWrapper {
   margin-top: 3rem;
   width: 100%;
@@ -326,11 +310,12 @@ label {
 .weatherPage {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .weatherPage .colorWrapper {
   background-color: var(--yellow);
+ height: 100%;
 }
 
 .minniebackgroundimg {
