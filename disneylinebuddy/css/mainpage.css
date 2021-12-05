@@ -380,7 +380,6 @@ select {
   overflow: hidden;
   position: relative;
   overflow: hidden;
-  height: 90vh;
 }
 
 .tictactoePage section {
@@ -445,31 +444,15 @@ label {
 }
 
 /* ******************** Dash Game ****************** */
-/* .dashPage:before {
-  content: "Please turn device to play game.";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  vertical-align: middle;
-  margin: 3rem .5rem;
-  padding: 4rem .5rem;
-  font-size: 2rem;
-  background-color: var(--yellow);
-  height: 60vh;
-}
 
-.game,
-.dashPage h2,
-.dashPage input {
-  display: none;
-}
-
-
-  .dashPage:before {
-    display: none;
-  } */
   .dashPage {
-    min-height: 100vh;
+      min-height: 100vh;
+      max-width: 100%;
+      padding: 1rem;
+      object-fit: cover;
+      overflow: hidden;
+      position: relative;
+      overflow: hidden;
   }
   .game,
   .dashPage h2,
@@ -488,7 +471,7 @@ label {
     /* relative so it can move in the container */
     position: relative;
     /* positioned the amount of the container, minus the heieght of the character */
-    top: 130px;
+    top: 140px;
     right: 290px;
     z-index: 100;
     height: 500px;
@@ -498,12 +481,25 @@ label {
     width: 80px;
     height: 80px;
     position: absolute;
-    
-    top: 350px;
-    left: 680px;
-    border: 1px solid red;
+    top: 230px;
+    /* left: 680px; */
   }
-
+.pointsBox {
+border: 1px solid yellow;
+ width: 80px;
+ height: 80px;
+ position: absolute;
+ top: 230px;
+ left: 130px;
+}
+.gameOver {
+  border: 1px solid red;
+   width: 80px;
+   height: 80px;
+   position: absolute;
+  top: 440px;
+  left:100px;
+}
   .animate {
     animation: jump 500ms;
     transition-property: all;
@@ -516,7 +512,8 @@ label {
     position: relative;
      height: 80px;
     top: -110px;
-    /* left: 450px; */
+    /* left: 250px; */
+    border: 1px solid red;
   }
 
   .start {
@@ -541,7 +538,7 @@ label {
 
   @keyframes block {
     0% {
-      left: 820px;
+      left: 250px;
     }
 
     100% {
