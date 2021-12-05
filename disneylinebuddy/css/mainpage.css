@@ -445,7 +445,7 @@ label {
 }
 
 /* ******************** Dash Game ****************** */
-.dashPage:before {
+/* .dashPage:before {
   content: "Please turn device to play game.";
   display: flex;
   flex-direction: column;
@@ -464,41 +464,43 @@ label {
   display: none;
 }
 
-@media only screen and (min-width: 800px) {
+
   .dashPage:before {
     display: none;
-  }.dashPage {
+  } */
+  .dashPage {
     min-height: 100vh;
   }
   .game,
   .dashPage h2,
   .dashPage input {
-    display: block;
+    text-align: center;
   }
   .game {
-    width: 500px;
-    height: 300px;
+    width: 90vw;
+    height: 65vh;
     border: 1px solid black;
     margin: 0 auto;
   }
 
   .char {
     transform: scale(-1, 1);
-    font-size: 5rem;
     /* relative so it can move in the container */
     position: relative;
     /* positioned the amount of the container, minus the heieght of the character */
-    top: 205px;
-    right: 380px;
+    top: 130px;
+    right: 290px;
     z-index: 100;
+    height: 500px;
   }
 
-  .gameOver {
+  .getPoints {
     width: 80px;
     height: 80px;
     position: absolute;
-    top: 380px;
-    left: 220px;
+    
+    top: 350px;
+    left: 680px;
     border: 1px solid red;
   }
 
@@ -512,8 +514,9 @@ label {
   .block {
     font-size: 3rem;
     position: relative;
-    top: 130px;
-    left: 450px;
+     height: 80px;
+    top: -110px;
+    /* left: 450px; */
   }
 
   .start {
@@ -563,7 +566,7 @@ label {
       top: 200px;
     }
   }
-}
+
 
 /* **************** Media Query************ */
 @media only screen and (min-width: 500px) {
