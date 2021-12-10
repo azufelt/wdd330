@@ -27,32 +27,8 @@
     {
     "name": "Would you Rather...",
     "backgroundcolor":"5, 81%, 38%",
-    "link":"#",
+    "link":"rather.html",
     "linkcolor":"white"
-  },
-    {
-    "name": "Dino Dash",
-    "backgroundcolor":"190, 100%, 23%",
-    "link":"dash.html",
-    "linkcolor":"white"
-  },
-    {
-    "name": "Ride Wait Times",
-    "backgroundcolor":"40, 79%, 54%",
-    "link":"#",
-    "linkcolor":"black"
-  },
-    {
-    "name": "Tap-O-War",
-    "backgroundcolor":"40, 79%, 54%",
-    "link":"#",
-    "linkcolor":"black"
-  },
-    {
-    "name": "Packing List",
-    "backgroundcolor":"188, 32%, 67%",
-    "link":"#",
-    "linkcolor":"black"
   }
 ]
 }

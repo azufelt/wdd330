@@ -16,7 +16,7 @@
       href="https://fontlibrary.org//face/waltograph"
       type="text/css"
     />
-    <!-- <link href="http://fonts.cdnfonts.com/css/disney-family-1" rel="stylesheet"> -->
+    <script src="js/rather.js" type="module"></script>
 
     <link rel="shortcut icon" href="../favicon.ico" />
     <title>Disney Line Buddy</title>
@@ -32,26 +32,39 @@
           class="navBalloon"
       /></a>
     </header>
-    <main class="dashPage">
+    <main class="ratherPage">
       <div class="colorWrapper"></div>
-      <h2>Jump Game</h2>
-      <div class="game">
-        <div>
-          <img class="char" src="images/dino.svg" />
+      <img
+        src="images/paintingmickey.jpg"
+        alt="painting mickey"
+        class="backgroundimg"
+      />
+      <div class="flipCardContainer">
+        <div class="rathercardWrapper">
+          <div class="rather-card">
+            <div class="rather-card-inner">
+              <div class="rather-card-front" data-key="">
+                <h2 class="ratherQ"></h2>
+              </div>
+              <div class="rather-card-back" data-key=""></div>
+            </div>
+          </div>
         </div>
-        <!-- <div><img class="char" src="images/woody.svg" /></div> -->
-        <div class="pointsBox"></div>
-        <div class="">
-          <img class="getPoint" src="images/star.svg" />
-          <div></div>
+        <!-- <div class="cubeWrapper">
+        <div class="perspective">
+          <div class="cube">
+            <div class="cube-face cube-face-front">Front</div>
+            <div class="cube-face cube-face-back">Back</div>
+            <div class="cube-face cube-face-left">Left</div>
+            <div class="cube-face cube-face-right">Right</div>
+            <div class="cube-face cube-face-top">Top</div>
+            <div class="cube-face cube-face-bottom">Bottom</div>
+          </div>
         </div>
-
-        <div><img class="block" src="images/pixarball.svg" /></div>
-        <div class="gameOver"></div>
-      </div>
-      <div class="buttonBox">
-        <input type="submit" class="startBtn" value="Start Game!" />
-        <h3 class="keepScore"></h3>
+      </div> -->
+        <div class="ratherBtn">
+          <span>?</span>
+        </div>
       </div>
     </main>
 
@@ -63,6 +76,6 @@
         },
       });
     </script>
-    <script src="js/dash.js" type="module"></script>
+    <!-- <script src="js/main.mjs" type="module" defer></script> -->
   </body>
 </html>

@@ -1,3 +1,9 @@
+import {
+  getName
+} from "./getName.mjs";
+
+getName();
+
 var dinoChar = document.querySelector(".dino");
 dinoChar.addEventListener('click', jump, false);
 
