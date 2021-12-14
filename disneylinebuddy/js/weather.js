@@ -1,8 +1,8 @@
-// import {
-//   getName
-// } from "./getName.mjs";
+import {
+  getName
+} from "./getName.mjs";
 
-// getName();
+getName();
 
 
 const selectPark = document.querySelector(".parkList");
@@ -134,7 +134,7 @@ function displayWeather(apiURL) {
     });
 }
 
-function displayForecast(forecastAPI, offset) {
+function displayForecast(forecastAPI) {
   fetch(forecastAPI)
     .then((respond) => respond.json())
     .then((jsonObj) => {
@@ -159,18 +159,22 @@ function displayForecast(forecastAPI, offset) {
         };
         let weekDay = new Intl.DateTimeFormat('en-US', options).format(weatherDay);
         console.log(new Intl.DateTimeFormat('en-US', options).format(weatherDay));
-        let max = jsonObj.daily[i].temp.max;
+        let max = (jsonObj.daily[i].temp.max).toFixed(0);
         console.log(max);
-        let min = jsonObj.daily[i].temp.min;
+        let min = (jsonObj.daily[i].temp.min).toFixed(0);
         console.log(min);
-        let conditions = jsonObj.daily[0].weather[0].description;
+        let conditions = jsonObj.daily[i].weather[0].main;
+        console.log(conditions);
 
-        document.querySelector('.forecastList').innerHTML = `
-        <li>
+        let displayLi = document.querySelector('.forecastList');
+        let li = document.createElement('li');
+        li.innerHTML = `
+        <svg class="liMickey" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.98 73.7"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M92.12,46.48c-4.2,5.28-11.14,7.23-17.76,5.64A27,27,0,1,1,25.24,52c-7.35,1.77-15-.77-19-7C1,37,3.93,25.79,12.76,20.06S33,16.22,38.19,24.27a16.6,16.6,0,0,1,1.86,13.81,27.08,27.08,0,0,1,19.47,0,16.81,16.81,0,0,1,2.76-15.32c6-7.51,17.47-8.29,25.71-1.74S98.08,39,92.12,46.48Z" transform="translate(-3.63 -16.6)"/></svg>
           <h5>${weekDay}</h5>
-          <span>${max.toFixed(0)}°F | ${min.toFixed(0)}°F</span>
+          <span>${max}°F | ${min}°F</span>
           <p>${conditions}</p>
-        </li>`;
-      }
+       `;
+        displayLi.append(li);
+      };
     });
 }

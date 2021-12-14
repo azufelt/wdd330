@@ -10,5 +10,38 @@
   </head>
   <body>
     <div class="weatherResults"></div>
+    <div class="popupWrapper">
+      <div class="popup">
+        <span class="closebutton">✕</span>
+      </div>
+    </div>
+    <style>
+      .popupWrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .popup {
+        position: absolute;
+        background-color: pink;
+        height: 80%;
+        width: 80%;
+      }
+      .closebutton {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+    <script>
+      const closeBtn = document.querySelector(".closebutton");
+      closeBtn.addEventListener("click", closeBox, false);
+
+      function closeBox() {
+        let target = document.querySelector(".popup");
+        target.classList.add("hide");
+      }
+    </script>
   </body>
 </html>
