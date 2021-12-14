@@ -22,9 +22,13 @@
 ul {
   list-style: none;
 }
+select, input {
+  font-size: 1.2rem;
+}
 
 html {
   width: 100vw;
+  height: 90vh;
 }
 
 h1,
@@ -34,24 +38,27 @@ header span {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   /* display: flex; */
   /* flex-direction: row; */
   /* justify-content: space-between; */
-  /* align-items: center; */
+  align-items: center;
   background-color: var(--light-blue);
   padding: 2rem;
   min-height: 8vh;
 }
 
 .mainPage {
-  min-height: 100vh;
+  min-height: 90vh;
   max-width: 100%;
   padding: 1rem;
   object-fit: cover;
   overflow: hidden;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 90vh;
 }
 
 .mainPage .colorWrapper {
@@ -74,19 +81,23 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+.mainPage li {
+      margin: 1.5rem 0.5rem;
+}
 .mainPage .NavTile {
   width: 10rem;
   height: 10rem;
   background-color: var(--yellow);
 }
 
-.navBalloon {
+img.navBalloon {
   position: absolute;
   width: 30%;
+  height: 20%;
   top: 0%;
-  left: 70%;
-  z-index: 2;
+  left: 55%;
+ overflow: hidden;
+ z-index: 100;
 }
 
 .tileList {
@@ -128,7 +139,7 @@ header {
   opacity: 30%;
   top: -50px;
   left: -50px;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .bottomImage {
@@ -146,7 +157,7 @@ header {
 
 /* ************ Character Search Page********* */
 .characterPage {
-  min-height: 100vh;
+  min-height: 90vh;
   max-width: 100%;
   padding: 1rem;
   object-fit: cover;
@@ -234,7 +245,7 @@ label {
 
 /* ************ Trivia Page********* */
 .triviaPage {
-  min-height: 100vh;
+  min-height: 90vh;
   max-width: 100%;
   padding: 1rem;
   object-fit: cover;
@@ -316,7 +327,7 @@ label {
 .weatherPage {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 .weatherPage .colorWrapper {
@@ -347,7 +358,10 @@ select {
   padding: 0.5rem;
   font-size: 1.1rem;
 }
-
+.weatherResultsTitle {
+  font-size: 2rem;
+  color: var(--blue);
+}
 .weatherResults-inner {
   background-color: var(--white);
   padding: 2rem;
@@ -355,7 +369,32 @@ select {
   opacity: 90%;
   height: 60vh;
 }
-
+.weatherBox {
+  display: flex;
+  flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+       background-color: var(--yellow);
+}
+.caps {
+  text-transform: capitalize;
+}
+.tempIcon {
+  border: 5px solid var(--yellow);
+   background-color: white;
+   padding: 0 2rem;
+}
+.tempIcon img {
+  filter: drop-shadow(2px 4px 6px black);
+}
+.tempBox {
+  background-color: var(--yellow);
+  padding: 1rem;
+}
+.parkTime {
+  padding: 1rem;
+  text-align: center;
+}
 .weatherReport {
   opacity: 100%;
   filter: drop-shadow(0px 0px 0px black);
@@ -373,7 +412,7 @@ select {
 
 /* ****************** tic tac toe page *************** */
 .tictactoePage {
-  min-height: 100vh;
+  min-height: 90vh;
   max-width: 100%;
   padding: 1rem;
   object-fit: cover;
@@ -386,7 +425,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: evenly;
-  height: 100vh;
+  height: 90vh;
 }
 
 .playerSelections {
@@ -446,7 +485,7 @@ label {
 /* ******************** Dash Game ****************** */
 
   .dashPage {
-      min-height: 100vh;
+      min-height: 90vh;
       max-width: 100%;
       padding: 1rem;
       object-fit: cover;
@@ -576,7 +615,7 @@ border: 1px solid yellow;
 .ratherPage {
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 .ratherPage .backgroundimg {
 position: absolute;
@@ -584,7 +623,7 @@ z-index: -1;
 opacity: 80%;
 /* top: -50 px; */
 /* left: -50 px; */
-min-height: 100 vh;
+min-height: 90vh;
 }
 .ratherPage .colorWrapper {
   /* background-color: var(--yellow); */
@@ -711,7 +750,7 @@ min-height: 100 vh;
   }
 
   .navBalloon {
-    left: 60%;
+    left: 70%;
   }
 
   .backgroundimg {

@@ -9,31 +9,24 @@
   --darkorange: #bb3e03ff;
   --red: #ae2012ff;
   --green: #40712E;
+    --white: white;
 }
+ 
 
-/* p {
-  font-family: 'WaltographRegular';
-  font-weight: normal;
-  font-style: normal;
-} */
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Open Sans", sans-serif;
-}
 
-html {
-  width: 100vw;
-}
 
 body {
   position: relative;
   overflow: hidden;
 }
-
+.copyright {
+  position:fixed;
+  z-index: 50;
+      left: 40%;
+}
 .enterPage {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   background-color: var(--yellow);
   opacity: 0;
@@ -42,7 +35,7 @@ body {
 
 .enterStuckatTop {
   margin: 0%;
-  height: 100vh;
+  height: 90vh;
   opacity: 1;
   z-index: 1;
 }
@@ -115,38 +108,38 @@ nav img {
   0% {
     height: 35%;
     top: 30%;
-    left: 45%;
+    left: 40%;
     z-index: 1;
     opacity: 1;
     margin-top: 0%;
   }
   20% {
     height: 30%;
-    left: 50%;
+    left: 45%;
   }
   30% {
-    top: -10%;
+    top: -0%;
   }
   40% {
     height: 28%;
-    left: 40%;
-    top: -15%;
+    left: 55%;
+    top: -5%;
   }
   60% {
     height: 26%;
-    top: -20%;
-    left: 50%;
-  }
-  80% {
-    height: 24%;
-    top: -20%;
-    left: 45%;
-  }
-  90% {
-    height: 20%;
     top: -10%;
     left: 60%;
   }
+  80% {
+    height: 24%;
+    top: -10%;
+    left: 70%;
+  }
+  /* 90% {
+    height: 20%;
+    top: -5%;
+    left: 65%;
+  } */
   100% {
     height: 20%;
     top: 0%;
@@ -180,6 +173,7 @@ nav img {
     opacity: 0;
   }
 }
+
 .WelcomePage {
   position: absolute;
   top: -200%;
@@ -187,10 +181,30 @@ nav img {
   width: 100%;
   height: 100%;
   z-index: -1;
+  overflow: hidden;
+  border-radius: 50px;
   background-color: var(--almond);
 }
 .WelcomePage img {
-  width: 100%;
+ position: absolute;
+ top: 25%;
+ left: -15%;
+ max-width: 100%;
+ opacity: 0.5;
+ z-index: -1;
+}
+.backgroundWrapper {
+    min-height: 90vh;
+    max-width: 100%;
+    padding: 1rem;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+}
+.colorWrapper {
+  background-color: var(--almond);
 }
 .WelcomePage h1,
 .WelcomePage span {
@@ -266,10 +280,12 @@ header h1 {
 main {
   background-color: var(--yellow);
 }
-
+.tileList li {
+  cursor:pointer;
+}
 .mainPage {
   background-color: var(--almond);
-  height: 100vh;
+  height: 90vh;
 }
 .mainPage .NavTile {
   width: 5rem;

@@ -7,3 +7,13 @@ export function getName() {
     document.querySelector('.nameTitle').innerHTML = displayName;
   }
 }
+
+const date = new Date();
+const options = {
+  weekday: "long",
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+};
+let copyrightDate = new Date().toLocaleDateString("en-us", options);
+document.querySelector("#currentyear").innerHTML = date.getFullYear();
