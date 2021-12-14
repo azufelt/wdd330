@@ -13,7 +13,11 @@ selectPark.addEventListener("change", (event) => {
 });
 
 function getWeather(park) {
-  console.log(park);
+  document.querySelector(".weatherResults").innerHTML =
+    `<div class="weatherResults-inner">
+    <div class="weatherReport"></div>
+    <div class="forecastResults"></div>
+    </div>`;
   getLocation(park);
 }
 
@@ -50,18 +54,14 @@ function getLocation(park) {
     },
   ];
   const location = park;
-  //filter for the location value provided
-  //search for location of variable
   var parkFound = -1;
   for (var i = 0; i < coordinates.length; i++) {
     if (coordinates[i].location == location) {
-      // __FOUND is set to the index of the element
       parkFound = i;
       break;
     }
   }
-  console.log(parkFound);
-  // coordinates[0].long
+
   const long = coordinates[parkFound].long;
   const lat = coordinates[parkFound].lat;
 
@@ -76,7 +76,7 @@ function getLocation(park) {
   displayForecast(forecastAPI, offset);
 }
 
-function displayWeather(apiURL, offset) {
+function displayWeather(apiURL) {
   fetch(apiURL)
     .then((response) => response.json())
     .then((jsObject) => {
@@ -85,7 +85,7 @@ function displayWeather(apiURL, offset) {
           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
       };
-      console.log(jsObject);
+      // console.log(jsObject);
       const icon = jsObject.current.weather[0].icon;
       const currentConditions = jsObject.current.weather[0].description;
       const temp = jsObject.current.temp.toFixed(0);
@@ -93,55 +93,30 @@ function displayWeather(apiURL, offset) {
       const windspeed = jsObject.current.wind_speed.toFixed(0);
       const url = `"http://openweathermap.org/img/wn/${icon}@2x.png"`;
 
-      //get local time
-      //get timezone offset
-      //subtract daylight savings if needed
-      //convert timestamp to readable time
-      var d = new Date();
-      console.log(d);
-      var utc_offset = d.getTimezoneOffset();
-      console.log(utc_offset);
-      d.setMinutes(d.getMinutes() + utc_offset);
-      console.log(d);
+      let ParkTime = formatAMPM(new Date);
 
-      var parkTimeZone = jsObject.timezone_offset;
-      var disneyOffset = parkTimeZone / 60;
-      d.setMinutes(d.getMinutes() + disneyOffset);
-      console.log("youtube time" + d);
-      //^^^ this is the CORRECT Date Timestamp!!! 
-      // Now to parse it to just the time! 
-
-
-      let offset = jsObject.timezone_offset;
-      let dateTime = jsObject.current.dt;
-      let date = new Date().toUTCString();
-      let parkTime = niceTime(dateTime, offset);
-      let parkDate = niceDate(date, offset);
-      console.log(parkDate);
-      console.log(parkTime);
-
-      //  Strip out just the HH:MM:SS AM/PM from the date
-      function niceTime(dateTime, offset) {
-        let day = new Date((dateTime + offset) * 1000).toLocaleString();
-        let hour = day.indexOf(' ') + 1;
-        let time = day.substring(hour);
-        time = time.substring(0, time.lastIndexOf(':')) + time.substring(time.length - 3)
-        return time;
+      function formatAMPM(d) {
+        var utc_offset = d.getTimezoneOffset();
+        d.setMinutes(d.getMinutes() + utc_offset);
+        var api_offset = jsObject.timezone_offset;
+        var park_offset = api_offset / 60;
+        d.setMinutes(d.getMinutes() + park_offset);
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = ('0' + minutes).slice(-2);
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
       }
-
-      function niceDate(date, offset) {
-        let day = new Date((date + offset) * 1000);
-        day = day.toLocaleString();
-        return day.substring(0, day.indexOf(','));
-      }
+      // console.log(ParkTime);
 
 
 
-      document.querySelector(".weatherResults").innerHTML =
-        `<div class="weatherResults-inner">
-        <div class="weatherReport">
-        <h3 class="weatherResultsTitle">Current Conditions:</h3>
-        <h4 class="parkTime"> Current Park Time: ${parkTime} </h4>
+      document.querySelector(".weatherReport").innerHTML =
+        `<h3 class="weatherResultsTitle">Current Conditions:</h3>
+        <h4 class="parkTime"> Current Park Time: ${ParkTime} </h4>
             <div class="weatherBox">
         <ul class="tempIcon">
         <li> <img src=${url} alt="weather icon"> </li>
@@ -154,8 +129,8 @@ function displayWeather(apiURL, offset) {
               <li>Wind: ${windspeed} mph</li>
               </ul>
               </div>
-              </div>
-              </div>`;
+              
+              `;
     });
 }
 
@@ -169,20 +144,33 @@ function displayForecast(forecastAPI, offset) {
         });
       };
       console.log(jsonObj);
-      let i;
 
-      for (i = 0; i < 3; i++) {
+      document.querySelector(".forecastResults").innerHTML = `<div class="forecastBox">
+      <div class="forecastTitle"><h4>3-Day Forecast</h4>
+      <h5>Hi | Low</h5>
+      </div>
+      <ul class="forecastList"></ul></div>`;
+
+      for (let i = 0; i < 3; i++) {
         let dayStamp = jsonObj.daily[i].dt;
-        let date = new Date(dayStamp);
+        let weatherDay = new Date(dayStamp * 1000);
+        var options = {
+          weekday: 'long'
+        };
+        let weekDay = new Intl.DateTimeFormat('en-US', options).format(weatherDay);
+        console.log(new Intl.DateTimeFormat('en-US', options).format(weatherDay));
         let max = jsonObj.daily[i].temp.max;
-        console.log(date.getDay());
+        console.log(max);
         let min = jsonObj.daily[i].temp.min;
         console.log(min);
+        let conditions = jsonObj.daily[0].weather[0].description;
 
-
+        document.querySelector('.forecastList').innerHTML = `
+        <li>
+          <h5>${weekDay}</h5>
+          <span>${max.toFixed(0)}°F | ${min.toFixed(0)}°F</span>
+          <p>${conditions}</p>
+        </li>`;
       }
-
-
-
     });
 }

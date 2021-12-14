@@ -59,7 +59,6 @@ function getLocation(park) {
   displayWeather(apiURL);
 }
 
-
 function displayWeather(apiURL) {
   fetch(apiURL)
     .then((response) => response.json())
@@ -69,85 +68,34 @@ function displayWeather(apiURL) {
           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
       };
-      console.log(jsObject);
-      // const icon = jsObject.current.weather[0].icon;
-      // const currentConditions = jsObject.current.weather[0].description;
-      // const temp = jsObject.current.temp.toFixed(0);
-      // const humidity = jsObject.current.humidity + "%";
-      // const windspeed = jsObject.current.wind_speed.toFixed(0);
-      // const url = `"http://openweathermap.org/img/wn/${icon}@2x.png"`;
 
-      //get local park time
-      //timezone offset is delivered in seconds... convert to milliseconds to make comparison.
-      //Get timestamp in locale
-
-      //
-      // let parkTime = jsObject.current.dt;
-
-      // function formatAMPM(parkTime) {
-      //   var hours = parkTime.getHours();
-      //   var minutes = parkTime.getMinutes();
-      //   var ampm = hours >= 12 ? 'pm' : 'am';
-      //   hours = hours % 12;
-      //   hours = hours ? hours : 12; // the hour '0' should be '12'
-      //   minutes = ('0' + minutes).slice(-2);
-      //   var strTime = hours + ':' + minutes + ' ' + ampm;
-      //   return strTime;
-      // }
-
-      // console.log(formatAMPM(new Date));
-
-
-      //timezone offset delivers MINUTES in the Api
-      //So subtract UTC timestamp- offset to get local park time
-
-      //offset in weather API
-      let offset = jsObject.timezone_offset;
-      let dateTime = jsObject.current.dt;
-      let date = new Date().toUTCString();
-
-
-      //weather API current timestamp
-      // let userLocalTime = jsObject.current.dt;
-      //utc new date, then millisecond parse
-      // let dateTime = new Date();
-      // let dateString = new Date().toUTCString();
-      // let milliseconds = Date.parse(dateString);
-      // let date = milliseconds / 1000;
-
-      let parkTime = niceTime(dateTime, offset);
-      let parkDate = niceDate(date, offset);
-      console.log(parkDate);
-      console.log(parkTime);
-
-      //  Strip out just the HH:MM:SS AM/PM from the date
-      function niceTime(dateTime, offset) {
-        let day = new Date((dateTime + offset) * 1000).toLocaleString();
-        let hour = day.indexOf(' ') + 1;
-        let time = day.substring(hour);
-        time = time.substring(0, time.lastIndexOf(':')) + time.substring(time.length - 3)
-        return time;
-      }
-
-      function niceDate(date, offset) {
-        let day = new Date((date + offset) * 1000);
-        day = day.toLocaleString();
-        return day.substring(0, day.indexOf(','));
-      }
-
+      //user local day/time
       var d = new Date();
-      console.log(d);
+      //get the timezone offset for the user
       var utc_offset = d.getTimezoneOffset();
-      console.log(utc_offset);
+      //using the returned offset, "zero" out the time to UTC time
       d.setMinutes(d.getMinutes() + utc_offset);
+      //get disney park time offset
+      var api_offset = jsObject.timezone_offset;
+      //refactor seconds to minutes;
+      var park_offset = api_offset / 60;
+      d.setMinutes(d.getMinutes() + park_offset);
       console.log(d);
-
-      var parkTimeZone = jsObject.timezone_offset;
-      var disneyOffset = parkTimeZone / 60;
-      d.setMinutes(d.getMinutes() + disneyOffset);
-      console.log(d);
+      //^^^ CORRECT Date/TIME!! 
 
 
+      function formatAMPM(d) {
+        var hours = d.getHours();
+        var minutes = d.getMinutes();
+        var ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        minutes = ('0' + minutes).slice(-2);
+        var strTime = hours + ':' + minutes + ' ' + ampm;
+        return strTime;
+      }
+
+      console.log(formatAMPM(new Date));
 
     })
 }
