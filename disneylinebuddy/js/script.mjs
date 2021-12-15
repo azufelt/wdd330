@@ -30,6 +30,22 @@ function floatBalloon() {
   setTimeout(function () {
     mainScreen.style.top = 0;
   }, 13000);
+
+  //timer to start new balloon hover animation
+  let balloon = document.querySelector('.navBalloon');
+  setTimeout(function () {
+    balloon.classList.add('balloonHover');
+    //remove childnodes from welcome page
+    let body = document.querySelector('body');
+    body.style.height('90vh');
+    let displayWindow = document.querySelector('.enterPageWrapper');
+    var child = displayWindow.lastElementChild;
+    while (child) {
+      displayWindow.removeChild(child);
+      child = displayWindow.lastElementChild;
+    }
+  }, 15000);
+
 }
 
 function storeName() {

@@ -96,15 +96,17 @@ footer {
   background-color: var(--yellow);
 }
 
-img.navBalloon {
+.navBalloon {
   position: absolute;
   width: 30%;
   height: 20%;
   top: 0%;
-  left: 65%;
+  left: 60%;
  overflow: hidden;
  z-index: 100;
- animation: balloonHover 15s 5s infinite linear;
+}
+.balloonHover {
+  animation: balloonHover 15s 5s infinite linear;
 }
 
 .tileList {
@@ -114,6 +116,7 @@ img.navBalloon {
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  cursor:pointer;
 }
 
 .tileSquare {
@@ -849,7 +852,7 @@ min-height: 90vh;
 /* **************** Media Query************ */
 @media only screen and (min-width: 500px) {
   html {
-    max-width: 550px;
+    max-width: 500px;
     margin: 0 auto;
   }
 
@@ -868,14 +871,13 @@ min-height: 90vh;
     width: 100%;
     border-radius: 50px;
   }
-
+ .triviaPage,
+ .enterPageWrapper {
+   border-radius: 0 0 50px 50px;
+ }
   header,
   .WelcomePage {
     border-radius: 50px 50px 0 0;
-  }
-
-  .navBalloon {
-    left: 70%;
   }
 
   .backgroundimg {
