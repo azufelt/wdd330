@@ -37,7 +37,7 @@ function floatBalloon() {
     balloon.classList.add('balloonHover');
     //remove childnodes from welcome page
     let body = document.querySelector('body');
-    body.style.height('90vh');
+    body.style.height = '90vh';
     let displayWindow = document.querySelector('.enterPageWrapper');
     var child = displayWindow.lastElementChild;
     while (child) {
