@@ -104,6 +104,7 @@ img.navBalloon {
   left: 65%;
  overflow: hidden;
  z-index: 100;
+ animation: balloonHover 15s 5s infinite linear;
 }
 
 .tileList {
@@ -138,6 +139,22 @@ img.navBalloon {
   color: black;
   text-decoration: none;
 }
+.tileSquare:hover {
+  border-color: hsla(40, 79%, 54%, .1);
+}
+
+.tileSquare:focus {
+  width: 95px;
+  height: 95px;
+  border-color: hsla(40, 79%, 54%, .5);
+}
+
+.tileSquare:active {
+  width: 95px;
+  height: 95px;
+  border-color: hsla(40, 79%, 54%, .5);
+}
+
 
 .backgroundimg {
   position: absolute;
@@ -689,6 +706,32 @@ border: 1px solid yellow;
       top: 330px;
     }
   }
+  @keyframes balloonHover {
+    0%, 100%{
+      top: 0px;
+      left: 65%;
+    }
+    30%, 70% {
+      top: 5px;
+      
+    }
+    35% {
+       left: 60%;
+    }
+    40% {
+      top: 15px;
+    }
+    45% {
+      left: 65%;
+    }
+    50%, 60% {
+      top: 15px;
+    }
+    55% {
+      left: 63%;
+    }
+  
+  }
 
 /* ***************** Would you Rather? Page ********* */
 .flipCardContainer {
@@ -724,7 +767,6 @@ min-height: 90vh;
   text-align: center;
   float: right;
   margin: 4rem 2rem;
-
   cursor: pointer;
 }
 .ratherBtn:hover {
