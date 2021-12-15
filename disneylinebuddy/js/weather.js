@@ -85,7 +85,6 @@ function displayWeather(apiURL) {
           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
       };
-      // console.log(jsObject);
       const icon = jsObject.current.weather[0].icon;
       const currentConditions = jsObject.current.weather[0].description;
       const temp = jsObject.current.temp.toFixed(0);
@@ -110,10 +109,6 @@ function displayWeather(apiURL) {
         var strTime = hours + ':' + minutes + ' ' + ampm;
         return strTime;
       }
-      // console.log(ParkTime);
-
-
-
       document.querySelector(".weatherReport").innerHTML =
         `<h3 class="weatherResultsTitle">Current Conditions:</h3>
         <h4 class="parkTime"> Current Park Time: ${ParkTime} </h4>
@@ -143,7 +138,7 @@ function displayForecast(forecastAPI) {
           return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
         });
       };
-      console.log(jsonObj);
+
 
       document.querySelector(".forecastResults").innerHTML = `<div class="forecastBox">
       <div class="forecastTitle"><h4>3-Day Forecast</h4>
@@ -158,13 +153,10 @@ function displayForecast(forecastAPI) {
           weekday: 'long'
         };
         let weekDay = new Intl.DateTimeFormat('en-US', options).format(weatherDay);
-        console.log(new Intl.DateTimeFormat('en-US', options).format(weatherDay));
         let max = (jsonObj.daily[i].temp.max).toFixed(0);
-        console.log(max);
         let min = (jsonObj.daily[i].temp.min).toFixed(0);
-        console.log(min);
         let conditions = jsonObj.daily[i].weather[0].main;
-        console.log(conditions);
+
 
         let displayLi = document.querySelector('.forecastList');
         let li = document.createElement('li');

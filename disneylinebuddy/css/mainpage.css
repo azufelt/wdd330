@@ -35,6 +35,7 @@ h1,
 header span {
   font-family: WaltographRegular, script, serif;
   font-size: 3rem;
+  max-width: 60%;
 }
 
 header {
@@ -63,7 +64,7 @@ footer {
   overflow: hidden;
   position: relative;
   overflow: hidden;
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .mainPage .colorWrapper {
@@ -100,7 +101,7 @@ img.navBalloon {
   width: 30%;
   height: 20%;
   top: 0%;
-  left: 55%;
+  left: 65%;
  overflow: hidden;
  z-index: 100;
 }
@@ -295,6 +296,7 @@ label {
   transition: transform 1.8s;
   transform-style: preserve-3d;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius:15px;
   cursor: pointer;
 }
 
@@ -366,12 +368,12 @@ select {
   font-size: 1.1rem;
 }
 .weatherResultsTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--blue);
 }
 .weatherResults-inner {
   background-color: var(--white);
-  padding: 2rem;
+  padding: 1rem;
   margin: 2rem;
   opacity: 90%;
   height: 60vh;
@@ -396,7 +398,7 @@ select {
 }
 .tempBox {
   background-color: var(--yellow);
-  padding: 1rem;
+  padding: .8rem;
 }
 .parkTime {
   padding: 1rem;
@@ -406,10 +408,10 @@ select {
   opacity: 100%;
   filter: drop-shadow(0px 0px 0px black);
 }
-
+/* 
 .weatherReport ul {
   font-size: 1.2rem;
-}
+} */
 
 .weatherReport h3{
   text-align: center;
@@ -525,6 +527,9 @@ label, option {
 .gameStatus {
   margin-top: 3rem;
   text-align: center;
+      position: absolute;
+      bottom: 15%;
+      left: 25%;
 }
 
 .tictactoePage h2 {
@@ -737,13 +742,14 @@ min-height: 90vh;
 }
 
 .rathercardWrapper {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+   margin: 3rem auto;
 }
 
 .rather-card {
@@ -779,7 +785,6 @@ min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border-radius: 15px; */
 }
 
 .rather-card-front {
@@ -787,19 +792,16 @@ min-height: 90vh;
 }
 
 .rather-card-back {
-  content: "Would you rather...";
-  background-color: var(--orange);
-  /* transform: rotateX(180deg); */
-}
-
-/* .ratherfliptoBack {
+  background-color: var(--light-blue);
   transform: rotateX(180deg);
 }
 
-.ratherfliptoFront {
-  transform: rotateX(0deg);
-} */
-
+.ratherQ {
+  color: var(--light-blue);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 2rem;
+}
 
 /* **************** Media Query************ */
 @media only screen and (min-width: 500px) {
@@ -838,4 +840,12 @@ min-height: 90vh;
     width: 100vw;
   }
 
+}
+
+
+.wrongData {
+  animation: wiggle 1s linear;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }

@@ -9,24 +9,34 @@ const searchbtn = document.querySelector(".characterSearch");
 searchbtn.addEventListener('click', findChar, false);
 
 
-const bigCharacterList = []; //makes new array available at global scope for future use
-// console.log(bigCharacterList);
+const bigCharacterList = [];
 
 function findChar() {
   let displayWindow = document.querySelector('.returnresults');
-  displayWindow = "";
+  //Clear the old search if one is present
+  var child = displayWindow.lastElementChild;
+  while (child) {
+    displayWindow.removeChild(child);
+    child = displayWindow.lastElementChild;
+  }
   let showResults = document.querySelector('.returnresults');
   showResults.classList.add('show');
 
   let searchChar = document.querySelector(".characterValue").value;
   document.querySelector('#character').value = ''; //clear input value 
 
-  //filter through the big List array to find an object that has a value that matches the string input from user;
-  //removed  const filterList =  from the below method, don't think it needs it?
+
+  // const str = ` ${searchChar}`;
+  // const arr = str.split(" ");
+  // for (var i = 0; 1 < arr.length; i++) {
+  //   arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+  // }
+  // const characterCaps = arr.join(" ");
+  // console.log(characterCaps);
+
   bigCharacterList.filter(function (item) {
     if (item.name == searchChar) {
       let listItem = document.querySelector('.returnresults');
-
       let li = document.createElement('li');
       let title = document.createElement('h2');
       let liName = item.name;

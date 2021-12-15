@@ -50,19 +50,15 @@ function getAnswer() {
       return response.json();
     })
     .then(function (answerObject) {
-      console.log(answerObject)
       var message = answerObject.triviaCards[index].answer;
-      console.log(message);
       var location = '.trivia-card-back';
       cardDisplay(message, location);
     })
 }
 
 function getRandomInt(Num) {
-  let max = 50;
-  // console.log(max);
+  let max = 54;
   Num = Math.floor(Math.random() * max);
-  //having getAnswer here populates front and back at the same time, but also makes the answer visible too soon. 
   let dataKey = document.querySelector('.trivia-card-inner')
   dataKey.setAttribute('data-key', Num);
   return Num;
@@ -75,10 +71,8 @@ function getLength() {
       return list.json();
     })
     .then(function (object) {
-      console.log(object);
       let array = object.triviaCards;
       let maxLength = array.length;
-      console.log(maxLength);
       return maxLength;
     });
 }

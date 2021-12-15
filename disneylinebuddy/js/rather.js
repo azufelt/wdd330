@@ -10,83 +10,71 @@ ratherBtn.addEventListener('click', cardFlip, false);
 
 function cardFlip() {
   var element = document.querySelector('.rather-card');
-
+  // var element = event.currentTarget;
   if (element.className === "rather-card") {
     let front = document.querySelector('.rather-card-inner');
     if (front.style.transform == "rotateX(180deg)") {
       front.style.transform = "rotateX(0deg)";
-      getQuestion();
+      // "would you Rather"
+      setTimeout(function () {
+        clearRatherQ();
+      }, 1000);
+
     } else {
       front.style.transform = "rotateX(180deg)";
-      // getAnswer();
+      getQuestion();
     }
   }
 }
 
-const flipDirection = [
-  "flipBack",
-  "flipLeft",
-  "flipRight",
-  "flipTop",
-  "flipBottom"
-]
-
 function getRandomInt(Num) {
-  let max = 1;
-  // console.log(max);
+
+  let max = 47;
   Num = Math.floor(Math.random() * max);
   return Num;
+}
+
+function cardDisplay(message) {
+  let displayMessage = document.querySelector('.backratherQ');
+  let h2 = document.createElement('h2');
+  h2.innerHTML = message;
+  displayMessage.append(h2);
 }
 
 function getQuestion() {
   var Num;
   let index = getRandomInt(Num);
-  console.log(Num);
   const json = "json/rather.json"
   fetch(json)
     .then(function (response) {
       return response.json();
     })
     .then(function (jsObject) {
-      console.log(jsObject);
       var message = jsObject.rather[index].question;
-      var location = '.trivia-card-front';
-      cardDisplay(message, location);
+      cardDisplay(message);
     })
 };
 
-function cardDisplay(message, location) {
-  var messageDisplay = document.querySelector(location);
-  messageDisplay.innerHTML `<h2>${message}</h2`;
-  //WHY ISN"T THIS DISPLAYING IN DOM????
-  document.querySelector(location).innerHTML = messageDisplay;
+function clearRatherQ() {
+  let displayWindow = document.querySelector('.backratherQ');
+  //Clear the old display if one is present
+  var child = displayWindow.lastElementChild;
+  while (child) {
+    displayWindow.removeChild(child);
+    child = displayWindow.lastElementChild;
+  }
 }
 
-
-
-
-// function rotateCube() {
-//   // var element = event.currentTarget;
-//   var cubeFace = document.querySelector('.cube-face-front');
-//   // if(cubeFace.hasAttribute('id', 'fliTop')){
-//   //   cubeFace.removeAttribute('id', 'flipTop');
-//   // }
-//   console.log('test');
-//   // let cube = document.appendChild(cubeFace);
-//   let Num;
-//   let i = getRandomInt(Num);
-//   let rotate = flipDirection[i];
-//   console.log(i);
-//   cubeFace.setAttribute('id', 'animate');
-
-
-// }
-
-// if (cubeFace.style.transform == "rotateX(180deg)") {
-//   cubeFace.style.transform = "rotate(0deg)";
-// } else {
-//   cubeFace.style.transform + "rotateX(180deg)";
-// }
-// getRandomInt(Num);
-// let rotate = flipDirection[Num];
-// cubeFace.style.transform = rotate;
+function getLength() {
+  let jsonlength = "json/rather.json"
+  fetch(jsonlength)
+    .then(function (list) {
+      return list.json();
+    })
+    .then(function (object) {
+      let array = object.rather;
+      let maxLength = array.length;
+      return maxLength;
+    });
+}
+getLength();

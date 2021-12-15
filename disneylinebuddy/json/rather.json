@@ -2,9 +2,131 @@
   "rather": [
 
     {
-      "question": "What year did Disneyland open?"     
+      "question":"Swim deep in the sea with Ariel -or- Fly high in the sky with Peter Pan?"  
     },
     {
-      "question": "What is the name of Wendy’s dog in Peter Pan?"
+      "question":"Live with annoying stepsisters -or-live with controlling Mother Gothel?"
+    },{
+      "question":"Race as fast as Lightning McQueen -or- Fly on a magic carpet like Aladdin?"    
+    },{
+      "question":"Have a hook for a hand -or- have giant Dumbo ears?"
+    },{
+      "question":"Be raised by three fairies like Aurora - or- be raised by a pack of wild gorillas like Tarzan?"    
+    },{
+      "question":"Be accident prone like Goofy -or- have a bad temper like Donald Duck?"    
+    },{
+      "question":"Be as sweet as Minnie Mouse -or- be as beautiful as Snow White?"    
+    },{
+      "question":"Have Elsa's icy powers -or- have Rapunzel's magic golden hair?"    
+    },{
+      "question":"Have to clean up after the Seven Dwarfs -or- clean up after Cinderella's step sisters & wicked stepmother?"    
+    },{
+      "question":"Fall in love with a Beast like Belle -or- kiss a frog like Tiana?"    
+    },{
+      "question":"Live in the Mickey Mouse Clubhouse -or- in Cinderella's castle?"    
+    },{
+      "question":"Have Pascal as your sidekick -or- have Flounder as your sidekick?"    
+    },{
+      "question":"Be able to smash things like Wreck it Ralph -or- Swing thro0ugh the trees like Tarzan?"    
+    },{
+      "question":"Find Sulley the Monster in your closet -or- find Stich under your bed?"    
+    },
+    {
+      "question":"Be wanted by the law like Flynn Rider -or- have your Stepmother try to poison you with an enchanted apple?"    
+    },
+    {
+      "question":"Be on a super team with Baymax -or- be part of the Incredibles Family?"    
+    },
+    {
+      "question":"Live with enchanted talking furniture like Belle -or- save your kingdom with a talking Snowman like Anna?"    
+    },
+    {
+      "question":"Be forced to eat stale crackers from the Sultan -or- squishy forest grubs like Simba? "    
+    },
+    {
+      "question":"Have Elsa's long, white, braided hair -or- Merida's red, curly, wild hair?"    
+    },
+    {
+      "question":"Eat a poisoned apple like Snow White -or- kiss a frog like Tiana?"    
+    },
+    {
+      "question":"Have an enchated Fairy Godmother -or- a Magic Genie in a lamp?"    
+    },
+    {
+      "question":"Sail the high seas like Prince Eric -or- be king of the jungle like Tarzan?"    
+    },
+    {
+      "question":"Have Merida's bow and arrows -or- Cinderella's glass slippers?"    
+    },
+    {
+      "question":"Dance with Prince Charming at a royal ball -or- canoe down a giant river with Pocahontis?"    
+    },
+    {
+      "question":"Ride the Teacups ten times in a row -or- listen to 'It's a Small World' song all day?"    
+    },{
+      "question":"Eat an ice cream sundae on Main Street -or- snack on fresh cinnamon churros?"    
+    },
+    {
+      "question":"Borrow an ourfit from Minnie Mouse -or- trade losets with Jasmine?"    
+    },
+    {
+      "question":"Be captured by the Pirates of the Caribbean -or- fight the enchanted dragon in Sleeping Beauty?"
+    },
+    {
+      "question":"Get soaking wet on Splash Mountain -or- take a hauting tour through the Haunted Mansion?"    
+    },
+    {
+      "question":"See the fireworks over the Castle -or- watch the floating lights in Rapunzel's Kingdom?"    
+    },
+    {
+      "question":"Free with fright on the Tower of Terror -or- Scream as loud as you can on Soarin'?"    
+    },
+    {
+      "question":"Go snow sledding with Olaf & Sven -or- go tractor tipping with Mater & Mcqueen?"    
+    },
+    {
+      "question":"Wear Jasmine's Arabian outfit in a snow storm -or- have Anna's winter cape in the blistering summer?"    
+    },
+    {
+      "question":"Get a ride to school on Kristoff's sled -or- on Aladdin's magic carpet?"    
+    },
+    {
+      "question":"Have your nose grow like Pinocchio -or- accidentally turn your mother into a bear like Merida did?"    
+    },
+    {
+      "question":"Sign your name wearing Mickey's big white glovers -or- ride a bike with Ariels mermaid tail?"    
+    },
+    {
+      "question":"Have your nose stuck in a book like Belle -or- cook in a restaurant like Tiana?"    
+    },
+    {
+      "question":"Giggle like the hyenas in the Lion King -or- roar like the Beast?"    
+    },{
+      "question":"Brush your hair with a fork like Ariel -or- dress like a soldier like Mulan?"    
+    },
+    {
+      "question":"Live in the Jungle with Baloo the Bear -or- live in the forest with Bambi and friends?"    
+    },
+    {
+      "question":"Earn gold doubloons by solving pirate problems with Jake -or- steal from the rich and give to the poor with Robin Hood?"    
+    },
+    {
+      "question":"Own a light saber -or- a magic wand?"    
+    },
+    {
+      "question":"Have a long white beard like the Seven Dwarfs -or- have a short black curly beard like Jafar?"    
+    },
+    {
+      "question":"Live in Pixie Hollow -or- at the Magic Kingdom?"    
+    },
+    {
+      "question": "Fly by holding a giant bunch of helium balloons -or by getting sprinkled with Pixie Dust?"    
+    },
+    {
+      "question":"Sleep for 100 yersr like Aurora -or- always be tired like Sleepy the Dwarf?"    
+    },
+    {
+      "question":"Have to take care of 101 Dalmatian puppies -or- have to keep track of Sitch the Alien?"    
     }
+
   ]}

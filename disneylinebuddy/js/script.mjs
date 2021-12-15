@@ -8,9 +8,6 @@ enterBtn.addEventListener('click', openPage, false);
 function openPage() {
 
   storeName()
-  // .then(() => {
-  //   floatBalloon()
-  // })
 }
 
 function floatBalloon() {
@@ -38,8 +35,6 @@ function floatBalloon() {
 function storeName() {
   //get visitor name, log to storage
   const nameInput = document.querySelector("#nameInput").value;
-
-
   if (nameInput == "") {
     //wiggle field
     const nameWrong = document.querySelector('#nameInput');
