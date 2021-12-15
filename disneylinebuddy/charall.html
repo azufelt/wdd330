@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ashley Zufelt" />
+    <link type="normalize/css" rel="stylesheet" href="#" />
+    <!-- <link type="text/css" rel="stylesheet" href="css/style.css" /> -->
+    <link type="text/css" rel="stylesheet" href="css/mainpage.css" />
+    <link type="text/css" rel="stylesheet" href="css/character.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/waltograph"
+      type="text/css"
+    />
+    <script src="js/allChar.js" type="module"></script>
+
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <title>Disney Line Buddy</title>
+  </head>
+
+  <body>
+    <main class="characterPage">
+      <div class="">
+        <form action="">
+          <label for="character">Search Your Fave Character:</label>
+          <input
+            type="text"
+            id="character"
+            class="characterValue"
+            name="character"
+            required
+          />
+          <input type="button" class="button characterSearch" value="Search" />
+        </form>
+
+        <div class="characterBio">
+          <ul class="returnresults"></ul>
+        </div>
+        <div class="allCharWrapper">
+          <div class="allChar"></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: ["Open Sans"],
+        },
+      });
+    </script>
+    <!-- <script src="js/main.mjs" type="module" defer></script> -->
+  </body>
+</html>

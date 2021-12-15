@@ -1,7 +1,6 @@
   let park = ""
 
   function getWeather(park) {
-    console.log(park);
     getLocation(florida);
   }
 

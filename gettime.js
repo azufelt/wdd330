@@ -2,7 +2,6 @@ let park = 'florida';
 getWeather(park);
 
 function getWeather(park) {
-  console.log(park);
   getLocation(park);
 }
 
@@ -80,7 +79,7 @@ function displayWeather(apiURL) {
       //refactor seconds to minutes;
       var park_offset = api_offset / 60;
       d.setMinutes(d.getMinutes() + park_offset);
-      console.log(d);
+      // console.log(d);
       //^^^ CORRECT Date/TIME!! 
 
 
@@ -95,7 +94,7 @@ function displayWeather(apiURL) {
         return strTime;
       }
 
-      console.log(formatAMPM(new Date));
+      // console.log(formatAMPM(new Date));
 
     })
 }

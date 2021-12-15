@@ -11,9 +11,7 @@ fetch(json)
     return response.json();
   })
   .then(function (jsObject) {
-    console.log(jsObject);
     const tiles = jsObject.navTiles;
-    console.log(tiles);
     tiles.forEach(tile => {
       let tileList = document.querySelector('.tileList');
       //build the individual tile and then append the parent class=.tileList

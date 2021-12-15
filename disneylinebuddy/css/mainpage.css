@@ -328,6 +328,7 @@ label {
   flex-direction: column;
   justify-content: center;
   border-radius: 15px;
+  color: var(--white);
 }
 
 .trivia-card-front {

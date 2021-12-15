@@ -1,9 +1,9 @@
-"use strict"
-import {
-  getName
-} from "./getName.mjs";
+// "use strict"
+// import {
+//   getName
+// } from "./getName.mjs";
 
-getName();
+// getName();
 
 const searchbtn = document.querySelector(".characterSearch");
 searchbtn.addEventListener('click', findChar, false);
@@ -170,15 +170,12 @@ function findChar() {
 
 
 
+
         })
+
     }
   });
 }
-
-
-
-
-
 async function fetchList() {
   var pageNum = 1;
   var pageApi = `https://api.disneyapi.dev/characters?page=${pageNum}`;
@@ -214,11 +211,45 @@ async function fetchList() {
               let newItem = new item(charName, charid); //builds the object for the class constructor from withing the "for" statement and sends it to the global class constructor
               //... Instead of constructing a class, you could use this: let newItem = {name: charName, id: charid};
               bigCharacterList.push(newItem);
-
+              buildAllChar(item, bigCharacterList);
             }
           })
       }
     });
 }
+
+function buildAllChar(bigCharacterList) {
+  // let window = document.querySelector('.allChar');
+  // console.log(bigCharacterList);
+  bigCharacterList.forEach(item => {
+    console.log(item.name);
+
+  });
+
+
+  let idNum = item.id;
+  let getOneCharacter = `https://api.disneyapi.dev/characters/${idNum}`
+
+  fetch(getOneCharacter)
+    .then((response) => response.json())
+    .then(function (jsonObject) {
+      //get img url and slice file extension
+      let CharImg = document.createElement('img');
+      let imgURL = jsonObject.imageUrl;
+
+      let dummyString = imgURL;
+      dummyString = dummyString.slice(0, dummyString.lastIndexOf(".jpeg"))
+      let newURL = dummyString + ".jpeg";
+
+      CharImg.setAttribute('src', newURL);
+      CharImg.setAttribute('alt', 'disney character image')
+      li.append(CharImg)
+
+
+
+
+    })
+}
+
 
 fetchList();
